@@ -1,10 +1,11 @@
 class VenuesController < ApplicationController
+  before_action :set_venue, only: [:show, :destroy, :edit, :update]
+
   def index
     @venues = Venue.all
   end
 
   def show
-    @venue = Venue.find(params[:id])
   end
 
   def create
@@ -17,16 +18,13 @@ class VenuesController < ApplicationController
   end
 
   def destroy
-    @venue = Venue.find(params[:id])
     @venue.destroy
   end
 
   def edit
-    @venue = Venue.find(params[:id])
   end
 
   def update
-    @venue = Venue.find(params[:id])
     if @venue.update(venue_params)
       redirect_to admin_path
     else

@@ -4,15 +4,9 @@
   <h1><%= venue.name %></h1>
   <p><%= venue.address %></p>
   <p><%= venue.phone_number %></p>
-  <%= link_to "Edit", venue_path(venue) %>
+  <%= link_to "Edit", edit_venue_path(venue) %>
   <%= link_to "Delete", venue_path(venue), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
 <% end %>
 
 
-<%= simple_form_for @venue do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone_number %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
-<% end %>
+<%= render "shared/form", venue: @venue %>
