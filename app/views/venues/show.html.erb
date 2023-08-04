@@ -1,0 +1,9 @@
+<h1>Yeah?</h1>
+
+<%= simple_form_for @venue do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit %>
+<% end %>
