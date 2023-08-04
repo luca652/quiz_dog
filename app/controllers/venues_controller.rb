@@ -23,6 +23,7 @@ class VenuesController < ApplicationController
   end
 
   def edit
+    @hide_navbar = true
   end
 
   def update

@@ -13,6 +13,7 @@ class QuizmastersController < ApplicationController
   end
 
   def edit
+    @hide_navbar = true
   end
 
   def update
