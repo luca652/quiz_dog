@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_04_115350) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_04_151337) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "quizmasters", force: :cascade do |t|
+    t.string "name"
+    t.text "profile"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_quizmasters_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -36,5 +45,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_115350) do
     t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
+  add_foreign_key "quizmasters", "users"
   add_foreign_key "venues", "users"
 end

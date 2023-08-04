@@ -37,4 +37,8 @@ class VenuesController < ApplicationController
   def venue_params
     params.require(:venue).permit(:name, :address, :phone_number, :user_id)
   end
+
+  def set_venue
+    @venue = Venue.find(params[:id])
+  end
 end

@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   def admin
     @venues = Venue.all
     @venue = Venue.new
+    @quizmasters = Quizmaster.all
+    @quizmaster = Quizmaster.new
   end
 
+  def aboutus
+  end
 end
