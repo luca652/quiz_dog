@@ -25,6 +25,7 @@ class QuizmastersController < ApplicationController
 
   def destroy
     @quizmaster.destroy
+    redirect_to admin_path
   end
 
   private

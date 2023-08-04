@@ -19,6 +19,7 @@ class VenuesController < ApplicationController
 
   def destroy
     @venue.destroy
+    redirect_to admin_path
   end
 
   def edit
