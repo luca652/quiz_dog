@@ -32,7 +32,7 @@ class QuizmastersController < ApplicationController
   private
 
   def quizmaster_params
-    params.require(:quizmaster).permit(:name, :profile, :user_id)
+    params.require(:quizmaster).permit(:name, :profile, :user_id, :photo)
   end
 
   def set_quizmaster
