@@ -1,1 +1,45 @@
 // Specific CSS for your home-page
+.container-home-top {
+  display: flex;
+  height: 100vh;
+}
+
+.banner {
+  background-image: url('banner2.png');
+  background-size: cover;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.header-home-top {
+  color: white;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.banner-info {
+  display: flex;
+
+  .banner-info-card {
+    color: $quiz-dog-red;
+    background-color: white;
+    margin: 0rem 1rem 0rem 1rem;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+}
+
+.card-bg-img {
+  object-fit: cover;
+}
