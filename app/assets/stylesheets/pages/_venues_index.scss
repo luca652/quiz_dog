@@ -1,0 +1,12 @@
+.container-venues-map {
+  display: flex;
+}
+
+.container-venue-cards {
+  flex-grow: 1;
+  display: flex;
+}
+
+#map {
+  flex: 0 0 30%;
+}
