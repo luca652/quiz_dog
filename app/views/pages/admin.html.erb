@@ -1,34 +1,32 @@
-<h1>Quiz Dog - Admin</h1>
 
-<div class="admin-container">
-  <div class="tab-container">
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-bo" aria-selected="true">Venues</button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Quizmasters</button>
-      </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-venues" role="tabpanel" aria-labelledby="nav-home-tab">
-        <h2>VENUES</h2>
+<div class="container">
+  <h1>QUIZDOG - ADMIN</h1>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Venues</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Quizmasters</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <h2>VENUES</h2>
         <div class="admin-container-cards">
           <% @venues.each do |venue| %>
             <h2><%= venue.name %></h2>
             <p><%= venue.address %></p>
             <p><%= venue.phone_number %></p>
-            <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
+            <%# <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
             <%= link_to "Edit", edit_venue_path(venue) %>
             <%= link_to "Delete", venue_path(venue), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
           <% end %>
           <h2>ADD VENUES</h2>
           <%= render "shared/venue_form", venue: @venue %>
         </div>
-      </div>
     </div>
-
-    <div class="tab-pane fade" id="nav-pins" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <h2>QUIZMASTERS</h2>
-
       <% @quizmasters.each do |quizmaster| %>
         <h2><%= quizmaster.name %></h2>
         <p><%= quizmaster.profile %></p>
@@ -38,4 +36,5 @@
 
       <%= render "shared/quizmaster_form", quizmaster: @quizmaster %>
     </div>
+  </div>
 </div>
