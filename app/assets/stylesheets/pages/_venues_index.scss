@@ -2,11 +2,48 @@
   display: flex;
 }
 
-.container-venue-cards {
+.cards {
   flex-grow: 1;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
 }
 
 #map {
-  flex: 0 0 30%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.card-venue-image > img {
+    width: 15rem;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 22px;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  }
+
+  .card-body {
+    background-color: #FFF3DA;
+  }
+
+
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
