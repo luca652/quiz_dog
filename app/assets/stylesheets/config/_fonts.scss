@@ -1,10 +1,12 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=IBM+Plex+Sans&family=Poppins:wght@200&family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=DM+Sans:wght@700&family=IBM+Plex+Sans&family=Monofett&family=Poppins:wght@200&family=Roboto+Flex:opsz@8..144&family=Zilla+Slab:ital,wght@0,600;1,500&display=swap');
+
 
 // Define fonts for body and headers
 $body-font: 'Roboto Flex', sans-serif;
-$headers-font: 'Roboto Flex', sans-serif;
+$headers-font: 'Zilla Slab', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
