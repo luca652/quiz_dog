@@ -1,11 +1,63 @@
-<h1>Venues#index</h1>
-<p>Find me in app/views/venues/index.html.erb</p>
+<h1>Our pubs</h1>
 
 <div class="container-venues-map">
-  <div class="container-venue-cards">
+  <div class="cards">
+
+    <div class="card-venue">
+      <div class="card-venue-image">
+        <%= image_tag("venues/therose.jpeg") %>
+      </div>
+      <div class="card-body">
+        <h5>Pub Quizzes</h5>
+        <p>We do tons of them</p>
+      </div>
+    </div>
+
+    <div class="card-venue">
+      <div class="card-venue-image">
+        <%= image_tag("venues/therose.jpeg") %>
+      </div>
+      <div class="card-body">
+        <h5>Pub Quizzes</h5>
+        <p>We do tons of them</p>
+      </div>
+    </div>
+
+    <div class="card-venue">
+      <div class="card-venue-image">
+        <%= image_tag("venues/therose.jpeg") %>
+      </div>
+      <div class="card-body">
+        <h5>Pub Quizzes</h5>
+        <p>We do tons of them</p>
+      </div>
+    </div>
+
+    <div class="card-venue">
+      <div class="card-venue-image">
+        <%= image_tag("venues/therose.jpeg") %>
+      </div>
+      <div class="card-body">
+        <h5>Pub Quizzes</h5>
+        <p>We do tons of them</p>
+      </div>
+    </div>
+
+    <div class="card-venue">
+      <div class="card-venue-image">
+        <%= image_tag("venues/therose.jpeg") %>
+      </div>
+      <div class="card-body">
+        <h5>Pub Quizzes</h5>
+        <p>We do tons of them</p>
+      </div>
+
+    </div>
   </div>
+
   <div id="map" style="width: 100%; height: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

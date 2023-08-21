@@ -1,42 +1,112 @@
 // Specific CSS for your home-page
-.container-home-top {
-  display: flex;
-  height: 100vh;
-}
+// .container-home-top {
+//   display: flex;
+//   height: 100vh;
+// }
 
 .banner {
   background-image: url('banner2.png');
   background-size: cover;
   background-position: center;
-  padding: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  height: 100vh;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
   width: 20rem;
+  padding-top: 10rem;
 }
 
 .header-home-top {
   color: white;
-  border-top: 4px solid white;
-  border-bottom: 4px solid white;
-  font-size: 5rem;
+  border: 4px solid white;
+  font-size: 3rem;
+  width: fit-content;
+  padding: 0 20px;
 }
 
-.banner-info {
+.home-testimonial-card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 4px solid black;
 
-  .banner-info-card {
-    color: $quiz-dog-red;
-    background-color: white;
-    margin: 0rem 1rem 0rem 1rem;
-    text-align: center;
-    border-radius: 10px;
+  p {
+    margin: 0;
+  }
 
+  .avatar {
+    margin-left: 0.5rem;
   }
 }
+.carousel {
+  width: 60%;
+  height: auto;
+}
+
+// .card-group-image > img {
+//   height: 100px;
+//   width: 100%;
+//   margin-bottom: 5px;
+//   object-fit: cover;
+//   border-radius: 10px 10px 0px 0px;
+// }
+
+// .card-body h5  {
+//   margin-bottom: 0px;
+
+//   a {
+//   color: #808080;
+//   text-decoration: none;
+//   }
+// }
+
+// .card-body {
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   position: relative;
+
+//   p {
+//     margin-bottom: 4px;
+//   }
+
+// }
+
+// .card-members-requests {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 4px;
+//   border-top: 1px solid rgb(189, 189, 189);
+//   padding-top: 2px;
+
+//   .card-members-number {
+//     margin-bottom: 0px;
+//   }
+
+//   .card-requests-number {
+//     text-decoration: none;
+//     color: $quiz-dog-red;
+//     font-size: 12px;
+//     margin-right: 0px 0px;
+//     padding: 0px 0px;
+//   }
+// }
+
+// .info-window-group-role {
+//   background-color: $quiz-dog-red;
+//   border: 0px;
+//   color: white;
+//   padding: 0px 4px;
+//   border-radius: 10px;
+//   font-size: 8px;
+//   font-weight: bold;
+//   position: absolute;
+//   left: 160px;
+//   top: -19px;
+// }
+
+// .approval-pending {
+//   color: $quiz-dog-red;
+// }
