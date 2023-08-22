@@ -8,7 +8,9 @@
           <%= cl_image_tag venue.photo.key %>
         </div>
         <div class="card-body">
-          <h2><%= venue.name %></h2>
+          <div class="card-body-title">
+            <h4><%= venue.name %></h4>
+          </div>
           <p><%= venue.address %></p>
           <p><%= venue.phone_number %></p>
           <p><%= venue.quizmaster %></p>
