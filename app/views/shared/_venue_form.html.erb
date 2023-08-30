@@ -3,9 +3,9 @@
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.input :quizmaster %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :time %>
   <%= f.input :day_of_the_week %>
+  <%= f.input :time %>
+  <%= f.input :photo, as: :file %>
   <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit %>
 <% end %>
