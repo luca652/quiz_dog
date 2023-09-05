@@ -4,4 +4,5 @@ class Venue < ApplicationRecord
   # validates :name, :address, :phone_number, presence: true
   belongs_to :user
   has_one_attached :photo
+  has_many :gigs
 end
