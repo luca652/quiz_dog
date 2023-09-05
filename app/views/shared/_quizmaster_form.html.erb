@@ -5,3 +5,17 @@
   <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit %>
 <% end %>
+
+
+<%= simple_form_for @quizmaster do |f| %>
+  <%= f.input :name %>
+  <%= f.input :profile %>
+  <%= f.input :photo, as: :file %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <% @venues.each do |venue| %>
+    <%= f.simple_fields_for :gig, index: venue.id do |gig| %>
+    <%= gig.input venue.name, as: :boolean %>
+    <% end %>
+    <% end %>
+  <%= f.submit %>
+<% end %>

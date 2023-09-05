@@ -7,6 +7,10 @@ class PagesController < ApplicationController
     @venue = Venue.new
     @quizmasters = Quizmaster.all
     @quizmaster = Quizmaster.new
+    @gigs = []
+    @venues.each do |venue|
+      @gigs << Gig.new
+    end
   end
 
   def aboutus
