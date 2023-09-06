@@ -5,10 +5,11 @@ class QuizmastersController < ApplicationController
 
   def create
     @quizmaster = Quizmaster.new(quizmaster_params)
-    if @quizmaster.save
+
+    if @quizmaster.save!
       redirect_to admin_path
     else
-      render :new, status: :unprocessable_entity
+      redirect_to admin_path, status: :unprocessable_entity
     end
   end
 

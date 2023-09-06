@@ -1,11 +1,3 @@
-<%= simple_form_for @quizmaster do |f| %>
-  <%= f.input :name %>
-  <%= f.input :profile %>
-  <%= f.input :photo, as: :file %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
-<% end %>
-
 
 <%= form_for @quizmaster do |form| %>
   <%= form.label :name %>
