@@ -7,15 +7,22 @@
 <% end %>
 
 
-<%= simple_form_for @quizmaster do |f| %>
-  <%= f.input :name %>
-  <%= f.input :profile %>
-  <%= f.input :photo, as: :file %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
+<%= form_for @quizmaster do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :profile %>
+  <%= form.text_field :profile %>
+  <%= form.label :photo %>
+  <%= form.file_field :photo %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
   <% @venues.each do |venue| %>
-    <%= f.simple_fields_for :gig, index: venue.id do |gig| %>
-    <%= gig.input venue.name, as: :boolean %>
-    <% end %>
-    <% end %>
-  <%= f.submit %>
+  <%= form.fields_for :gigs do |gig_fields| %>
+    <div class="form-check">
+      <%= gig_fields.check_box :venue_id, {}, venue.id, nil %>
+      <%= gig_fields.label :venue_id, venue.name, class: "form-check-label" %>
+    </div>
+  <% end %>
+  <% end %>
+  <%= form.submit %>
 <% end %>
