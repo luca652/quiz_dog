@@ -3,9 +3,15 @@ class QuizmastersController < ApplicationController
   def index
   end
 
+  def new
+    @hide_navbar = true
+    @venues = Venue.all
+    @quizmaster = Quizmaster.new
+    @quizmaster.gigs.build
+  end
+
   def create
     @quizmaster = Quizmaster.new(quizmaster_params)
-
     if @quizmaster.save!
       redirect_to admin_path
     else
@@ -15,6 +21,8 @@ class QuizmastersController < ApplicationController
 
   def edit
     @hide_navbar = true
+    @venues = Venue.all
+    # @quizmaster.gigs.build
   end
 
   def update

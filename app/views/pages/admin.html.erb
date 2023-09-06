@@ -29,14 +29,13 @@
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <h2>QUIZMASTERS</h2>
+      <%= link_to "Create a new QUIZMASTER!", new_quizmaster_path %>
       <% @quizmasters.each do |quizmaster| %>
         <h2><%= quizmaster.name %></h2>
         <p><%= quizmaster.profile %></p>
         <%= link_to "Edit", edit_quizmaster_path(quizmaster) %>
         <%= link_to "Delete", quizmaster_path(quizmaster), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
       <% end %>
-
-      <%= render "shared/quizmaster_form", quizmaster: @quizmaster %>
     </div>
   </div>
 </div>
