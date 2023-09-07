@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get "about-us", to: "pages#aboutus"
   get "admin", to: "pages#admin"
   resources :venues
-  resources :quizmasters
+  resources :quizmasters do
+    resources :gigs
+  end
 end

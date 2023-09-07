@@ -8,13 +8,14 @@
   <%= form.file_field :photo %>
   <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <% @venues.each do |venue| %>
-  <%= form.fields_for :gigs do |gig_fields| %>
-    <div class="form-check">
-      <%= gig_fields.check_box :venue_id, {}, venue.id, nil %>
-      <%= gig_fields.label :venue_id, venue.name, class: "form-check-label" %>
-    </div>
-  <% end %>
-  <% end %>
+  <div class="form-group">
+    <%= form.collection_check_boxes :venue_ids, Venue.all, :id, :name do |cb| %>
+      <div class="form-check">
+        <%= cb.check_box %>
+        <%= cb.label %>
+      </div>
+    <% end %>
+  </div>
+
   <%= form.submit %>
 <% end %>

@@ -33,6 +33,9 @@
       <% @quizmasters.each do |quizmaster| %>
         <h2><%= quizmaster.name %></h2>
         <p><%= quizmaster.profile %></p>
+          <% quizmaster.venues.each do |venue| %>
+            <p><%= venue.name %></p>
+          <% end %>
         <%= link_to "Edit", edit_quizmaster_path(quizmaster) %>
         <%= link_to "Delete", quizmaster_path(quizmaster), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
       <% end %>
