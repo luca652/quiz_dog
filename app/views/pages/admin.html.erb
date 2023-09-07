@@ -12,32 +12,34 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <h2>VENUES</h2>
+      <%= link_to "Create a new VENUE!", new_venue_path %>
         <div class="admin-container-cards">
           <% @venues.each do |venue| %>
             <h2><%= venue.name %></h2>
             <p><%= venue.address %></p>
             <p><%= venue.phone_number %></p>
-            <p><%= venue.quizmaster %></p>
             <p><%= venue.day_of_the_week %></p>
             <p><%= venue.time %></p>
-            <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
+            <% if venue.photo.key %>
+              <%= cl_image_tag venue.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
             <%= link_to "Edit", edit_venue_path(venue) %>
             <%= link_to "Delete", venue_path(venue), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
           <% end %>
-          <h2>ADD VENUES</h2>
-          <%= render "shared/venue_form", venue: @venue %>
         </div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <h2>QUIZMASTERS</h2>
+      <%= link_to "Create a new QUIZMASTER!", new_quizmaster_path %>
       <% @quizmasters.each do |quizmaster| %>
         <h2><%= quizmaster.name %></h2>
         <p><%= quizmaster.profile %></p>
+          <% quizmaster.venues.each do |venue| %>
+            <p><%= venue.name %></p>
+          <% end %>
         <%= link_to "Edit", edit_quizmaster_path(quizmaster) %>
         <%= link_to "Delete", quizmaster_path(quizmaster), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
       <% end %>
-
-      <%= render "shared/quizmaster_form", quizmaster: @quizmaster %>
     </div>
   </div>
 </div>

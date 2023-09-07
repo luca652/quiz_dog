@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     @venue = Venue.new
     @quizmasters = Quizmaster.all
     @quizmaster = Quizmaster.new
+    @quizmaster.gigs.build
   end
 
   def aboutus

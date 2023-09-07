@@ -1,7 +1,26 @@
-<%= simple_form_for @quizmaster do |f| %>
-  <%= f.input :name %>
-  <%= f.input :profile %>
-  <%= f.input :photo, as: :file %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
+
+<%= form_for @quizmaster do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :profile %>
+  <%= form.text_area :profile %>
+  <%= form.label :photo %>
+  <%= form.file_field :photo %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="form-group">
+  <%# collection_check_boxes takes four arguments:
+  1. :venue_ids is the attribute of Quizmaster object to which the selected values will be assigned.
+  2. Venue.all retrieves all instances to display in the list
+  3. :id is the value that will be sent to the controller for each of the venues selected
+  4 :name is the value to be displayed on the label %>
+    <%= form.collection_check_boxes :venue_ids, Venue.all, :id, :name do |cb| %>
+      <div class="form-check">
+        <%= cb.check_box %>
+        <%= cb.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= form.submit %>
 <% end %>
