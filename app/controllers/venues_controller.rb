@@ -1,6 +1,10 @@
 class VenuesController < ApplicationController
   before_action :set_venue, only: [:show, :destroy, :edit, :update]
 
+  def new
+    @venue = Venue.new
+  end
+
   def index
     @venues = Venue.all
     @markers = @venues.geocoded.map do |venue|
