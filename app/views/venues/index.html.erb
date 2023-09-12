@@ -3,18 +3,19 @@
 <div class="container-venues-map">
   <div class="cards">
     <% @venues.each do |venue| %>
-      <div class="card-venue">
-        <div class="card-venue-image">
-          <%= cl_image_tag venue.photo.key %>
-        </div>
-        <div class="card-body">
+      <div class="card-category">
+        <%= cl_image_tag venue.photo.key %>
+
+        <div class="card-venue-info">
           <div class="card-body-title">
             <h4><%= venue.name %></h4>
           </div>
-          <p><%= venue.address %></p>
-          <p><%= venue.phone_number %></p>
-          <p><%= venue.day_of_the_week %></p>
-          <p><%= venue.time.strftime('%H:%M') %></p>
+            <div class="card-body-text">
+            <p><%= venue.address %></p>
+            <p><%= venue.phone_number %></p>
+            <p><%= venue.day_of_the_week %></p>
+            <p><%= venue.time.strftime('%H:%M') %></p>
+          </div>
         </div>
       </div>
     <% end %>
