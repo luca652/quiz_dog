@@ -7,7 +7,7 @@ class QuizmastersController < ApplicationController
     @hide_navbar = true
     @quizmaster = Quizmaster.new
     @venues = Venue.all
-    @quizmaster.gigs.build
+    # @quizmaster.gigs.build
   end
 
   def create

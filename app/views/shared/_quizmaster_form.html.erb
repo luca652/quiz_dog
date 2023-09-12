@@ -1,5 +1,6 @@
 
-<%= form_for @quizmaster do |form| %>
+<%= form_with model: @quizmaster, url: (@quizmaster.new_record? ? quizmasters_path : quizmaster_path(@quizmaster)),
+                          method: (@quizmaster.new_record? ? :post : :patch) do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :profile %>
