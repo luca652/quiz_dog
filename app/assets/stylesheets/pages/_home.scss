@@ -5,7 +5,7 @@
 // }
 
 .banner {
-  background-image: url('banner2.png');
+  background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -15,7 +15,7 @@
 
 .logo {
   width: 20rem;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 .header-home-top {
@@ -25,6 +25,12 @@
   width: fit-content;
   padding: 0 20px;
 }
+
+.homepage-body {
+  color: white;
+  font-weight: bold;
+}
+
 
 .home-testimonial-card {
   display: flex;
