@@ -41,9 +41,10 @@
     margin-bottom: 0px;
   }
 
-  i {
-    // color: $quiz-dog-red;
-    margin-left: 5px;
+  img {
+    border: 1px solid $quiz-dog-red;
+    width: 10px;
+    border-radius: 50%;
   }
 }
 
