@@ -5,7 +5,6 @@ class Venue < ApplicationRecord
   belongs_to :user
   belongs_to :quizmaster
   has_one_attached :photo
-  has_many :gigs
 
   validates :name, :address, :time, :day_of_the_week, :phone_number, presence: true
 end
