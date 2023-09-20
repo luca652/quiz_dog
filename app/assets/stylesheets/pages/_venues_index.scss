@@ -1,11 +1,13 @@
 .container-venues-map {
   display: flex;
+  padding: 2.5rem;
 }
 
 #map {
   height: 100vh;
   position: sticky;
   top: 0;
+  margin-left: 2rem;
 }
 .cards {
   display: grid;

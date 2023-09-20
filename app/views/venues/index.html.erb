@@ -3,21 +3,26 @@
 <div class="container-venues-map">
   <div class="cards">
     <% @venues.each do |venue| %>
-      <div class="card-category">
-        <%= cl_image_tag venue.photo.key %>
-
-        <div class="card-venue-info">
-          <div class="card-body-title">
-            <h4><%= venue.name %></h4>
-          </div>
-            <div class="card-body-text">
-            <p><%= venue.address %></p>
-            <p><%= venue.phone_number %></p>
-            <p><%= venue.day_of_the_week %></p>
-            <p><%= venue.time.strftime('%H:%M') %></p>
-          </div>
+    <div class="card-venue-category">
+      <%= cl_image_tag venue.photo.key %>
+      <div class="card-venue-info">
+        <h5><%= venue.name %></h5>
+        <p>hosted by Sergio</p>
+        <div class="card-venue-time">
+          <p><%= venue.day_of_the_week.upcase %> at</p>
+          <p><%= venue.time.strftime('%H:%M') %></p>
         </div>
+        <p>
+          <%# <i class="fa-sharp fa-solid fa-location-dot"></i> %>
+          <%= venue.address.partition(" London ").first%>
+          <%= venue.address.partition(" London ").last%>
+        </p>
+        <p>
+          <%# <i class="fa-solid fa-square-phone"></i> %>
+          <%= venue.phone_number %>
+        </p>
       </div>
+    </div>
     <% end %>
   </div>
 
