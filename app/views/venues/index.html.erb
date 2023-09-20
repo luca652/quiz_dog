@@ -7,7 +7,9 @@
       <%= cl_image_tag venue.photo.key %>
       <div class="card-venue-info">
         <h5><%= venue.name %></h5>
-        <p>hosted by Sergio</p>
+        <p>hosted by <%= venue.quizmaster.name %>
+          <%= cl_image_tag venue.quizmaster.photo.key %>
+        </p>
         <div class="card-venue-time">
           <p><%= venue.day_of_the_week.upcase %> at</p>
           <p><%= venue.time.strftime('%H:%M') %></p>
