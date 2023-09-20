@@ -1,3 +1,19 @@
-// .nav-link {
-//   color: $quiz-dog-red;
-// }
+.admin-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+
+  .card-longer {
+    height: 330px;
+  }
+}
+
+.admin-cards-buttons {
+  display: flex;
+
+  a {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
