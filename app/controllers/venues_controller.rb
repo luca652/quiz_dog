@@ -50,7 +50,7 @@ class VenuesController < ApplicationController
   private
 
   def venue_params
-    params.require(:venue).permit(:name, :address, :phone_number, :user_id, :photo, :time, :quizmaster, :day_of_the_week, quizmaster_ids: [])
+    params.require(:venue).permit(:name, :address, :phone_number, :user_id, :time, :photo, :day_of_the_week, :quizmaster_id)
   end
 
   def set_venue

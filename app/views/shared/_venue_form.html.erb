@@ -1,4 +1,5 @@
-<%= form_with model: @venue do |form| %>
+<%= form_with model: @venue, url: (@venue.new_record? ? venues_path : venue_path(@venue)),
+                          method: (@venue.new_record? ? :post : :patch) do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :address %>
@@ -19,13 +20,13 @@
   2. Venue.all retrieves all instances to display in the list
   3. :id is the value that will be sent to the controller for each of the venues selected
   4 :name is the value to be displayed on the label %>
-    <%= form.collection_check_boxes :quizmaster_ids, Quizmaster.all, :id, :name do |cb| %>
+    <%= form.collection_radio_buttons :quizmaster_id, Quizmaster.all, :id, :name do |cb| %>
       <div class="form-check">
-        <%= cb.check_box %>
+        <%= cb.radio_button %>
         <%= cb.label %>
       </div>
     <% end %>
   </div>
 
-  <%= f.submit %>
+  <%= form.submit %>
 <% end %>
