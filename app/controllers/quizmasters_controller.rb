@@ -21,7 +21,6 @@ class QuizmastersController < ApplicationController
   def edit
     @hide_navbar = true
     @venues = Venue.all
-    # @quizmaster.gigs.build
   end
 
   def update
@@ -33,22 +32,26 @@ class QuizmastersController < ApplicationController
   end
 
   def destroy
+    @venues = @quizmaster.venues
+    reset_default_quizmaster(@venues)
     @quizmaster.destroy
     redirect_to admin_path
   end
 
   private
 
-  # def quizmaster_params
-  #   params.require(:quizmaster).permit(:name, :profile, :user_id, :photo, gigs_attributes: [:id, :venue_id, :_destroy])
-  # end
-
   def quizmaster_params
     params.require(:quizmaster).permit(:name, :profile, :user_id, :photo, :id, :venue_id, venue_ids: [])
   end
 
-
   def set_quizmaster
     @quizmaster = Quizmaster.find(params[:id])
+  end
+
+  def reset_default_quizmaster(venues)
+    venues.each do |venue|
+      venue.quizmaster = Quizmaster.find(38)
+      venue.save
+    end
   end
 end
