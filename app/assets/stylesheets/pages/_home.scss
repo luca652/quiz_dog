@@ -1,8 +1,4 @@
-// Specific CSS for your home-page
-// .container-home-top {
-//   display: flex;
-//   height: 100vh;
-// }
+
 
 .banner {
   background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
@@ -49,4 +45,8 @@
 .carousel {
   width: 60%;
   height: auto;
+}
+
+.prova {
+  font-family: $my-font;
 }

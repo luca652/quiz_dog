@@ -1,35 +1,44 @@
 
 
 <div class="banner">
-  <div class="container">
+  <div class="container homepage-body">
     <div class="row justify-content-center">
       <div class="col-10 d-flex justify-content-center">
-        <%= image_tag("logo.png", class: "logo mb-1 mt-1", alt: "quizmaster logo") %>
+        <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
       </div>
     </div>
-    <div class="homepage-body">
-      <h2>Fancy the funnest challenge you can have in a pub? Fancy winning loads of prizes? Fancy learning something whilst damaging close friendships?</h2>
-      <h2>Sick of the same egg heads winning every week?</h2>
-      <h2>If yes, Quiz Dog has you covered.</h2>
-      <h2>We have venues all across London (and one in America) that blow the rest out of the water.</h2>
-      <h2>Everything’s done on your phone too, because we want to save this planet one sheet of paper at a time! And with our anti-cheating measures, you can’t lose (unless you score fewer points than the other teams)!!!</h2>
-      <h2>Check our venues page to find your closest Quiz Dog event.</h2>
+    <div class="row home-page-buttons justify-content-center mt-3">
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
+        <h5 class="button-quizdog-primary">FIND A QUIZ</h5>
+      </div>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        <h5 class="button-quizdog-primary">START A QUIZ</h5>
+      </div>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        <h5 class="button-quizdog-primary">HOST YOUR OWN</h5>
+      </div>
     </div>
-    <div class="row home-page-buttons">
-      <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+  </div>
+</div>
+
+
+
+
+    <div class="row home-page-buttons justify-content-center mt-3">
+      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
         <h5 class="button-quizdog-primary">PUBS</h5>
       </div>
-      <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
         <h5 class="button-quizdog-primary">CORPORATE</h5>
       </div>
-      <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
         <h5 class="button-quizdog-primary">CHARITY</h5>
       </div>
-      <div class="col-md-3 col-sm-12 d-flex justify-content-center">
+      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
         <h5 class="button-quizdog-primary">PRIVATE EVENTS</h5>
       </div>
-      <div class="col-md-3 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">VIRTUAL</h5>
+      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+        <h5 class="prova button-quizdog-primary">VIRTUAL</h5>
       </div>
     </div>
 
@@ -60,8 +69,7 @@
   </div>
 </div> %>
 
-<h1>Our pubs</h1>
-
+<%# OUR PUBS SECTION %>
 <div class="container-venues-map">
   <div class="cards">
     <% @venues.each do |venue| %>
