@@ -1,11 +1,11 @@
-
+<%#
 
 <div class="banner">
   <div class="container homepage-body">
     <div class="row justify-content-center">
       <div class="col-10 d-flex justify-content-center">
         <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
-      </div>
+      <%# </div>
     </div>
     <div class="row home-page-buttons justify-content-center mt-3">
       <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
@@ -19,49 +19,53 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
 
 
 
-
-    <div class="row home-page-buttons justify-content-center mt-3">
-      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">PUBS</h5>
-      </div>
-      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">CORPORATE</h5>
-      </div>
-      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">CHARITY</h5>
-      </div>
-      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">PRIVATE EVENTS</h5>
-      </div>
-      <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-        <h5 class="prova button-quizdog-primary">VIRTUAL</h5>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
-
+<div class="top">
   <div id="home-page-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item carousel-image bg-img-1 active">
-        <%# <%= image_tag("banner.png", class: "bg-image", alt:"Joe quizzing") %>
+      <div class="carousel-item carousel-image bg-img-1 active"></div>
+      <div class="carousel-item carousel-image bg-img-2"></div>
+      <div class="carousel-item carousel-image bg-img-3"></div>
+    </div>
+    <div class="row home-page-buttons justify-content-center mt-3">
+     <div class="col-10 d-flex justify-content-center">
+      <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
+    </div>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
+        <h5 class="button-quizdog-primary">FIND A QUIZ</h5>
       </div>
-      <div class="carousel-item carousel-image bg-img-2">
-        <%# <%= image_tag("banner1.png", class: "bg-image", alt:"Joe quizzing") %>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        <h5 class="button-quizdog-primary">START A QUIZ</h5>
       </div>
-      <div class="carousel-item carousel-image bg-img-3">
-        <%# <%= image_tag("banner2.png", class: "bg-image", alt: "people quizzing") %>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+        <h5 class="button-quizdog-primary">HOST YOUR OWN</h5>
       </div>
     </div>
   </div>
+</div>
 
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+      <h5 class="button-quizdog-primary">PUBS</h5>
+    </div>
+    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+      <h5 class="button-quizdog-primary">CORPORATE</h5>
+    </div>
+    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+      <h5 class="button-quizdog-primary">CHARITY</h5>
+    </div>
+    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+      <h5 class="button-quizdog-primary">PRIVATE EVENTS</h5>
+    </div>
+    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
+      <h5 class="prova button-quizdog-primary">VIRTUAL</h5>
+    </div>
+  </div>
+</div>
 <%# <div class="row justify-content-evenly bg-success">
   <div class="col-3">
     <div class="home-testimonial-card">
