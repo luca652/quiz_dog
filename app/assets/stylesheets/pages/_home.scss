@@ -1,4 +1,27 @@
 
+// CAROUSEL
+#home-page-carousel {
+  height: 100vh;
+}
+
+.bg-img-1 {
+  background-image: url('banner.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.bg-img-2 {
+  background-image: url('banner1.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.bg-img-3 {
+  background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.carousel-image {
+  height: 100vh;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .banner {
   background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
@@ -41,12 +64,4 @@
   .avatar {
     margin-left: 0.5rem;
   }
-}
-.carousel {
-  width: 60%;
-  height: auto;
-}
-
-.prova {
-  font-family: $my-font;
 }
