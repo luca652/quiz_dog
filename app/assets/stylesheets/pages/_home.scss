@@ -1,4 +1,49 @@
 
+// CAROUSEL
+#home-page-carousel {
+  position: relative;
+  display: flex;
+}
+
+.bg-img-1 {
+  background-image: url('banner.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.bg-img-2 {
+  background-image: url('banner1.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.bg-img-3 {
+  background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.carousel-image {
+  height: 100vh;
+  // background: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 20rem;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // margin: auto;
+}
+
+.home-page-buttons {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  flex-grow: 0;
+  height: 10rem;
+}
 
 .banner {
   background-image: url('banner2.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
@@ -9,10 +54,7 @@
   width: 100%;
 }
 
-.logo {
-  width: 20rem;
-  // padding-top: 1rem;
-}
+
 
 .header-home-top {
   color: white;
@@ -41,12 +83,4 @@
   .avatar {
     margin-left: 0.5rem;
   }
-}
-.carousel {
-  width: 60%;
-  height: auto;
-}
-
-.prova {
-  font-family: $my-font;
 }
