@@ -28,46 +28,53 @@
 <%# QUIZZING SECTION %>
 <div id="quizzing-section" class="d-flex flex-column">
   <h1 class="d-flex justify-content-center">QUIZZING</h1>
-  <%# <div class="container"> %>
+  <div class="container">
     <div class="row quizzing-category-cards gx-0 justify-content-center">
 
-    <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
-      <%= link_to venues_path do %>
-      <%= image_tag("smile.png", class: "card-img-top", alt: "quizmaster in action") %>
-      <div class="card-body">
-        <h5 class="card-title">PUBS</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+        <%= link_to venues_path do %>
+        <%= image_tag("smile.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action")%>
+        <div class="card-img-overlay">
+          <div class="card-title-cont d-flex">
+            <h3 class="card-title text-info text-center font-weight-bold">PUBS</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <% end %>
       </div>
-      <% end %>
+
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+        <%= link_to venues_path do %>
+        <%= image_tag("dog.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action") %>
+        <div class="card-img-overlay">
+          <div class="card-title-cont d-flex">
+            <h3 class="card-title text-info text-center font-weight-bold">CORPORATE</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+        <%= link_to venues_path do %>
+        <%= image_tag("answers.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action") %>
+        <div class="card-img-overlay">
+          <div class="card-title-cont d-flex">
+            <h3 class="card-title text-info text-center font-weight-bold">CHARITY</h3>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <% end %>
+      </div>
+
     </div>
-
-
-
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
-        <%= image_tag("dog.png", class: "card-img-top", alt: "quizmaster in action") %>
-        <div class="card-body">
-          <h5 class="card-title">COPORATE</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
-        <%= image_tag("answers.png", class: "card-img-top", alt: "quizmaster in action") %>
-        <div class="card-body">
-          <h5 class="card-title">CHARITY</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
-        <%= image_tag("banner.png", class: "card-img-top", alt: "quizmaster in action") %>
-        <div class="card-body">
-          <h5 class="card-title">PRIVATE</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-
-    <%# </div> %>
 
     </div>
   </div>
