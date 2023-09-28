@@ -1,29 +1,6 @@
-<%#
 
-<div class="banner">
-  <div class="container homepage-body">
-    <div class="row justify-content-center">
-      <div class="col-10 d-flex justify-content-center">
-        <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
-      <%# </div>
-    </div>
-    <div class="row home-page-buttons justify-content-center mt-3">
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
-        <h5 class="button-quizdog-primary">FIND A QUIZ</h5>
-      </div>
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">START A QUIZ</h5>
-      </div>
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
-        <h5 class="button-quizdog-primary">HOST YOUR OWN</h5>
-      </div>
-    </div>
-  </div>
-</div> %>
-
-
-
-<div class="top">
+<%# CAROUSEL WITH BACKGROUND IMAGES + LOGO AND BUTTONS %>
+<div class="top mb-5">
   <div id="home-page-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item carousel-image bg-img-1 active"></div>
@@ -47,7 +24,59 @@
   </div>
 </div>
 
-<div class="container">
+
+<%# QUIZZING SECTION %>
+<div id="quizzing-section" class="d-flex flex-column">
+  <h1 class="d-flex justify-content-center">QUIZZING</h1>
+  <%# <div class="container"> %>
+    <div class="row quizzing-category-cards gx-0 justify-content-center">
+
+    <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
+      <%= link_to venues_path do %>
+      <%= image_tag("smile.png", class: "card-img-top", alt: "quizmaster in action") %>
+      <div class="card-body">
+        <h5 class="card-title">PUBS</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <% end %>
+    </div>
+
+
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
+        <%= image_tag("dog.png", class: "card-img-top", alt: "quizmaster in action") %>
+        <div class="card-body">
+          <h5 class="card-title">COPORATE</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
+        <%= image_tag("answers.png", class: "card-img-top", alt: "quizmaster in action") %>
+        <div class="card-body">
+          <h5 class="card-title">CHARITY</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12" style="max-width: 18rem;">
+        <%= image_tag("banner.png", class: "card-img-top", alt: "quizmaster in action") %>
+        <div class="card-body">
+          <h5 class="card-title">PRIVATE</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+    <%# </div> %>
+
+    </div>
+  </div>
+</div>
+
+
+
+<%# BUTTONS %>
+<%# <div class="container">
   <div class="row justify-content-center mt-3">
     <div class="col-md-2 col-sm-12 d-flex justify-content-center">
       <h5 class="button-quizdog-primary">PUBS</h5>
@@ -65,7 +94,10 @@
       <h5 class="prova button-quizdog-primary">VIRTUAL</h5>
     </div>
   </div>
-</div>
+</div> %>
+
+
+<%# TESTIMONIALS %>
 <%# <div class="row justify-content-evenly bg-success">
   <div class="col-3">
     <div class="home-testimonial-card">
