@@ -28,16 +28,13 @@
 <%# QUIZZING SECTION %>
 <div id="quizzing-section" class="d-flex flex-column">
   <h1 class="d-flex justify-content-center">QUIZZING</h1>
-  <div class="container">
-    <div class="row quizzing-category-cards gx-0 justify-content-center">
+  <%# <div class="container"> %>
+    <div class="row quizzing-category-cards gx-0 justify-content-evenly">
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
         <%= link_to venues_path do %>
-        <%= image_tag("smile.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action")%>
-        <div class="card-img-overlay">
-          <div class="card-title-cont d-flex">
-            <h3 class="card-title text-info text-center font-weight-bold">PUBS</h3>
-          </div>
+        <div class="quizzing-category-img-1 quizzing-category-image position-relative">
+          <h3 class="card-title text-info font-weight-bold align-self-end">PUBS</h3>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -46,13 +43,10 @@
       </div>
 
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to venues_path do %>
-        <%= image_tag("dog.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action") %>
-        <div class="card-img-overlay">
-          <div class="card-title-cont d-flex">
-            <h3 class="card-title text-info text-center font-weight-bold">CORPORATE</h3>
-          </div>
+        <div class="quizzing-category-img-2 quizzing-category-image position-relative">
+          <h3 class="card-title text-info font-weight-bold align-self-end">CORPORATE</h3>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
@@ -60,13 +54,10 @@
         <% end %>
       </div>
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent" style="width: 22rem;">
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to venues_path do %>
-        <%= image_tag("answers.png", class: "card-img-top quizzing-category-img", alt: "quizmaster in action") %>
-        <div class="card-img-overlay">
-          <div class="card-title-cont d-flex">
-            <h3 class="card-title text-info text-center font-weight-bold">CHARITY</h3>
-          </div>
+        <div class="quizzing-category-img-3 quizzing-category-image position-relative">
+          <h3 class="card-title text-info font-weight-bold align-self-end">CHARITY</h3>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -77,10 +68,23 @@
     </div>
 
     </div>
-  </div>
+  <%# </div> %>
 </div>
 
+<%# KARAOKE SECTION %>
+<div id="karaoke-section" class="d-flex flex-column">
+  <h1 class="d-flex justify-content-center">KARAOKE</h1>
+</div>
 
+<%# WHO WE ARE SECTION %>
+<div id="who-we-are-section" class="d-flex flex-column">
+  <h1 class="d-flex justify-content-center">WHO WE ARE</h1>
+</div>
+
+<%# WHO WE ARE SECTION %>
+<div id="contact-section" class="d-flex flex-column">
+  <h1 class="d-flex justify-content-center">CONTACT QUIZDOG</h1>
+</div>
 
 <%# BUTTONS %>
 <%# <div class="container">
