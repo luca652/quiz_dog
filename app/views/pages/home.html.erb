@@ -26,12 +26,12 @@
 
 
 <%# QUIZZING SECTION %>
-<div id="quizzing-section" class="d-flex mt-5 mb-5 flex-column">
+<div id="quizzing-section" class="d-flex mt-5 mb-5 flex-column container-lg">
   <h1 class="d-flex justify-content-center mb-3">QUIZZING</h1>
-  <div class="container">
+
     <div class="row category-cards gx-0 justify-content-evenly">
 
-      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent d-flex">
+      <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
         <%= link_to venues_path do %>
         <div class="quizzing-category-img-1 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">PUBS</h4>
@@ -43,7 +43,7 @@
       </div>
 
 
-      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+      <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
         <%= link_to corporate_path do %>
         <div class="quizzing-category-img-2 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
@@ -54,7 +54,7 @@
         <% end %>
       </div>
 
-      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+      <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
         <%= link_to charity_path do %>
         <div class="quizzing-category-img-3 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">CHARITY</h4>
@@ -66,19 +66,16 @@
       </div>
 
     </div>
-
-    </div>
   </div>
 </div>
 
 <%# KARAOKE SECTION %>
-<div id="karaoke-section" class="d-flex mt-5 mb-5 flex-column">
+<div id="karaoke-section" class="d-flex mt-5 mb-5 flex-column container-lg">
   <h1 class="d-flex justify-content-center mb-3">KARAOKE</h1>
-  <div class="container">
 
     <div class="row category-cards karaoke-cards gx-0 justify-content-center">
 
-      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent d-flex">
+      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
         <%= link_to corporate_karaoke_path do %>
         <div class="quizzing-category-img-1 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
@@ -90,7 +87,7 @@
       </div>
 
 
-      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
         <%= link_to piano_karaoke_path do %>
         <div class="quizzing-category-img-2 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">PIANO</h4>
@@ -102,7 +99,6 @@
       </div>
 
     </div>
-  </div>
 </div>
 
 <%# WHO WE ARE SECTION %>
