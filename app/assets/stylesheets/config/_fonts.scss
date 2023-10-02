@@ -5,16 +5,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=DM+Sans:wght@700&family=IBM+Plex+Sans&family=Monofett&family=Poppins:wght@200&family=Roboto+Flex:opsz@8..144&family=Zilla+Slab:ital,wght@0,600;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=DM+Sans:wght@700&family=IBM+Plex+Sans&family=Monofett&family=Poppins:wght@200&family=Raleway:wght@700&family=Roboto+Flex:opsz@8..144&family=Zilla+Slab:ital,wght@0,600;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=DM+Sans:wght@700&family=IBM+Plex+Sans&family=Monofett&family=Mulish:wght@500&family=Poppins:wght@200&family=Raleway:wght@700&family=Roboto+Flex:opsz@8..144&family=Zilla+Slab:ital,wght@0,600;1,500&display=swap');
-// Define fonts for body and headers
-$body-font: 'Mulish', sans-serif;
-$headers-font: 'Raleway', sans-serif;
+
 
 // To use a font file (.woff) uncomment following lines
 @font-face {
-  font-family: "Font Name";
+  font-family: "Lovelo-Black";
   src: font-url('Lovelo-Black.eot');
   src: font-url('Lovelo-Black.eot?#iefix') format('embedded-opentype'),
        font-url('Lovelo-Black.woff') format('woff'),
        font-url('Lovelo-Black.ttf') format('truetype')
 }
-$my-font: "Lovelo-Black";
+$lovelo: "Lovelo-Black";
+
+@font-face {
+  font-family: "Nourd";
+  src: font-url('nourd-regular.eot');
+  src: font-url('nourd-regular?#iefix') format('embedded-opentype'),
+       font-url('nourd-regular.woff') format('woff'),
+       font-url('nourd-regular.ttf') format('truetype')
+}
+$nourd: "Nourd";
+
+// Define fonts for body and headers
+$body-font: $nourd;
+$headers-font: $lovelo;
