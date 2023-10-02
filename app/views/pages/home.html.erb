@@ -9,7 +9,7 @@
     </div>
     <div class="row home-page-buttons justify-content-center mt-3">
      <div class="col-10 d-flex justify-content-center">
-      <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
+      <%= image_tag("logo.png", class: "logo mb-3 mt-5 img-fluid", alt: "quizmaster logo") %>
     </div>
       <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
         <h5 class="btn-56"><%= link_to 'FIND A QUIZ', venues_path %></h5>
@@ -29,11 +29,11 @@
 <div id="quizzing-section" class="d-flex mt-5 mb-5 flex-column">
   <h1 class="d-flex justify-content-center mb-3">QUIZZING</h1>
   <div class="container">
-    <div class="row quizzing-category-cards gx-0 justify-content-evenly">
+    <div class="row category-cards gx-0 justify-content-evenly">
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
+      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent d-flex">
         <%= link_to venues_path do %>
-        <div class="quizzing-category-img-1 quizzing-category-image position-relative">
+        <div class="quizzing-category-img-1 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">PUBS</h4>
         </div>
         <div class="card-body">
@@ -43,9 +43,9 @@
       </div>
 
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to corporate_path do %>
-        <div class="quizzing-category-img-2 quizzing-category-image position-relative">
+        <div class="quizzing-category-img-2 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
         </div>
         <div class="card-body">
@@ -54,9 +54,9 @@
         <% end %>
       </div>
 
-      <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to charity_path do %>
-        <div class="quizzing-category-img-3 quizzing-category-image position-relative">
+        <div class="quizzing-category-img-3 category-image position-relative">
           <h4 class="card-title font-weight-bold align-self-end">CHARITY</h4>
         </div>
         <div class="card-body">
@@ -74,34 +74,35 @@
 <%# KARAOKE SECTION %>
 <div id="karaoke-section" class="d-flex mt-5 mb-5 flex-column">
   <h1 class="d-flex justify-content-center mb-3">KARAOKE</h1>
+  <div class="container">
 
-  <div class="row quizzing-category-cards gx-0 justify-content-evenly">
+    <div class="row category-cards karaoke-cards gx-0 justify-content-center">
 
-    <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
-      <%= link_to venues_path do %>
-      <div class="quizzing-category-img-1 quizzing-category-image position-relative">
-        <h3 class="card-title font-weight-bold align-self-end">CORPORATE</h3>
+      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent d-flex">
+        <%= link_to corporate_karaoke_path do %>
+        <div class="quizzing-category-img-1 category-image position-relative">
+          <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <% end %>
       </div>
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+      <div class="card category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+        <%= link_to piano_karaoke_path do %>
+        <div class="quizzing-category-img-2 category-image position-relative">
+          <h4 class="card-title font-weight-bold align-self-end">PIANO</h4>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+        </div>
+        <% end %>
       </div>
-      <% end %>
+
     </div>
-
-
-    <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
-      <%= link_to venues_path do %>
-      <div class="quizzing-category-img-2 quizzing-category-image position-relative">
-        <h3 class="card-title font-weight-bold align-self-end">PIANO</h3>
-      </div>
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
-      </div>
-      <% end %>
-    </div>
-
   </div>
-
 </div>
 
 <%# WHO WE ARE SECTION %>

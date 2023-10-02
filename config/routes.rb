@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "charity", to: "pages#charity"
   get "private", to: "pages#private"
   get "virtual", to: "pages#virtual"
+  get "corporate-karaoke", to: "pages#corporate_karaoke"
+  get "piano-karaoke", to: "pages#piano_karaoke"
 
   resources :venues
   resources :quizmasters

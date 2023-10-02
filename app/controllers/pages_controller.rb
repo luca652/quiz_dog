@@ -33,4 +33,10 @@ class PagesController < ApplicationController
 
   def aboutus
   end
+
+  def corporate_karaoke
+  end
+
+  def piano_karaoke
+  end
 end

@@ -45,17 +45,15 @@
   }
 }
 
-// Quizzing cards
+// Category cards for QUIZZING and KARAOKE
 
-.quizzing-category-cards a {
+.category-cards a {
   text-decoration: none;
   color: black;
   font-weight: lighter;
 }
 
-.quizzing-category-img {
-  border-radius: 5px;
-}
+
 
 .quizzing-category-img-1 {
   background-image: url("smile.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -69,7 +67,11 @@
   background-image: url("answers.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
-.quizzing-category-image {
+.category-img {
+  border-radius: 5px;
+}
+
+.category-image {
   position: relative;
   height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio, adjust as needed */
@@ -89,4 +91,10 @@
   // margin: 0 5px 10px 0;
   border-radius: 5px;
   font-family: $lovelo;
+}
+
+@media (min-width: 768px) {
+  .karaoke-cards {
+    justify-content: space-around;
+  }
 }
