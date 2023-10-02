@@ -12,7 +12,7 @@
       <%= image_tag("logo.png", class: "logo mb-1 mt-5 img-fluid", alt: "quizmaster logo") %>
     </div>
       <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
-        <h5 class="btn-56">FIND A QUIZ</h5>
+        <h5 class="btn-56"><%= link_to 'FIND A QUIZ', venues_path %></h5>
       </div>
       <div class="col-md-12 col-sm-12 d-flex justify-content-center">
         <h5 class="btn-56">START A QUIZ</h5>
@@ -34,7 +34,7 @@
       <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
         <%= link_to venues_path do %>
         <div class="quizzing-category-img-1 quizzing-category-image position-relative">
-          <h3 class="card-title text-info font-weight-bold align-self-end">PUBS</h3>
+          <h4 class="card-title font-weight-bold align-self-end">PUBS</h4>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -46,7 +46,7 @@
       <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to venues_path do %>
         <div class="quizzing-category-img-2 quizzing-category-image position-relative">
-          <h3 class="card-title text-info font-weight-bold align-self-end">CORPORATE</h3>
+          <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
@@ -57,7 +57,7 @@
       <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
         <%= link_to venues_path do %>
         <div class="quizzing-category-img-3 quizzing-category-image position-relative">
-          <h3 class="card-title text-info font-weight-bold align-self-end">CHARITY</h3>
+          <h4 class="card-title font-weight-bold align-self-end">CHARITY</h4>
         </div>
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,6 +74,34 @@
 <%# KARAOKE SECTION %>
 <div id="karaoke-section" class="d-flex flex-column">
   <h1 class="d-flex justify-content-center">KARAOKE</h1>
+
+<div class="row quizzing-category-cards gx-0 justify-content-evenly">
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
+        <%= link_to venues_path do %>
+        <div class="quizzing-category-img-1 quizzing-category-image position-relative">
+          <h3 class="card-title font-weight-bold align-self-end">PUBS</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <% end %>
+      </div>
+
+
+      <div class="card quizzing-category-card m-2 col-lg-3 col-md-3 col-sm-12 border-0 bg-transparent">
+        <%= link_to venues_path do %>
+        <div class="quizzing-category-img-2 quizzing-category-image position-relative">
+          <h3 class="card-title font-weight-bold align-self-end">CORPORATE</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+
 </div>
 
 <%# WHO WE ARE SECTION %>
@@ -85,27 +113,6 @@
 <div id="contact-section" class="d-flex flex-column">
   <h1 class="d-flex justify-content-center">CONTACT QUIZDOG</h1>
 </div>
-
-<%# BUTTONS %>
-<%# <div class="container">
-  <div class="row justify-content-center mt-3">
-    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-      <h5 class="button-quizdog-primary">PUBS</h5>
-    </div>
-    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-      <h5 class="button-quizdog-primary">CORPORATE</h5>
-    </div>
-    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-      <h5 class="button-quizdog-primary">CHARITY</h5>
-    </div>
-    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-      <h5 class="button-quizdog-primary">PRIVATE EVENTS</h5>
-    </div>
-    <div class="col-md-2 col-sm-12 d-flex justify-content-center">
-      <h5 class="prova button-quizdog-primary">VIRTUAL</h5>
-    </div>
-  </div>
-</div> %>
 
 
 <%# TESTIMONIALS %>

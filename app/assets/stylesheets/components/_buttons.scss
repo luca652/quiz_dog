@@ -2,7 +2,6 @@
 .btn-56 {
   appearance: button;
   background-color: $quiz-dog-red;
-  // background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
   box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
@@ -11,8 +10,6 @@
   cursor: pointer;
   display: inline-block;
   font-family: $lovelo;
-  // font-size: 20px;
-  // font-weight: 400;
   line-height: 20px;
   margin: 0 5px 10px 0;
   overflow: visible;
@@ -24,7 +21,7 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  // margin: 1rem auto;
+  text-decoration: none;
 }
 
 .btn-56:focus {

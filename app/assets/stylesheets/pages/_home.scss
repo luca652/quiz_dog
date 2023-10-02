@@ -28,6 +28,7 @@
   width: 20rem;
 }
 
+// three buttons over carousel
 .home-page-buttons {
   position: absolute;
   top: 0;
@@ -37,20 +38,14 @@
   margin: auto;
   flex-grow: 0;
   height: 10rem;
+
+  a {
+    text-decoration: none;
+    color: #ffff;
+  }
 }
 
-.header-home-top {
-  color: white;
-  border: 4px solid white;
-  font-size: 3rem;
-  width: fit-content;
-  padding: 0 20px;
-}
-
-.homepage-body {
-  color: white;
-  font-weight: bold;
-}
+// Quizzing cards
 
 .quizzing-category-cards a {
   text-decoration: none;
@@ -89,4 +84,9 @@
 .card-title {
   position: absolute;
   bottom: 10px; /* Adjust as needed for your desired vertical position */
+  padding: 5px 10px 0px;
+  background-color: $yellow;
+  // margin: 0 5px 10px 0;
+  border-radius: 5px;
+  font-family: $lovelo;
 }
