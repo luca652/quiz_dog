@@ -13,6 +13,30 @@ class PagesController < ApplicationController
     @quizmaster = Quizmaster.new
   end
 
+  def host_your_own
+  end
+
+  def start_a_quiz
+  end
+
+  def corporate
+  end
+
+  def charity
+  end
+
+  def private
+  end
+
+  def virtual
+  end
+
   def aboutus
+  end
+
+  def corporate_karaoke
+  end
+
+  def piano_karaoke
   end
 end
