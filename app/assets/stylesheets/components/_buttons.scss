@@ -1,8 +1,8 @@
 
-.button-quizdog-primary {
+.btn-56 {
   appearance: button;
   background-color: $quiz-dog-red;
-  background-image: none;
+  // background-image: none;
   border: 1px solid #000;
   border-radius: 4px;
   box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
@@ -10,14 +10,13 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Lovelo-Black";
-  font-size: 20px;
-  font-weight: 400;
+  font-family: $lovelo;
+  // font-size: 20px;
+  // font-weight: 400;
   line-height: 20px;
-  // width: 250px;
   margin: 0 5px 10px 0;
   overflow: visible;
-  padding: 12px 40px;
+  padding: 14px 40px 10px;
   text-align: center;
   text-transform: none;
   touch-action: manipulation;
@@ -25,85 +24,35 @@
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  margin: 1rem auto;
+  // margin: 1rem auto;
 }
 
-.button-quizdog-primary:focus {
+.btn-56:focus {
   text-decoration: none;
 }
 
-.button-quizdog-primary:hover {
+.btn-56:hover {
   text-decoration: none;
 }
 
-.button-quizdog-primary:active {
+.btn-56:active {
   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
   outline: 0;
 }
 
-.button-quizdog-primary:not([disabled]):active {
+.btn-56:not([disabled]):active {
   box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
   transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  .button-quizdog-primary {
-    padding: 12px 50px;
+  .btn-56 {
+    padding: 14px 50px 10px;
   }
 }
 
 
-.button-quizdog-secondary {
-  appearance: button;
-  background-color: white;
-  background-image: none;
-  border: 1px solid #000;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  // font-family: 'Poppins',Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 0 5px 10px 0;
-  overflow: visible;
-  padding: 12px 40px;
-  text-align: center;
-  text-transform: none;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  margin: 0 auto;
-}
 
-.button-quizdog-secondary:focus {
-  text-decoration: none;
-}
-
-.button-quizdog-secondary:hover {
-  text-decoration: none;
-}
-
-.button-quizdog-secondary:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
-}
-
-.button-quizdog-secondary:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button-quizdog-secondary {
-    padding: 12px 50px;
-  }
-}
 
 .button-navbar {
   appearance: button;

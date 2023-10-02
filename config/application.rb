@@ -12,6 +12,8 @@ module Quizdog
       generate.assets false
       generate.helper false
       generate.test_framework :test_unit, fixture: false
+      # added this line so that rails finds fonts folder in assets pipeline
+      config.assets.paths << Rails.root.join("app", "assets", "fonts")
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
