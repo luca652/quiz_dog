@@ -1,5 +1,6 @@
 class QuizmastersController < ApplicationController
   before_action :set_quizmaster, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
   def index
   end
 

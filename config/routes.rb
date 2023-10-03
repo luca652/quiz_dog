@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   get "piano-karaoke", to: "pages#piano_karaoke"
 
   resources :venues
-  resources :quizmasters
+  resources :quizmasters, except: [:index, :show]
 end

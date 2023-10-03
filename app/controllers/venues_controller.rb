@@ -1,5 +1,6 @@
 class VenuesController < ApplicationController
   before_action :set_venue, only: [:show, :destroy, :edit, :update]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @venue = Venue.new
