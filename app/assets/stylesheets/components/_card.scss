@@ -4,7 +4,7 @@
   padding-top: 100px;
 }
 
-.card-venue-category {
+.card-venue {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,47 +16,36 @@
   overflow: hidden;
 }
 
-.card-venue-category img {
+.card-venue img {
   height: 50%;
   width: 100%;
   object-fit: cover;
+  position: relative;
 }
 
+
+.card-venue-title {
+  align-items: center;
+  position: absolute;
+  margin-top: 0.5rem;
+
+
+  h6 {
+    background-color: $yellow;
+    padding: 5px 10px 0px;
+    border-radius: 5px;
+  }
+}
 
 .card-venue-info {
-  width: 95%;
-  align-items: center;
-  padding: 10px 5px;
-  font-weight: bold;
-
-  h5 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    padding: 0;
-    margin-bottom: 0rem;
-  }
-
-  p {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 0px;
-  }
-
-  img {
-    border: 1px solid $quiz-dog-red;
-    width: 10px;
-    border-radius: 50%;
-  }
-}
-
-.card-venue-time {
-  margin-top: 0.2rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  border-top: 1px solid rgb(189, 189, 189);
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-.card-venue-time p {
+.card-venue-info p {
   margin: 0px;
   margin-left: 2px;
   display: flex;
