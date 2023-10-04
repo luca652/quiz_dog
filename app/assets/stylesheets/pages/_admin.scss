@@ -3,17 +3,25 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
-
-  .card-longer {
-    height: 330px;
-  }
 }
 
-.admin-cards-buttons {
-  display: flex;
+.admin-card-venue {
+  // position: relative;
+  margin-bottom: 5px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // text-align: center;
+  // width: 300px;
+  // border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  // overflow: hidden;
+  // margin-bottom: 2rem;
+  // height: 330px;
+}
 
-  a {
-    display: flex;
-    justify-content: space-evenly;
-  }
+.admin-card-buttons {
+  // position: absolute;
+  width: 300px;
+  margin-bottom: 2rem;
 }
