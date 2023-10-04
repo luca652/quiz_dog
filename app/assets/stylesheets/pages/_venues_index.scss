@@ -1,3 +1,26 @@
+.banner-container {
+  position: relative;
+}
+
+.punters-text-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  flex-grow: 0;
+
+}
+
+.banner-image-venues {
+  background-image: url('banner1.png'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  // position: relative;
+}
+
 .container-venues-map {
   display: flex;
   padding: 2.5rem;
@@ -5,15 +28,16 @@
 
 #map {
   height: 100vh;
-  position: sticky;
+  width: 70%;
+  height: 300px;
+  border-radius: 5px;
   top: 0;
-  margin-left: 2rem;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  column-gap: 3rem;
   flex-grow: 1;
 }
 
@@ -49,14 +73,43 @@
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+//   }
+// }
+
+
+.category-img {
+  border-radius: 5px;
+}
+
+.category-image {
+  position: relative;
+  // height: 0;
+  padding-bottom: 56.25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  img {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    height: 200px;
   }
 }
 
-
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px 10px 0px;
+  background-color: $yellow;
+  // margin: 0 5px 10px 0;
+  border-radius: 5px;
+  font-family: $lovelo;
+}
 
 
 
