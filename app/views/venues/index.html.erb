@@ -1,52 +1,51 @@
-<div class="container">
-  <p>Fancy the funnest challenge you can have in a pub? Fancy winning loads of prizes? Fancy learning something whilst damaging close friendships?
-  Sick of the same egg heads winning every week?
-  If yes, Quiz Dog has you covered.
-  We have venues all across London (and one in America) that blow the rest out of the water.
-  Everything’s done on your phone too, because we want to save this planet one sheet of paper at a time! And with our anti-cheating measures, you can’t lose (unless you score fewer points than the other teams)!!!
-  Check our venues page to find your closest Quiz Dog event.
-  Fancy the funnest challenge you can have in a pub? Fancy winning loads of prizes? Fancy learning something whilst damaging close friendships?
-  Sick of the same egg heads winning every week?
-  If yes, Quiz Dog has you covered.
-  We have venues all across London (and one in America) that blow the rest out of the water.
-  Everything’s done on your phone too, because we want to save this planet one sheet of paper at a time! And with our anti-cheating measures, you can’t lose (unless you score fewer points than the other teams)!!!
-  Check our venues page to find your closest Quiz Dog event.
-  <p>
-</div>
-
-<div class="container container-venues-map">
-  <div class="cards">
-    <% @venues.each do |venue| %>
-    <div class="card-venue-category">
-      <% if venue.photo %>
-      <%= cl_image_tag venue.photo.key %>
-      <% end %>
-      <div class="card-venue-info">
-        <h5><%= venue.name %></h5>
-        <p>hosted by <%= link_to venue.quizmaster.name, quizmaster_path(venue.quizmaster) %>
-          <%# <%= cl_image_tag venue.quizmaster.photo.key %>
-        </p>
-        <div class="card-venue-time">
-          <p><%= venue.day_of_the_week.upcase %> at</p>
-          <p><%= venue.time.strftime('%H:%M') %></p>
-        </div>
-        <p>
-          <%# <i class="fa-sharp fa-solid fa-location-dot"></i> %>
-          <%= venue.address.partition(" London ").first%>
-          <%= venue.address.partition(" London ").last%>
-        </p>
-        <p>
-          <%# <i class="fa-solid fa-square-phone"></i> %>
-          <%= venue.phone_number %>
-        </p>
+<%# top section with banner and punters text %>
+<div class="banner-container">
+  <div class="banner-image-venues"></div>
+  <div class="container-lg d-flex justify-content-center">
+    <div class="punters-text-overlay col-lg-8 col-md-8 col-sm-12 d-flex flex-column">
+      <h1 class="d-flex justify-content-center mt-5 mb-3">COME QUIZ WITH US</h1>
+      <div class="text-bubble">
+        <p class="d-flex align-items-center">Fancy the funnest challenge you can have in a pub? Fancy winning loads of prizes? Fancy learning something whilst damaging close friendships?</p>
+        <p class="d-flex align-items-center">Sick of the same egg heads winning every week?</p>
+        <p class="d-flex align-items-center"> If yes, Quiz Dog has you covered.</p>
+        <p class="d-flex align-items-center"> We have venues all across London (and one in America) that blow the rest out of the water.</p>
+        <p class="d-flex align-items-center">Everything’s done on your phone too, because we want to save this planet one sheet of paper at a time! And with our anti-cheating measures, you can’t lose (unless you score fewer points than the other teams)!!!</p>
+        <p class="d-flex align-items-center mb-0">Check our venues page to find your closest Quiz Dog event.</p>
       </div>
     </div>
-    <% end %>
+  </div>
+</div>
+
+<%# MAP and VENUE CARDS %>
+<div class="container-xl d-flex flex-column align-items-center">
+  <h1 class="d-flex justify-content-center mt-5 mb-3">OUR PUBS</h1>
+    <div id="map" class="mb-4"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  <div class="container-venues-map d-flex pt-2 pl-3 pr-3 pb-3">
+
+    <div class="cards">
+      <% @venues.each do |venue| %>
+      <div class="card-venue">
+        <% if venue.photo %>
+        <%= cl_image_tag venue.photo.key %>
+        <% end %>
+        <div class="card-venue-title">
+          <h6><%= venue.name %></h6>
+        </div>
+            <%# <%= cl_image_tag venue.quizmaster.photo.key %>
+        <div class="card-venue-info">
+          <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
+          <%# <p class="venue-hosted-by">hosted by <%= link_to venue.quizmaster.name, quizmaster_path(venue.quizmaster) %> </p>
+          <p class="venue-address"> <%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
+          <p class="venue-phone-number"><%= venue.phone_number %></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 
-  <div id="map" style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+
 </div>

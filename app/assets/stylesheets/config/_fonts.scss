@@ -22,7 +22,19 @@ $lovelo: "Lovelo-Black";
   src: font-url('nourd-regular.eot');
   src: font-url('nourd-regular?#iefix') format('embedded-opentype'),
        font-url('nourd-regular.woff') format('woff'),
-       font-url('nourd-regular.ttf') format('truetype')
+       font-url('nourd-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nourd";
+  src: font-url('nourd-bold.eot');
+  src: font-url('nourd-bold?#iefix') format('embedded-opentype'),
+       font-url('nourd-bold.woff') format('woff'),
+       font-url('nourd-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
 }
 $nourd: "Nourd";
 

@@ -4,59 +4,63 @@
   padding-top: 100px;
 }
 
-.card-venue-category {
+.card-venue {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 260px;
-  height: 285px;
+  width: 300px;
+  height: 240px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 
-.card-venue-category img {
-  height: 50%;
+.card-venue img {
+  height: 65%;
   width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   object-fit: cover;
+  position: relative;
 }
 
+
+.card-venue-title {
+  align-items: center;
+  position: absolute;
+  margin-top: 120px;
+
+
+  h6 {
+    background-color: $yellow;
+    padding: 5px 10px 0px;
+    border-radius: 5px;
+  }
+}
 
 .card-venue-info {
-  width: 95%;
-  align-items: center;
-  padding: 10px 5px;
-  font-weight: bold;
-
-  h5 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    padding: 0;
-    margin-bottom: 0rem;
-  }
-
-  p {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 0px;
-  }
-
-  img {
-    border: 1px solid $quiz-dog-red;
-    width: 10px;
-    border-radius: 50%;
-  }
-}
-
-.card-venue-time {
-  margin-top: 0.2rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  border-top: 1px solid rgb(189, 189, 189);
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+
+  .venue-day-time {
+    font-weight: bold;
+  }
+  .venue-address {
+    font-size: small;
+    color: grey;
+  }
+
+  .venue-phone-number {
+    font-size: small;
+    color: grey;
+  }
 }
 
-.card-venue-time p {
+.card-venue-info p {
   margin: 0px;
   margin-left: 2px;
   display: flex;

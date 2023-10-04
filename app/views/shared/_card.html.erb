@@ -1,20 +1,26 @@
-<div class="card-venue-category">
-  <%= cl_image_tag @venue.photo.key %>
-  <div class="card-venue-info">
-    <h5><%= @venue.name %></h5>
-    <p>hosted by Sergio</p>
-    <div class="card-venue-time">
-      <p><%= @venue.day_of_the_week.upcase %> at</p>
-      <p><%= @venue.time.strftime('%H:%M') %></p>
+< <div class="cards">
+      <% @venues.each do |venue| %>
+      <div class="card-venue">
+        <% if venue.photo %>
+        <%= cl_image_tag venue.photo.key %>
+        <% end %>
+        <div class="card-venue-title">
+          <h6><%= venue.name %></h6>
+        </div>
+            <%# <%= cl_image_tag venue.quizmaster.photo.key %>
+        <div class="card-venue-info">
+          <p class="fw-bold"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
+          <p>hosted by <%= link_to venue.quizmaster.name, quizmaster_path(venue.quizmaster) %> </p>
+          <p>
+            <%# <i class="fa-sharp fa-solid fa-location-dot"></i> %>
+            <%= venue.address.partition(" London ").first%>
+            <%= venue.address.partition(" London ").last%>
+          </p>
+          <p>
+            <%# <i class="fa-solid fa-square-phone"></i> %>
+            <%= venue.phone_number %>
+          </p>
+        </div>
+      </div>
+      <% end %>
     </div>
-    <p>
-      <i class="fa-sharp fa-solid fa-location-dot"></i>
-      <%= @venue.address.partition(" London ").first%>
-      <%= @venue.address.partition(" London ").last%>
-    </p>
-    <p>
-      <i class="fa-solid fa-square-phone"></i>
-      <%= @venue.phone_number %>
-    </p>
-  </div>
-</div>
