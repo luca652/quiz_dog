@@ -1,19 +1,18 @@
-.admin-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  flex-grow: 1;
-
-  .card-longer {
-    height: 330px;
-  }
+.admin-card-venue {
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .admin-cards-buttons {
   display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-top: -2rem;
+  position: absolute;
 
   a {
     display: flex;
     justify-content: space-evenly;
+    margin: 5px;
   }
 }
