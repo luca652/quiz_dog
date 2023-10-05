@@ -1,39 +1,41 @@
 
 <div class="container">
-  <h1>QUIZDOG - ADMIN</h1>
-  <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+  <div class="d-flex align-items-center w-100">
+    <h1>ADMIN</h1>
+    <%= link_to "Log out", destroy_user_session_path, class: "pl-3", data: {turbo_method: :delete} %>
+  </div>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Venues</button>
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><h6>Venues</h6></button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Quizmasters</button>
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><h6>Quizmasters</h6></button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <%= link_to "Create a new VENUE!", new_venue_path %>
-        <div class="cards">
-          <% @venues.each do |venue| %>
-          <div class="admin-card-venue">
-            <div class="card-venue">
-              <%= cl_image_tag venue.photo.key %>
-              <div class="card-venue-title">
-                <h6><%= venue.name %></h6>
-              </div>
-              <div class="card-venue-info">
-                <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
-                <p class="venue-address"><%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
-                <p class="venue-phone-number"><%= venue.phone_number %></p>
-              </div>
+      <%= link_to "Create a new VENUE!", new_venue_path, class: "btn btn-success btn-create-venue" %>
+      <div class="cards">
+        <% @venues.each do |venue| %>
+        <div class="admin-card-venue">
+          <div class="card-venue">
+            <%= cl_image_tag venue.photo.key %>
+            <div class="card-venue-title">
+              <h6><%= venue.name %></h6>
             </div>
-            <div class="admin-cards-buttons">
-              <%= link_to "Edit", edit_venue_path(venue), class: "btn btn-primary"%>
-              <%= link_to "Delete", venue_path(venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+            <div class="card-venue-info">
+              <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
+              <p class="venue-address"><%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
+              <p class="venue-phone-number"><%= venue.phone_number %></p>
             </div>
           </div>
-          <% end %>
+          <div class="admin-cards-buttons">
+            <%= link_to "Edit", edit_venue_path(venue), class: "btn btn-primary"%>
+            <%= link_to "Delete", venue_path(venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+          </div>
         </div>
+        <% end %>
+      </div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <h2>QUIZMASTERS</h2>
