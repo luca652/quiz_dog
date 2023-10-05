@@ -1,9 +1,8 @@
 
 <div class="container">
-  <div class="d-flex align-items-center w-100">
-    <h1>ADMIN</h1>
-    <%= link_to "Log out", destroy_user_session_path, class: "pl-3", data: {turbo_method: :delete} %>
-  </div>
+  <h1 class="d-flex justify-content-center mb-1">QUIZDOG ADMIN</h1>
+  <%= link_to "Log out", destroy_user_session_path, class: "d-flex justify-content-center", data: {turbo_method: :delete} %>
+  <%# VENUES TAB SECTION %>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><h6>Venues</h6></button>
@@ -14,7 +13,8 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <%= link_to "Create a new VENUE!", new_venue_path, class: "btn btn-success btn-create-venue" %>
+      <%= link_to "Create a new VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
+      <%# VENUE CARDS %>
       <div class="cards">
         <% @venues.each do |venue| %>
         <div class="admin-card-venue">
@@ -37,18 +37,29 @@
         <% end %>
       </div>
     </div>
+
+    <%# QUIZMASTER TAB %>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <h2>QUIZMASTERS</h2>
-      <%= link_to "Create a new QUIZMASTER!", new_quizmaster_path %>
-      <% @quizmasters.each do |quizmaster| %>
-        <h2><%= quizmaster.name %></h2>
-        <p><%= quizmaster.profile %></p>
-          <% quizmaster.venues.each do |venue| %>
-            <p><%= venue.name %></p>
-          <% end %>
-        <%= link_to "Edit", edit_quizmaster_path(quizmaster) %>
-        <%= link_to "Delete", quizmaster_path(quizmaster), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-      <% end %>
+      <%= link_to "Create a new QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
+      <%# Quizmaster Cards %>
+      <div class="cards">
+        <% @quizmasters.each do |quizmaster| %>
+        <div class="admin-card-quizmaster">
+          <div class="card-quizmaster">
+            <h2><%= quizmaster.name %></h2>
+            <%= cl_image_tag quizmaster.photo.key %>
+            <p><%= quizmaster.profile %></p>
+            <% quizmaster.venues.each do |venue| %>
+              <p><%= venue.name %></p>
+            <% end %>
+          </div>
+          <div class="admin-cards-buttons">
+            <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
+            <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
