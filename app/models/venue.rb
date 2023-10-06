@@ -6,5 +6,5 @@ class Venue < ApplicationRecord
   belongs_to :quizmaster
   has_one_attached :photo
 
-  validates :name, :address, :time, :day_of_the_week, :phone_number, :photo, :quizmaster_id, presence: true
+  validates :name, :address, :time, :photo, :day_of_the_week, :phone_number, presence: true
 end
