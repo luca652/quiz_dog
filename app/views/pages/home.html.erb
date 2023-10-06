@@ -106,7 +106,7 @@
   <h1 class="d-flex justify-content-center">WHO WE ARE</h1>
 
   <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column">
-    <h4 class="d-flex justify-content-center">JOE AND DOGS</h4>
+    <h2 class="d-flex justify-content-center">JOE AND DOGS</h2>
     <div class="text-bubble">
       <p class="d-flex justify-content-center"> Quiz Dog was founded in 2019 (a historically brilliant year to start any business) after Joe had worked for many years in the industry. We wanted to do things differently. Focussing on fun, sustainability, and dynamic hosting. </p>
       <p>Starting in Peckham and Deptford, we now span across the capital (and even have an event in the USA). Our goal is to expand across the country and beyond, providing the best quizzing event it’s possible to have.</p>
@@ -115,9 +115,19 @@
   </div>
 
   <%# (link to Instagram here) %>
-</div>
 
-<h4 class="d-flex justify-content-center">OUR HOSTS</h4>
+  <h2 class="mt-5 mb-3">OUR HOSTS</h1>
+  <%# Quizmaster Cards %>
+  <div class="cards">
+    <% @quizmasters.each do |quizmaster| %>
+    <div class="quizmaster-card">
+      <%= cl_image_tag quizmaster.photo.key %>
+      <h4><%= quizmaster.name %></h4>
+      <p><%= quizmaster.profile %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 <h1>SUSTAINABILITY</h1>
 <h4>Carbon Footprintp</h4>

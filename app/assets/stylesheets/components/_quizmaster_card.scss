@@ -1,0 +1,24 @@
+.quizmaster-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  img {
+    width: 150px;
+  }
+
+  > h4 {
+    background-color: black;
+    color: #ffff;
+    padding: 5px 10px 0px;
+    border-radius: 5px;
+    margin-top: -10px;
+    text-align: justify;
+  }
+
+  > p {
+    width: 60%;
+    text-align: justify;
+  }
+}

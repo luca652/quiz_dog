@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @venues = Venue.all
+    @quizmasters = Quizmaster.all
   end
 
   def admin

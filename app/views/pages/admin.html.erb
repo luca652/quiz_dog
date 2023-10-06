@@ -46,8 +46,10 @@
         <% @quizmasters.each do |quizmaster| %>
         <div class="admin-card-quizmaster">
           <div class="card-quizmaster">
-            <h2><%= quizmaster.name %></h2>
+            <h4><%= quizmaster.name %></h4>
+            <% if quizmaster.photo.key %>
             <%= cl_image_tag quizmaster.photo.key %>
+            <% end %>
             <p><%= quizmaster.profile %></p>
             <% quizmaster.venues.each do |venue| %>
               <p><%= venue.name %></p>
