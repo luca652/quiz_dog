@@ -11,7 +11,8 @@ class QuizmastersController < ApplicationController
 
   def create
     @quizmaster = Quizmaster.new(quizmaster_params)
-    if @quizmaster.save
+
+    if @quizmaster.save!
       redirect_to admin_path
     else
       puts "Quizmaster Errors: #{@quizmaster.errors.full_messages.join(', ')}"
