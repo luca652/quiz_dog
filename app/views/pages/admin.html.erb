@@ -14,8 +14,8 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      
-      <%= link_to "Create a new VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
+
+      <%= link_to "Create a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
       <%# VENUE CARDS %>
       <div class="cards">
         <% @venues.each do |venue| %>
@@ -42,20 +42,22 @@
 
     <%# QUIZMASTER TAB %>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <%= link_to "Create a new QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
+      <%= link_to "Create a QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
       <%# Quizmaster Cards %>
       <div class="cards">
         <% @quizmasters.each do |quizmaster| %>
         <div class="admin-card-quizmaster">
-          <div class="card-quizmaster">
-            <h4><%= quizmaster.name %></h4>
+          <div class="quizmaster-card">
             <% if quizmaster.photo.key %>
             <%= cl_image_tag quizmaster.photo.key %>
             <% end %>
+            <h4><%= quizmaster.name %></h4>
             <p><%= quizmaster.profile %></p>
-            <% quizmaster.venues.each do |venue| %>
-              <p><%= venue.name %></p>
-            <% end %>
+            <div class="quizmaster-venues">
+              <% quizmaster.venues.each do |venue| %>
+                <p><%= venue.name %></p>
+              <% end %>
+            </div>
           </div>
           <div class="admin-cards-buttons">
             <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>

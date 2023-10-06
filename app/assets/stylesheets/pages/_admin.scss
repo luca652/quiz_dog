@@ -1,4 +1,6 @@
+// EXTRA STYLINGS FOR CARDS ON THE ADMIN PAGE
 
+// VENUE CARDS
 .admin-card-venue {
   position: relative;
   margin-bottom: 1.5rem;
@@ -17,8 +19,18 @@
     justify-content: space-evenly;
     margin: 5px;
   }
-
-.btn-create {
-  margin: 10px 0;
 }
+
+
+// QUIZMASTER CARDS
+
+.quizmaster-venues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: small;
+
+  > p {
+    display: flex;
+    justify-content: center;
+  }
 }
