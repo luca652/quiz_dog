@@ -14,6 +14,8 @@ class QuizmastersController < ApplicationController
     if @quizmaster.save
       redirect_to admin_path
     else
+      puts "Quizmaster Errors: #{@quizmaster.errors.full_messages.join(', ')}"
+      puts "Venue Errors: #{@quizmaster.venues.map { |venue| venue.errors.full_messages }.flatten}"
       redirect_to admin_path, status: :unprocessable_entity
     end
   end
@@ -41,7 +43,7 @@ class QuizmastersController < ApplicationController
   private
 
   def quizmaster_params
-    params.require(:quizmaster).permit(:name, :profile, :user_id, :photo, :id, :venue_id, venue_ids: [])
+    params.require(:quizmaster).permit(:name, :profile, :user_id, :photo, venue_ids: [])
   end
 
   def set_quizmaster
