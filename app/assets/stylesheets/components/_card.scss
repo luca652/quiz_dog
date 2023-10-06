@@ -50,20 +50,19 @@
   .venue-day-time {
     font-weight: bold;
   }
-  .venue-address {
-    font-size: small;
-    color: grey;
-  }
-
-  .venue-phone-number {
-    font-size: small;
-    color: grey;
-  }
 }
+
+.card-venue-info .venue-address,
+.card-venue-info .venue-phone-number,
+.card-venue-info .venue-hosted-by {
+  font-size: small;
+  color: grey;
+}
+
 
 .card-venue-info p {
   margin: 0px;
-  margin-left: 2px;
+  // margin-left: 2px;
   display: flex;
   align-items: center;
 }
