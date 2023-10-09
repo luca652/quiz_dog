@@ -48,15 +48,14 @@
       <%# Quizmaster Cards %>
       <div class="cards">
         <% @quizmasters.each do |quizmaster| %>
-        <div class="admin-card-quizmaster">
           <div class="quizmaster-card">
             <% if quizmaster.photo.key %>
             <%= cl_image_tag quizmaster.photo.key %>
             <% end %>
             <h4><%= quizmaster.name %></h4>
             <p><%= quizmaster.profile %></p>
-              <h6><%= quizmaster.name %>'s PUBS</h6>
             <div class="quizmaster-venues">
+              <h6><%= quizmaster.name %>'s PUBS</h6>
               <% if quizmaster.venues.empty? %>
                 <p>No pubs yet</p>
               <% else %>
@@ -70,8 +69,6 @@
               <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
             </div>
           </div>
-
-        </div>
         <% end %>
       </div>
     </div>
