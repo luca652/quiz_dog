@@ -48,7 +48,6 @@
       <%# Quizmaster Cards %>
       <div class="cards">
         <% @quizmasters.each do |quizmaster| %>
-        <div class="admin-card-quizmaster">
           <div class="quizmaster-card">
             <% if quizmaster.photo.key %>
             <%= cl_image_tag quizmaster.photo.key %>
@@ -56,16 +55,20 @@
             <h4><%= quizmaster.name %></h4>
             <p><%= quizmaster.profile %></p>
             <div class="quizmaster-venues">
-              <% quizmaster.venues.each do |venue| %>
-                <p><%= venue.name %></p>
+              <h6><%= quizmaster.name %>'s PUBS</h6>
+              <% if quizmaster.venues.empty? %>
+                <p>No pubs yet</p>
+              <% else %>
+                <% quizmaster.venues.each do |venue| %>
+                  <p><%= venue.name %></p>
+                <% end %>
               <% end %>
             </div>
+            <div class="admin-quizmaster-buttons">
+              <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
+              <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+            </div>
           </div>
-          <div class="admin-cards-buttons">
-            <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
-            <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-          </div>
-        </div>
         <% end %>
       </div>
     </div>
