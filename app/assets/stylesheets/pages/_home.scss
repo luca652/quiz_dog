@@ -1,5 +1,5 @@
 
-// CAROUSEL
+// CAROUSEL LANDING PAGE
 #home-page-carousel {
   position: relative;
   display: flex;
@@ -47,6 +47,11 @@
 
 // Category cards for QUIZZING and KARAOKE
 
+.carousel-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+ }
 .category-cards a {
   text-decoration: none;
   color: black;
@@ -64,6 +69,15 @@
 .quizzing-category-img-3 {
   background-image: url("answers.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
+
+.quizzing-category-img-4 {
+  background-image: url("finger.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.quizzing-category-img-5 {
+  background-image: url("banner2.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
 
 .category-img {
   border-radius: 5px;
