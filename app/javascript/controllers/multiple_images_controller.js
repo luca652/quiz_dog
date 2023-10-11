@@ -12,7 +12,7 @@ export default class extends Controller {
     elements.forEach((el) => {
       const minPerSlide = 3
       let next = el.nextElementSibling
-      for (let i = 0; i < 2; i++) {
+      for (let i=1; i<minPerSlide; i++) {
           if (!next) {
               // wrap carousel by using first child
             next = elements[0]
@@ -21,6 +21,18 @@ export default class extends Controller {
           el.appendChild(cloneChild.children[0])
           next = next.nextElementSibling
       }
-  })
+    })
   }
 }
+
+
+// elements.forEach((el) => {
+// console.log("this is the element: ", el)
+// let nextFirst = (elements.indexOf(el) + 1)
+// console.log("this is the index n of nextFirst: ", nextFirst)
+// let nextSecond = (elements.indexOf(el) + 2)
+// console.log("this is elements[nextFirst]: ", elements[nextFirst])
+
+// el.append(elements[nextFirst]);
+
+// })
