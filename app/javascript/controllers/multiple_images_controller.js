@@ -6,13 +6,13 @@ export default class extends Controller {
 
   connect() {
     console.log("Connected!");
-    let elements = [this.card1Target, this.card2Target, this.card3Target];
+    let elements = [this.card1Target, this.card2Target, this.card3Target, this.card4Target, this.card5Target];
     console.log(elements);
 
     elements.forEach((el) => {
-      const minPerSlide = 4
+      const minPerSlide = 3
       let next = el.nextElementSibling
-      for (var i=1; i<minPerSlide; i++) {
+      for (let i = 0; i < 2; i++) {
           if (!next) {
               // wrap carousel by using first child
             next = elements[0]

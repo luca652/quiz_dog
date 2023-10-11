@@ -28,12 +28,7 @@
 <%# QUIZZING SECTION %>
 
 <%# CAROUSEL FOR QUIZZING CATEGORIES %>
-<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-  </ol>
+<div id="quizzing-categories-carousel" class="carousel" data-interval="false">
   <div class="carousel-inner" data-controller="multiple-images">
     <div class="carousel-item active" data-multiple-images-target="card1">
       <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
@@ -96,11 +91,11 @@
       </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#quizzing-categories-carousel" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#quizzing-categories-carousel" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
