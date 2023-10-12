@@ -123,23 +123,6 @@
   justify-content: space-evenly;
 }
 
-/* medium and up screens */
-@media (min-width: 768px) {
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(25%);
-  }
-
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
-  }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start {
-  transform: translateX(0);
-}
 
 // CAROUSEL CONTROLS
 .carousel-control-prev, .carousel-control-next {
@@ -148,6 +131,7 @@
 }
 
 
+// KARAOKE SECTION
 .karaoke-cards {
   .card-title {
     background-color: $orange;
