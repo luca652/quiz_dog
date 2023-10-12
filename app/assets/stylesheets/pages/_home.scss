@@ -1,5 +1,5 @@
 
-// CAROUSEL
+// CAROUSEL LANDING PAGE
 #home-page-carousel {
   position: relative;
   display: flex;
@@ -47,6 +47,12 @@
 
 // Category cards for QUIZZING and KARAOKE
 
+.carousel-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+ }
+
 .category-cards a {
   text-decoration: none;
   color: black;
@@ -54,18 +60,27 @@
 }
 
 .quizzing-category-img-1 {
-  background-image: url("smile.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-2 {
   background-image: url("dog.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
+.quizzing-category-img-2 {
+  background-image: url("finger.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
 .quizzing-category-img-3 {
+  background-image: url("smile.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.quizzing-category-img-4 {
   background-image: url("answers.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
-.category-img {
+.quizzing-category-img-5 {
+  background-image: url("banner2.png"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+
+.category-image img {
   border-radius: 5px;
 }
 
@@ -90,6 +105,31 @@
   border-radius: 5px;
   font-family: $lovelo;
 }
+
+// CAROUSEL --> DISPLAY THREE CARDS AT THE SAME TIME
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item.active > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+// CAROUSEL CONTROLS
+.carousel-control-prev, .carousel-control-next {
+  bottom: 100px;
+  opacity: 1;
+}
+
 
 .karaoke-cards {
   .card-title {
