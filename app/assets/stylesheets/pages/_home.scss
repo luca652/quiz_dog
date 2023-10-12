@@ -107,6 +107,14 @@
 }
 
 // CAROUSEL --> DISPLAY THREE CARDS AT THE SAME TIME
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
     display: none;
@@ -116,13 +124,15 @@
   }
 }
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex;
-  justify-content: space-evenly;
+@media (min-width: 768px) and (max-width: 960px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item.active > div:nth-child(1),
+  .carousel-inner .carousel-item.active > div:nth-child(2) {
+    display: flex;
+  }
 }
-
 
 // CAROUSEL CONTROLS
 .carousel-control-prev, .carousel-control-next {
