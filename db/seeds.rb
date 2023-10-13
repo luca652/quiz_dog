@@ -8,7 +8,7 @@
 
 require "open-uri"
 
-user = User.create!(email: 'g@dini.com', password: "123456")
+user = User.create!(email: 'gd@dini.com', password: "123456")
 
 quizmaster_photo = URI.open("https://res.cloudinary.com/da0yktrei/image/upload/v1696583946/development/jtlpnvw28bpdg0puxoio5le0csga.png")
 quizmaster = Quizmaster.create!(name: "Kate", user_id: user.id, profile: "Placeholder text for host. Amazing at quizmastering and really good fun!")
