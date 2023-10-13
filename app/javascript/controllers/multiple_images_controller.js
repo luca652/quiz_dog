@@ -24,15 +24,3 @@ export default class extends Controller {
     })
   }
 }
-
-
-// elements.forEach((el) => {
-// console.log("this is the element: ", el)
-// let nextFirst = (elements.indexOf(el) + 1)
-// console.log("this is the index n of nextFirst: ", nextFirst)
-// let nextSecond = (elements.indexOf(el) + 2)
-// console.log("this is elements[nextFirst]: ", elements[nextFirst])
-
-// el.append(elements[nextFirst]);
-
-// })
