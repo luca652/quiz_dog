@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :index ]
+  skip_before_action :authenticate_user!, only: [ :home, :host_your_own, :start_a_quiz, :corporate, :charity, :private, :virtual, :aboutus, :corporate_karaoke, :piano_karaoke ]
 
   def home
     @venues = Venue.all

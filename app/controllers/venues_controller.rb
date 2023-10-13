@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
   before_action :set_venue, only: [:show, :destroy, :edit, :update]
 
   def new
