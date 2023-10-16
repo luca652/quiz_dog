@@ -1,10 +1,10 @@
 
-.btn-56 {
+.btn-red {
   appearance: button;
   background-color: $quiz-dog-red;
-  border: 1px solid #000;
+  // border: 1px solid #000;
   border-radius: 5px;
-  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  // box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -24,26 +24,26 @@
   text-decoration: none;
 }
 
-.btn-56:focus {
+.btn-red:focus {
   text-decoration: none;
 }
 
-.btn-56:hover {
+.btn-red:hover {
   text-decoration: none;
 }
 
-.btn-56:active {
+.btn-red:active {
   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
   outline: 0;
 }
 
-.btn-56:not([disabled]):active {
+.btn-red:not([disabled]):active {
   box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
   transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  .btn-56 {
+  .btn-red {
     padding: 14px 50px 10px;
   }
 }
