@@ -53,8 +53,15 @@
 }
 // Category cards for QUIZZING and KARAOKE
 
+
 .card-body {
   padding-bottom: 0px;
+}
+// here I removed bottom padding from bootstrap card to even out spacing on page
+
+.card-text {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .carousel-item a {
