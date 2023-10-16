@@ -10,7 +10,14 @@
   right: 0;
   margin: auto;
   flex-grow: 0;
+}
 
+
+.text-bubble-orange {
+  background-color: $orange;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .banner-image-venues {

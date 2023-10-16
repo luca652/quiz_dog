@@ -45,7 +45,24 @@
   }
 }
 
+.dividing-line-black {
+  border-bottom: 2px solid black !important;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
 // Category cards for QUIZZING and KARAOKE
+
+
+.card-body {
+  padding-bottom: 0px;
+}
+// here I removed bottom padding from bootstrap card to even out spacing on page
+
+.card-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .carousel-item a {
   text-decoration: none;
@@ -155,8 +172,9 @@
 
 // WHO WE ARE SECTION
 
-.text-bubble {
+.text-bubble-yellow {
   background-color: $yellow;
   padding: 1.5rem;
   border-radius: 5px;
+  text-align: center;
 }
