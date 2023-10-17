@@ -5,6 +5,7 @@ class VenuesController < ApplicationController
   def new
     @venue = Venue.new
     @quizmasters = Quizmaster.all
+    @venue.gigs.build
   end
 
   def index
@@ -38,6 +39,7 @@ class VenuesController < ApplicationController
 
   def edit
     @hide_navbar = true
+    @venue.gigs.build
   end
 
   def update
