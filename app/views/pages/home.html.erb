@@ -1,7 +1,7 @@
 
 <%# CAROUSEL WITH BACKGROUND IMAGES + LOGO AND BUTTONS %>
 <div class="top mb-5">
-  <div id="home-page-carousel" class="carousel slide" data-bs-ride="carousel" data-pause="false">
+  <div id="home-page-carousel" class="carousel slide" data-bs-ride="carousel" data-interval="3000" data-pause="false">
     <div class="carousel-inner">
       <div class="carousel-item carousel-image bg-img-1 active"></div>
       <div class="carousel-item carousel-image bg-img-2"></div>
@@ -11,15 +11,21 @@
       <div class="col-10 d-flex justify-content-center">
         <%= image_tag("logo.png", class: "logo mb-3 mt-5 img-fluid", alt: "quizmaster logo") %>
       </div>
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
-        <h5 class="btn-red"><%= link_to 'FIND A QUIZ', venues_path %></h5>
-      </div>
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
-        <h5 class="btn-red"><%= link_to 'START A QUIZ!', start_a_quiz_path %></h5>
-      </div>
-      <div class="col-md-12 col-sm-12 d-flex justify-content-center">
-        <h5 class="btn-red"><%= link_to 'HOST YOUR OWN', host_your_own_path %></h5>
-      </div>
+      <%= link_to venues_path do %>
+        <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
+          <h5 class="btn-red">FIND A QUIZ</h5>
+        </div>
+      <% end %>
+      <%= link_to start_a_quiz_path do %>
+        <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+          <h5 class="btn-red">START A QUIZ!</h5>
+        </div>
+      <% end %>
+      <%= link_to host_your_own_path do %>
+        <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+          <h5 class="btn-red">HOST YOUR OWN'</h5>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

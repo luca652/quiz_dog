@@ -19,17 +19,18 @@
 
 .btn-red:hover {
   text-decoration: none;
+  background-color: #750d10;
 }
 
-.btn-red:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
-  outline: 0;
-}
+// .btn-red:active {
+//   box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+//   outline: 0;
+// }
 
-.btn-red:not([disabled]):active {
-  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
-  transform: translate(2px, 2px);
-}
+// .btn-red:not([disabled]):active {
+//   box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+//   transform: translate(2px, 2px);
+// }
 
 @media (min-width: 768px) {
   .btn-red {
