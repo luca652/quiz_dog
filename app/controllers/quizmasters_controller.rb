@@ -50,10 +50,4 @@ class QuizmastersController < ApplicationController
     @quizmaster = Quizmaster.find(params[:id])
   end
 
-  def reset_default_quizmaster(venues)
-    venues.each do |venue|
-      venue.quizmaster = Quizmaster.find(38)
-      venue.save
-    end
-  end
 end
