@@ -35,8 +35,7 @@ class QuizmastersController < ApplicationController
   end
 
   def destroy
-    @venues = @quizmaster.venues
-    reset_default_quizmaster(@venues)
+    @quizmaster.gigs.destroy_all
     @quizmaster.destroy
     redirect_to admin_path
   end
