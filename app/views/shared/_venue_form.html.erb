@@ -20,7 +20,7 @@
   2. Venue.all retrieves all instances to display in the list
   3. :id is the value that will be sent to the controller for each of the venues selected
   4 :name is the value to be displayed on the label %>
-    <%= form.collection_check_boxes :quizmaster_id, Quizmaster.all, :id, :name do |cb| %>
+    <%= form.collection_check_boxes :quizmaster_ids, Quizmaster.all, :id, :name do |cb| %>
       <div class="form-check">
         <%= cb.check_box %>
         <%= cb.label %>

@@ -7,7 +7,6 @@ class QuizmastersController < ApplicationController
     @hide_navbar = true
     @quizmaster = Quizmaster.new
     @venues = Venue.all
-    @quizmaster.gigs.build
   end
 
   def create
@@ -25,7 +24,6 @@ class QuizmastersController < ApplicationController
   def edit
     @hide_navbar = true
     @venues = Venue.all
-    @quizmaster.gigs.build
   end
 
   def update
@@ -37,8 +35,7 @@ class QuizmastersController < ApplicationController
   end
 
   def destroy
-    @venues = @quizmaster.venues
-    reset_default_quizmaster(@venues)
+    @quizmaster.gigs.destroy_all
     @quizmaster.destroy
     redirect_to admin_path
   end

@@ -5,7 +5,6 @@ class VenuesController < ApplicationController
   def new
     @venue = Venue.new
     @quizmasters = Quizmaster.all
-    @venue.gigs.build
   end
 
   def index
@@ -33,13 +32,13 @@ class VenuesController < ApplicationController
   end
 
   def destroy
+    @venue.gigs.destroy_all
     @venue.destroy
     redirect_to admin_path
   end
 
   def edit
     @hide_navbar = true
-    @venue.gigs.build
   end
 
   def update
