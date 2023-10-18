@@ -118,32 +118,44 @@
 <div id="karaoke-section" class="d-flex mt-5 mb-5 flex-column container-fluid">
   <h1 class="d-flex justify-content-center mb-3">KARAOKE</h1>
 
-    <div class="row category-cards karaoke-cards gx-0 justify-content-center">
+  <div id="karaoke-categories-carousel" class="carousel" data-interval="false">
+    <div class="carousel-inner" data-controller="karaoke-carousel">
 
-      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent d-flex">
-        <%= link_to corporate_karaoke_path do %>
-        <div class="quizzing-category-img-1 category-image position-relative">
-          <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
+      <div class="carousel-item active" data-karaoke-carousel-target="card1">
+        <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to corporate_karaoke_path do %>
+          <div class="quizzing-category-img-1 category-image position-relative">
+            <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <% end %>
         </div>
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <% end %>
       </div>
 
-
-      <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
-        <%= link_to piano_karaoke_path do %>
-        <div class="quizzing-category-img-2 category-image position-relative">
-          <h4 class="card-title font-weight-bold align-self-end">PIANO</h4>
+      <div class="carousel-item" data-karaoke-carousel-target="card2">
+        <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to piano_karaoke_path do %>
+          <div class="quizzing-category-img-2 category-image position-relative">
+            <h4 class="card-title font-weight-bold align-self-end">PIANO</h4>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+          </div>
+          <% end %>
         </div>
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
-        </div>
-        <% end %>
       </div>
-
     </div>
+    <a class="carousel-control-prev" href="#karaoke-categories-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#karaoke-categories-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
 <%# WHO WE ARE SECTION %>

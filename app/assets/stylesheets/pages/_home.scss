@@ -132,6 +132,27 @@
   justify-content: space-evenly;
 }
 
+// CAROUSEL CONTROLS
+.carousel-control-prev, .carousel-control-next {
+  bottom: 100px;
+  opacity: 1;
+}
+
+
+// KARAOKE CAROUSEL WITH TWO CARDS
+
+#karaoke-categories-carousel .carousel-inner .carousel-item.active,
+#karaoke-categories-carousel .carousel-inner .carousel-item-next,
+#karaoke-categories-carousel .carousel-inner .carousel-item-prev {
+  display: flex;
+  justify-content: center;
+}
+
+.karaoke-card {
+  .card-title {
+    background-color: $orange;
+  }
+}
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
     display: none;
@@ -151,22 +172,14 @@
   }
 }
 
-// CAROUSEL CONTROLS
-.carousel-control-prev, .carousel-control-next {
-  bottom: 100px;
-  opacity: 1;
-}
-
-
-.karaoke-cards {
-  .card-title {
-    background-color: $orange;
-  }
-}
 
 @media (min-width: 768px) {
   .karaoke-cards {
     justify-content: space-around;
+  }
+
+  #karaoke-categories-carousel .carousel-control-prev, .carousel-control-next {
+    display: none;
   }
 }
 
