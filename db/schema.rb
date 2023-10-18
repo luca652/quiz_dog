@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_17_110200) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_18_091335) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -83,8 +83,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_17_110200) do
     t.float "longitude"
     t.time "time"
     t.string "day_of_the_week"
-    t.bigint "quizmaster_id"
-    t.index ["quizmaster_id"], name: "index_venues_on_quizmaster_id"
     t.index ["user_id"], name: "index_venues_on_user_id"
   end
 
@@ -93,6 +91,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_17_110200) do
   add_foreign_key "gigs", "quizmasters"
   add_foreign_key "gigs", "venues"
   add_foreign_key "quizmasters", "users"
-  add_foreign_key "venues", "quizmasters"
   add_foreign_key "venues", "users"
 end
