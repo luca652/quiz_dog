@@ -148,11 +148,8 @@
   justify-content: center;
 }
 
-.karaoke-card {
-  .card-title {
-    background-color: $orange;
-  }
-}
+
+
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
     display: none;
@@ -183,10 +180,22 @@
   }
 }
 
+.karaoke-card {
+  .card-title {
+    background-color: $orange;
+  }
+}
 // WHO WE ARE SECTION
 
 .text-bubble-yellow {
   background-color: $yellow;
+  padding: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.text-bubble-green {
+  background-color: $quiz-dog-green;
   padding: 1.5rem;
   border-radius: 5px;
   text-align: center;
