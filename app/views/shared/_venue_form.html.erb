@@ -1,32 +1,30 @@
-<%= form_with model: @venue, url: (@venue.new_record? ? venues_path : venue_path(@venue)),
-                          method: (@venue.new_record? ? :post : :patch) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :address %>
-  <%= form.text_field :address %>
-  <%= form.label :phone_number %>
-  <%= form.text_field :phone_number %>
-  <%= form.label :day_of_the_week %>
-  <%= form.text_field :day_of_the_week %>
-  <%= form.label :time %>
-  <%= form.datetime_field :time %>
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
-  <%= form.hidden_field :user_id, value: current_user.id %>
+<div class="container-sm">
 
-  <div class="form-group">
-  <%# collection_check_boxes takes four arguments:
-  1. :venue_ids is the attribute of Quizmaster object to which the selected values will be assigned.
-  2. Venue.all retrieves all instances to display in the list
-  3. :id is the value that will be sent to the controller for each of the venues selected
-  4 :name is the value to be displayed on the label %>
-    <%= form.collection_check_boxes :quizmaster_ids, Quizmaster.all, :id, :name do |cb| %>
-      <div class="form-check">
-        <%= cb.check_box %>
-        <%= cb.label %>
+    <%= simple_form_for @venue, url: (@venue.new_record? ? venues_path : venue_path(@venue)),
+                              method: (@venue.new_record? ? :post : :patch) do |form| %>
+      <%= form.input :name %>
+      <%= form.input :address %>
+      <%= form.input :phone_number %>
+      <%= form.input :day_of_the_week %>
+      <%= form.input :time, as: :time %>
+      <%= form.input :photo, as: :file %>
+      <%= form.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
+
+      <div class="form-group mb-3">
+        <p>Quizmaster:</p>
+      <%# collection_check_boxes takes four arguments:
+      1. :venue_ids is the attribute of Quizmaster object to which the selected values will be assigned.
+      2. Venue.all retrieves all instances to display in the list
+      3. :id is the value that will be sent to the controller for each of the venues selected
+      4 :name is the value to be displayed on the label %>
+        <%= form.collection_check_boxes :quizmaster_ids, Quizmaster.all, :id, :name do |cb| %>
+          <div class="form-check">
+            <%= cb.check_box %>
+            <%= cb.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
 
-  <%= form.submit %>
-<% end %>
+      <%= form.button :submit, class: "btn btn-success" %>
+    <% end %>
+</div>
