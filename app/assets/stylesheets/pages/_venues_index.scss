@@ -41,6 +41,15 @@
   top: 0;
 }
 
+.mapboxgl-popup-tip {
+  margin-bottom: 1.5rem;
+}
+
+.mapboxgl-popup-content {
+  padding: 10px 10px 6px !important;
+  border-radius: 5px !important;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
