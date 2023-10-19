@@ -1,27 +1,27 @@
 
-<%= form_with model: @quizmaster, url: (@quizmaster.new_record? ? quizmasters_path : quizmaster_path(@quizmaster)),
-                          method: (@quizmaster.new_record? ? :post : :patch) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :profile %>
-  <%= form.text_area :profile %>
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
-  <%= form.hidden_field :user_id, value: current_user.id %>
+<div class="container-sm">
+  <%= simple_form_for @quizmaster, url: (@quizmaster.new_record? ? quizmasters_path : quizmaster_path(@quizmaster)),
+                            method: (@quizmaster.new_record? ? :post : :patch) do |form| %>
+    <%= form.input :name %>
+    <%= form.input :profile, as: :text, input_html: { rows: 2 } %>
+    <%= form.input :photo, as: :file %>
+    <%= form.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
 
-  <div class="form-group">
-  <%# collection_check_boxes takes four arguments:
-  1. :venue_ids is the attribute of Quizmaster object to which the selected values will be assigned.
-  2. Venue.all retrieves all instances to display in the list
-  3. :id is the value that will be sent to the controller for each of the venues selected
-  4 :name is the value to be displayed on the label %>
-    <%= form.collection_check_boxes :venue_ids, Venue.all, :id, :name do |cb| %>
-      <div class="form-check">
-        <%= cb.check_box %>
-        <%= cb.label %>
-      </div>
-    <% end %>
-  </div>
+    <div class="form-group mb-3">
+      <p>Venues:</p>
+    <%# collection_check_boxes takes four arguments:
+    1. :venue_ids is the attribute of Quizmaster object to which the selected values will be assigned.
+    2. Venue.all retrieves all instances to display in the list
+    3. :id is the value that will be sent to the controller for each of the venues selected
+    4 :name is the value to be displayed on the label %>
+      <%= form.collection_check_boxes :venue_ids, Venue.all, :id, :name do |cb| %>
+        <div class="form-check">
+          <%= cb.check_box %>
+          <%= cb.label %>
+        </div>
+      <% end %>
+    </div>
 
-  <%= form.submit %>
-<% end %>
+    <%= form.button :submit, class: "btn btn-success" %>
+  <% end %>
+</div>
