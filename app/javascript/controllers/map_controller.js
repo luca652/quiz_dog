@@ -15,7 +15,7 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/streets-v10"
     })
     this.#addMarkersToMap()
-    this.#fitMapToMarkers()
+    this.#fitMapToCenter()
   }
 
   #addMarkersToMap() {
@@ -28,9 +28,9 @@ export default class extends Controller {
     })
   }
 
-  #fitMapToMarkers() {
-    const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  #fitMapToCenter() {
+    const center = [ -0.094809799951691, 51.47002035 ];
+    const bounds = new mapboxgl.LngLatBounds().extend([ center[0], center[1] ]);
+    this.map.fitBounds(bounds, { padding: 60, maxZoom: 9, duration: 0 })
   }
 }
