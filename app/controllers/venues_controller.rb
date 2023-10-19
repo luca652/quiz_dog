@@ -13,6 +13,7 @@ class VenuesController < ApplicationController
       {
         lat: venue.latitude,
         lng: venue.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {venue: venue}),
         marker_html: render_to_string(partial: "marker")
       }
     end
