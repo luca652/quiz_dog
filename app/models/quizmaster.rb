@@ -5,5 +5,5 @@ class Quizmaster < ApplicationRecord
   has_many :gigs
   has_many :venues, through: :gigs
 
-  validates :name, presence: true
+  validates :name, :profile, :photo, presence: true
 end
