@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get "corporate-karaoke", to: "pages#corporate_karaoke"
   get "piano-karaoke", to: "pages#piano_karaoke"
 
-  resources :venues
-  resources :quizmasters
+  resources :venues, except: [:show ]
+  resources :quizmasters, except: [:index, :show ]
 end
