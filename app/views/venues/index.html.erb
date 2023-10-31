@@ -35,7 +35,7 @@
         <p>No venues yet.</p>
       <% else %>
         <% @venues.each do |venue| %>
-          <div class="card-venue" id=<%="#{venue.id}"%> data-select-card-target = "card">
+          <div class="card-venue" id=<%="#{venue.id}"%> data-select-card-target = "card" data-action="click->select-card#deselect">
             <% if venue.photo %>
             <%= cl_image_tag venue.photo.key %>
             <% end %>

@@ -6,16 +6,10 @@ export default class extends Controller {
   static targets = ['card']
 
   connect() {
-    console.log("ci sono!")
-    this.cardTargets.forEach(card => {
-      console.log(card.id);
-    })
-    console.log("targets: ", this.cardTargets)
-    console.log("this: ", this)
+    console.log("Select card controller present!")
   }
 
   select(event) {
-    console.log("targets (#select): ", this.cardTargets)
     const url = event.target.href;
     let number = (url.split("#"))
     number = number[number.length - 1];
@@ -29,5 +23,22 @@ export default class extends Controller {
         card.classList.add("notselected")
       }
     });
+  }
+
+  deselect(event) {
+    console.log("working")
+    const clickedCard = event.target.closest(".card-venue");
+    console.log(clickedCard.classList.contains("notselected"));
+    this.cardTargets.forEach(card => {
+      console.log(card.classList);
+    })
+    if (clickedCard.classList.contains("notselected")) {
+      this.cardTargets.forEach(card => {
+        card.classList.remove("selected");
+        card.classList.remove("notselected");
+      })
+    }
+
+
   }
 }
