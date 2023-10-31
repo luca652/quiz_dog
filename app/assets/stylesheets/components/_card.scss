@@ -68,3 +68,20 @@
   display: flex;
   align-items: center;
 }
+
+
+
+// class for selected card
+.selected {
+  opacity: 1;
+  transform: scale(1.02);
+
+  .card-venue-title h6 {
+    font-size: large;
+    background-color: $orange;
+}}
+
+.notselected {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
