@@ -1,5 +1,5 @@
 <div>
-  <h6 class="mb-0 pb-0">
-    <%= link_to venue.name, "#anchor-#{venue.id}" %>
+  <h6 class="mb-0 pb-0" data-action="click->select-card#select">>
+    <%= link_to venue.name, "##{venue.id}" %>
   </h6>
 </div>
