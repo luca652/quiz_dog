@@ -21,7 +21,7 @@
 </div>
 
 <%# MAP and VENUE CARDS %>
-<div class="container-lg d-flex flex-column align-items-center">
+<div class="container-lg d-flex flex-column align-items-center" data-controller="select-card">
   <h1 class="d-flex justify-content-center mt-5 mb-3">OUR PUBS</h1>
     <div id="map" class="mb-4"
       data-controller="map"
@@ -35,7 +35,7 @@
         <p>No venues yet.</p>
       <% else %>
         <% @venues.each do |venue| %>
-          <div class="card-venue">
+          <div class="card-venue" id=<%="#{venue.id}"%> data-select-card-target = "card">
             <% if venue.photo %>
             <%= cl_image_tag venue.photo.key %>
             <% end %>

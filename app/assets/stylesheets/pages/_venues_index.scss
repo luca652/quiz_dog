@@ -125,17 +125,29 @@
   }
 }
 
-.card-title {
-  position: absolute;
-  bottom: 10px;
-  padding: 5px 10px 0px;
-  background-color: $yellow;
-  // margin: 0 5px 10px 0;
-  border-radius: 5px;
-  font-family: $lovelo;
+// .card-title {
+//   position: absolute;
+//   bottom: 10px;
+//   padding: 5px 10px 0px;
+//   background-color: green;
+//   // margin: 0 5px 10px 0;
+//   border-radius: 5px;
+//   font-family: $lovelo;
+// }
+
+// class for selected card
+.selected {
+  opacity: 1;
+  transform: scale(1.02);
+
+  .card-venue-title h6 {
+    font-size: large;
+    background-color: $orange;
+}}
+
+.notselected {
+  opacity: 0.5;
+  transform: scale(0.9);
 }
-
-
-
 
 // box shadow box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
