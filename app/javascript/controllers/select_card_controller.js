@@ -22,9 +22,11 @@ export default class extends Controller {
 
     this.cardTargets.forEach(card => {
       if (card.id === number) {
+        card.classList.remove("notselected")
         card.classList.add("selected");
       } else {
         card.classList.remove("selected");
+        card.classList.add("notselected")
       }
     });
   }
