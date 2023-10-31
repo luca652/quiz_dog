@@ -8,9 +8,9 @@
       <span class="navbar-toggler-icon hamburger-lines"></span>
     </a>
       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-        <%= link_to "Quizzing", {anchor: 'quizzing-section' }, class: "dropdown-item" %>
-        <%= link_to "Karaoke", {anchor: 'karaoke-section' }, class: "dropdown-item" %>
-        <%= link_to "Who we are", {anchor: 'who-we-are-section' }, class: "dropdown-item" %>
+        <%= link_to "Quizzing", root_path(anchor: 'quizzing-section'), class: "dropdown-item" %>
+        <%= link_to "Karaoke", root_path(anchor: 'karaoke-section'), class: "dropdown-item" %>
+        <%= link_to "Who we are", root_path(anchor: 'who-we-are-section'), class: "dropdown-item" %>
         <%= link_to "Access Quizdex", "#{root_path}#contact-section", class: "dropdown-item" %>
       </div>
   </div>
