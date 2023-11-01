@@ -11,6 +11,8 @@
   white-space: nowrap;
   text-decoration: none;
   width: 270px;
+  transform: scale(1);
+  transition: all 0.4s;
 }
 
 .btn-red:focus {
@@ -20,6 +22,7 @@
 .btn-red:hover {
   text-decoration: none;
   background-color: #750d10;
+  transform: scale(1.1);
 }
 
 // .btn-red:active {
