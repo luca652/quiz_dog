@@ -6,44 +6,43 @@
 }
 
 .bg-img-1 {
-  background-image: url('landing_page/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-2 {
-  background-image: url('landing_page/15.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/15.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-3 {
-  background-image: url('landing_page/16.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/16.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-4 {
-  background-image: url('landing_page/17.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/17.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-5 {
-  background-image: url('landing_page/18.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/18.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-6 {
-  background-image: url('landing_page/19.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/19.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-7 {
-  background-image: url('landing_page/20.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/20.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-8 {
-  background-image: url('landing_page/21.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/21.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .bg-img-9 {
-  background-image: url('landing_page/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
 .carousel-image {
   height: 100vh;
-  // background: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -76,6 +75,7 @@
   margin: 0 auto;
   border-radius: 5px;
 }
+
 // Category cards for QUIZZING and KARAOKE
 
 
@@ -102,23 +102,23 @@
 }
 
 .quizzing-category-img-1 {
-  background-image: url("quizzing-1.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("landing_page/quizzing_sections/2.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 .quizzing-category-img-2 {
-  background-image: url("quizzing-2.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("landing_page/quizzing_sections/3.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 .quizzing-category-img-3 {
-  background-image: url("quizzing-3.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("landing_page/quizzing_sections/5.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 .quizzing-category-img-4 {
-  background-image: url("quizzing-4.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("landing_page/quizzing_sections/6.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 .quizzing-category-img-5 {
-  background-image: url("quizzing-5.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-image: url("landing_page/quizzing_sections/7.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 
