@@ -1,11 +1,5 @@
 // VENUES
-.card-venue-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.card-venue {
+.venue-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +14,7 @@
   transition: all 0.4s;
 }
 
-.card-venue img {
+.venue-card img {
   height: 65%;
   width: 100%;
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
@@ -29,7 +23,7 @@
 }
 
 
-.card-venue-title {
+.venue-card-title {
   align-items: center;
   position: absolute;
   margin-top: 120px;
@@ -42,7 +36,7 @@
   }
 }
 
-.card-venue-info {
+.venue-card-info {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -52,31 +46,27 @@
   .venue-day-time {
     font-weight: bold;
   }
+
+  p {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+  }
 }
 
-.card-venue-info .venue-address,
-.card-venue-info .venue-phone-number,
-.card-venue-info .venue-hosted-by {
+.venue-card-info .venue-address,
+.venue-card-info .venue-phone-number,
+.venue-card-info .venue-hosted-by {
   font-size: small;
   color: grey;
 }
-
-
-.card-venue-info p {
-  margin: 0px;
-  // margin-left: 2px;
-  display: flex;
-  align-items: center;
-}
-
-
 
 // class for selected card
 .selected {
   opacity: 1;
   transform: scale(1.1);
 
-  .card-venue-title h6 {
+  .venue-card-title h6 {
     font-size: large;
     background-color: $orange;
 }}
