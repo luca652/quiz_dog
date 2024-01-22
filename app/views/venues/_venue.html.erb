@@ -1,0 +1,20 @@
+
+<div class="admin-card-venue">
+  <div class="venue-card" id=<%="#{venue.id}"%> data-select-card-target = "card" data-action="click->select-card#deselect">
+    <%= cl_image_tag venue.photo.key if venue.photo %>
+    <div class="venue-card-title">
+      <h6><%= venue.name %></h6>
+    </div>
+    <div class="venue-card-info">
+      <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
+      <p class="venue-address"> <%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
+      <p class="venue-phone-number"><%= venue.phone_number %></p>
+    </div>
+  </div>
+  <% if show_edit_delete_buttons %>
+    <div class="admin-cards-buttons">
+      <%= link_to "Edit", edit_venue_path(venue), class: "btn btn-primary"%>
+      <%= link_to "Delete", venue_path(venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+    </div>
+  <% end %>
+</div>

@@ -1,5 +1,4 @@
 
-
 <div class="container">
   <h1 class="d-flex justify-content-center mb-1">QUIZDOG ADMIN</h1>
   <div class="w-20 d-flex justify-content-center">
@@ -17,33 +16,10 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
       <%= link_to "Create a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
       <%# VENUE CARDS %>
       <div class="cards">
-        <% if @venues.empty? %>
-          <p>No venues yet.</p>
-        <% else %>
-          <% @venues.each do |venue| %>
-          <div class="admin-card-venue">
-            <div class="card-venue">
-              <%= cl_image_tag venue.photo.key %>
-              <div class="card-venue-title">
-                <h6><%= venue.name %></h6>
-              </div>
-              <div class="card-venue-info">
-                <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
-                <p class="venue-address"><%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
-                <p class="venue-phone-number"><%= venue.phone_number %></p>
-              </div>
-            </div>
-            <div class="admin-cards-buttons">
-              <%= link_to "Edit", edit_venue_path(venue), class: "btn btn-primary"%>
-              <%= link_to "Delete", venue_path(venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-            </div>
-          </div>
-          <% end %>
-        <% end %>
+        <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
       </div>
     </div>
 
@@ -52,33 +28,7 @@
       <%= link_to "Create a QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
       <%# Quizmaster Cards %>
       <div class="cards">
-        <% if @quizmasters.empty? %>
-          <p>No quizmasters yet.</p>
-        <% else %>
-          <% @quizmasters.each do |quizmaster| %>
-            <div class="quizmaster-card">
-              <% if quizmaster.photo.key %>
-              <%= cl_image_tag quizmaster.photo.key %>
-              <% end %>
-              <h4><%= quizmaster.name %></h4>
-              <p><%= quizmaster.profile %></p>
-              <div class="quizmaster-venues">
-                <h6><%= quizmaster.name %>'s PUBS</h6>
-                <% if quizmaster.venues.empty? %>
-                  <p>No pubs yet.</p>
-                <% else %>
-                  <% quizmaster.venues.each do |venue| %>
-                    <p><%= venue.name %></p>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="admin-quizmaster-buttons">
-                <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
-                <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+        <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: true } %>
       </div>
     </div>
   </div>
