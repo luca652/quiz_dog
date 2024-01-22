@@ -175,7 +175,7 @@
   <h2 class="mt-5 mb-3">OUR HOSTS</h1>
   <%# Quizmaster Cards %>
   <div class="cards">
-    <%= render @quizmasters %>
+    <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: false } %>
   </div>
 </div>
 
