@@ -1,5 +1,4 @@
 
-
 <div class="container">
   <h1 class="d-flex justify-content-center mb-1">QUIZDOG ADMIN</h1>
   <div class="w-20 d-flex justify-content-center">
@@ -24,7 +23,7 @@
         <% if @venues.empty? %>
           <p>No venues yet.</p>
         <% else %>
-          <% @venues.each do |venue| %>
+          <% render @venues %>
           <div class="admin-card-venue">
             <div class="card-venue">
               <%= cl_image_tag venue.photo.key %>

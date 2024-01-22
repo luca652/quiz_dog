@@ -1,0 +1,14 @@
+
+<div class="card-venue" id=<%="#{venue.id}"%> data-select-card-target = "card" data-action="click->select-card#deselect">
+  <% if venue.photo %>
+  <%= cl_image_tag venue.photo.key %>
+  <% end %>
+  <div class="card-venue-title">
+    <h6><%= venue.name %></h6>
+  </div>
+  <div class="card-venue-info">
+    <p class="venue-day-time"><%= venue.day_of_the_week.upcase %> at <%= venue.time.strftime('%H:%M') %></p>
+    <p class="venue-address"> <%= venue.address.partition(" London ").first%><%= venue.address.partition(" London ").last%></p>
+    <p class="venue-phone-number"><%= venue.phone_number %></p>
+  </div>
+</div>
