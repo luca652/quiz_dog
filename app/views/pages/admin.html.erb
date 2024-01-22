@@ -20,7 +20,7 @@
       <%= link_to "Create a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
       <%# VENUE CARDS %>
       <div class="cards">
-        <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: true } %>
+        <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
       </div>
     </div>
 
@@ -29,33 +29,7 @@
       <%= link_to "Create a QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
       <%# Quizmaster Cards %>
       <div class="cards">
-        <% if @quizmasters.empty? %>
-          <p>No quizmasters yet.</p>
-        <% else %>
-          <% @quizmasters.each do |quizmaster| %>
-            <div class="quizmaster-card">
-              <% if quizmaster.photo.key %>
-              <%= cl_image_tag quizmaster.photo.key %>
-              <% end %>
-              <h4><%= quizmaster.name %></h4>
-              <p><%= quizmaster.profile %></p>
-              <div class="quizmaster-venues">
-                <h6><%= quizmaster.name %>'s PUBS</h6>
-                <% if quizmaster.venues.empty? %>
-                  <p>No pubs yet.</p>
-                <% else %>
-                  <% quizmaster.venues.each do |venue| %>
-                    <p><%= venue.name %></p>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="admin-quizmaster-buttons">
-                <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
-                <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+        <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: true } %>
       </div>
     </div>
   </div>

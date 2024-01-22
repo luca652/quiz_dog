@@ -175,17 +175,7 @@
   <h2 class="mt-5 mb-3">OUR HOSTS</h1>
   <%# Quizmaster Cards %>
   <div class="cards">
-    <% if @quizmasters.empty? %>
-      <p> No quizmasters yet.</p>
-    <% else %>
-      <% @quizmasters.each do |quizmaster| %>
-        <div class="quizmaster-card">
-          <%= cl_image_tag quizmaster.photo.key %>
-          <h4><%= quizmaster.name %></h4>
-          <p><%= quizmaster.profile %></p>
-        </div>
-      <% end %>
-    <% end %>
+    <%= render @quizmasters %>
   </div>
 </div>
 
