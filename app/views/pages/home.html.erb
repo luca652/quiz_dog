@@ -38,7 +38,7 @@
 
 <%# QUIZZING SECTION %>
 <div id="quizzing-section" class="mt-4 mb-4 container-fluid">
-  <h1 class="mb-3">QUIZZING</h1>
+  <h1>QUIZZING</h1>
 
 <%# CAROUSEL FOR QUIZZING CATEGORIES %>
   <div id="quizzing-categories-carousel" class="carousel" data-interval="false">
@@ -111,7 +111,7 @@
 
 <%# KARAOKE SECTION %>
 <div id="karaoke-section" class="mt-4 mb-4 container-fluid">
-  <h1 class="mb-3">KARAOKE</h1>
+  <h1>KARAOKE</h1>
 
   <div id="karaoke-categories-carousel" class="carousel" data-interval="false">
     <div class="carousel-inner" data-controller="karaoke-carousel">
@@ -149,28 +149,49 @@
   </div>
 </div>
 
+<hr class="dividing-line-black">
+
 <%# WHO WE ARE SECTION %>
-<div id="who-we-are-section" class="d-flex flex-column align-items-center container-fluid">
+<div id="who-we-are-section" class="mt-4 mb-4 container-fluid">
   <h1>ABOUT QUIZ DOG</h1>
 
-  <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column align-items-center">
-    <h2 class="d-flex justify-content-center">JOE AND DOGS</h2>
-    <div class="text-bubble-yellow">
-      <p class="d-flex justify-content-center"> Quiz Dog was founded in 2019 (a historically brilliant year to start any business) after Joe had worked for many years in the industry. We wanted to do things differently. Focussing on fun, sustainability, and dynamic hosting. </p>
-      <p>Starting in Peckham and Deptford, we now span across the capital (and even have an event in the USA). Our goal is to expand across the country and beyond, providing the best quizzing event it’s possible to have.</p>
-      <p class="mb-0">Where do dogs come into it? Joe likes dogs. It’s as simple as that. Just so happens that we are just like a pack of playful, adventurous, ol' faithfuls ourselves. Please bring your dogs along to the quiz. They’ll be on Instagram immediately!</p>
+  <div id="about-categories-carousel" class="carousel" data-interval="false">
+    <div class="carousel-inner" data-controller="about-carousel">
+
+      <div class="carousel-item active" data-about-carousel-target="card1">
+        <div class="card category-card about-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to corporate_karaoke_path do %>
+          <%= image_tag("landing_page/about_section/9.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">OUR STORY & HOSTS</h4>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-about-carousel-target="card2">
+        <div class="card category-card about-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to corporate_karaoke_path do %>
+          <%= image_tag("landing_page/about_section/10.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">SUSTAINABILITY</h4>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#about-categories-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#about-categories-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+ </div>
 
-  <%# (link to Instagram here) %>
-
-  <h2 class="mt-5 mb-3">OUR HOSTS</h1>
-  <%# Quizmaster Cards %>
-  <div class="cards">
-    <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: false } %>
-  </div>
-</div>
-
+<hr class="dividing-line-black">
 
 <div id="sustainability-section" class="d-flex flex-column align-items-center container-fluid">
   <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column align-items-center">
