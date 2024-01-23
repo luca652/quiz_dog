@@ -5,6 +5,17 @@
   display: flex;
 }
 
+
+.logo {
+  width: 20rem;
+}
+
+.carousel-image {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .bg-img-1 {
   background-image: url('landing_page/main_carousel/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
@@ -41,16 +52,6 @@
   background-image: url('landing_page/main_carousel/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
-.carousel-image {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-
-.logo {
-  width: 20rem;
-}
-
 // three buttons over carousel
 .home-page-buttons {
   position: absolute;
@@ -78,15 +79,19 @@
 
 // Category cards for QUIZZING and KARAOKE
 
+.category-card {
+  margin: 0 2rem;
 
-.card-body {
-  padding-bottom: 0px;
+  @media (max-width: 767px) {
+    margin: 0;
+  }
 }
-// here I removed bottom padding from bootstrap card to even out spacing on page
 
-.card-text {
-  text-align: justify;
-  text-justify: inter-word;
+.category-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .carousel-item a {
@@ -95,66 +100,17 @@
   font-weight: lighter;
  }
 
-.category-cards a {
-  text-decoration: none;
-  color: black;
-  font-weight: lighter;
-}
-
-.quizzing-category-img-1 {
-  background-image: url("landing_page/quizzing_section/2.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-2 {
-  background-image: url("landing_page/quizzing_section/3.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-3 {
-  background-image: url("landing_page/quizzing_section/3.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-4 {
-  background-image: url("landing_page/quizzing_section/5.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-5 {
-  background-image: url("landing_page/quizzing_section/6.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-
-// KARAOKE IMAGES
-.karaoke-category-img-1 {
-  background-image: url("landing_page/karaoke_section/7.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.karaoke-category-img-2 {
-  background-image: url("landing_page/karaoke_section/8.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.category-image img {
-  border-radius: 5px;
-}
-
-.category-image {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .card-title {
-  position: absolute;
-  bottom: 10px;
   padding: 5px 10px 0px;
   background-color: $yellow;
-  // margin: 0 5px 10px 0;
   border-radius: 5px;
   font-family: $lovelo;
+}
+
+.karaoke-card {
+  .card-title {
+    background-color: $orange;
+  }
 }
 
 // CAROUSEL --> DISPLAY THREE CARDS AT THE SAME TIME
@@ -167,10 +123,10 @@
 }
 
 // CAROUSEL CONTROLS
-.carousel-control-prev, .carousel-control-next {
-  bottom: 100px;
-  opacity: 1;
-}
+// .carousel-control-prev, .carousel-control-next {
+//   bottom: 100px;
+//   opacity: 1;
+// }
 
 
 // KARAOKE CAROUSEL WITH TWO CARDS
@@ -214,11 +170,7 @@
   }
 }
 
-.karaoke-card {
-  .card-title {
-    background-color: $orange;
-  }
-}
+
 // WHO WE ARE SECTION
 
 .text-bubble-yellow {
