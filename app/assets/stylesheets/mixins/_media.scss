@@ -3,4 +3,8 @@
   @if $query == tabletAndUp {
     @media (min-width: 48rem) { @content; }
   }
+
+  @if $query == laptopAndUp {
+    @media (min-width: 64rem) {@content;}
+  }
 }

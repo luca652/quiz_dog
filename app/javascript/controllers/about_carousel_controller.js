@@ -2,6 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="about-carousel"
 export default class extends Controller {
+
+  static targets = ['card1', 'card2']
+
   connect() {
     console.log("Connected!");
     let elements = [this.card1Target, this.card2Target];

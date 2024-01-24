@@ -13,12 +13,6 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-
-  @include media(tabletAndUp) {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
 }
 
 .bg-img-1 {
@@ -116,10 +110,24 @@
   width: 70%;
   margin: 0 auto;
   border-radius: 5px;
+
+  @include media(tabletAndUp) {
+    width: 40%;
+  }
 }
 
-// Category cards for QUIZZING and KARAOKE
+// Category cards for QUIZZING, KARAOKE and ABOUT US
 
+.section-title {
+  @include media(tabletAndUp) {
+    text-align: center;
+  }
+
+}
+
+.card-img {
+  border-radius: $br;
+}
 .category-card {
   margin: 0;
 
@@ -157,6 +165,7 @@
 .about-card {
   .card-title {
     background-color: $peach;
+    text-align: center;
   }
 }
 // CAROUSEL --> DISPLAY THREE CARDS AT THE SAME TIME
@@ -165,12 +174,16 @@
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 // CAROUSEL CONTROLS
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
+
+  @include media(tabletAndUp) {
+    right: 1.2rem;
+  }
 }
 
 
