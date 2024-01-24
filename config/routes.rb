@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: "pages#home"
-  get "about-us", to: "pages#aboutus"
+  get "about-us", to: "pages#about_us"
   get "admin", to: "pages#admin"
   get "host-your-own", to: "pages#host_your_own"
   get "start-a-quiz", to: "pages#start_a_quiz"
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "virtual", to: "pages#virtual"
   get "corporate-karaoke", to: "pages#corporate_karaoke"
   get "piano-karaoke", to: "pages#piano_karaoke"
+  get "sustainability", to: "pages#sustainability"
 
   resources :venues, except: [:show ]
   resources :quizmasters, except: [:index, :show ]

@@ -14,10 +14,20 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+
+  @include media(tabletAndUp) {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .bg-img-1 {
-  background-image: url('landing_page/main_carousel/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/14-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-2 {
