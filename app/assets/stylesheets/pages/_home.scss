@@ -105,11 +105,13 @@
   }
 }
 
+// Line to divide page
 .dividing-line-black {
-  border-bottom: 2px solid black !important;
+  border-bottom: 2px solid #0E0000;
   width: 70%;
   margin: 0 auto;
   border-radius: 5px;
+  opacity: 1;
 
   @include media(tabletAndUp) {
     width: 40%;
@@ -179,12 +181,14 @@
 }
 
 // CAROUSEL CONTROLS
+
+// Makes controls pop more
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
 }
 
+// Changes position of carousel controls depending on screen size so that position on card is consistent
 .carousel-control-prev {
-
   @include media(tabletAndUp) {
     left: -2.5rem;
   }
@@ -195,7 +199,6 @@
 }
 
 .carousel-control-next {
-
   @include media(tabletAndUp) {
     right: -2.5rem;
   }
@@ -204,6 +207,8 @@
     right: 1.5rem;
   }
 }
+
+
 // KARAOKE CAROUSEL WITH TWO CARDS
 
 #karaoke-categories-carousel .carousel-inner .carousel-item.active,
@@ -211,12 +216,6 @@
 #karaoke-categories-carousel .carousel-inner .carousel-item-prev {
   display: flex;
   justify-content: center;
-}
-
-
-.social-media-img {
-  width: 3rem;
-  border-radius: 50%;
 }
 
 @media (max-width: 767px) {
@@ -238,7 +237,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .karaoke-cards {
     justify-content: space-around;
@@ -247,6 +245,14 @@
   #karaoke-categories-carousel .carousel-control-prev, #karaoke-categories-carousel .carousel-control-next {
     display: none;
   }
+}
+
+
+// CONTACT US
+
+.social-media-img {
+  width: 3rem;
+  border-radius: 50%;
 }
 
 

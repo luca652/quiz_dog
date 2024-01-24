@@ -15,3 +15,17 @@
 a {
   text-decoration: none;
 }
+
+.page-title {
+  color: $yellow;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  font-size: 4rem;
+}
+
+.page-banner {
+  height: 40vh;
+  background-size: cover;
+  background-position: center bottom;
+}

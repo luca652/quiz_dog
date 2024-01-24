@@ -1,6 +1,6 @@
 
 <div class="admin-card-venue">
-  <div class="venue-card" id=<%="#{venue.id}"%> data-select-card-target = "card" data-action="click->select-card#deselect">
+  <div class="venue-card" id=<%="#{venue.id}"%> data-select-card-target="card" data-action="click->select-card#deselect">
     <%= cl_image_tag venue.photo.key if venue.photo %>
     <div class="venue-card-title">
       <h6><%= venue.name %></h6>
