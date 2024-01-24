@@ -128,6 +128,7 @@
 .card-img {
   border-radius: $br;
 }
+
 .category-card {
   margin: 0;
 
@@ -180,13 +181,29 @@
 // CAROUSEL CONTROLS
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
+}
+
+.carousel-control-prev {
 
   @include media(tabletAndUp) {
-    right: 1.2rem;
+    left: -2.5rem;
+  }
+
+  @include media(laptopAndUp) {
+    left: 1.5rem;
   }
 }
 
+.carousel-control-next {
 
+  @include media(tabletAndUp) {
+    right: -2.5rem;
+  }
+
+  @include media(laptopAndUp) {
+    right: 1.5rem;
+  }
+}
 // KARAOKE CAROUSEL WITH TWO CARDS
 
 #karaoke-categories-carousel .carousel-inner .carousel-item.active,
