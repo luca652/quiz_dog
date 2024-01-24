@@ -5,7 +5,6 @@
   display: flex;
 }
 
-
 .logo {
   width: 20rem;
 }
@@ -31,35 +30,67 @@
 }
 
 .bg-img-2 {
-  background-image: url('landing_page/main_carousel/15.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/15-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/15.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-3 {
-  background-image: url('landing_page/main_carousel/16.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/16-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/16.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-4 {
-  background-image: url('landing_page/main_carousel/17.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/17-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/17.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-5 {
-  background-image: url('landing_page/main_carousel/18.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/18-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/18.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-6 {
-  background-image: url('landing_page/main_carousel/19.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/19-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/19.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-7 {
-  background-image: url('landing_page/main_carousel/20.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/20-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/20.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-8 {
-  background-image: url('landing_page/main_carousel/21.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/21-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/21.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 .bg-img-9 {
-  background-image: url('landing_page/main_carousel/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-image: url('landing_page/main_carousel/22-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 // three buttons over carousel
@@ -138,10 +169,9 @@
 }
 
 // CAROUSEL CONTROLS
-// .carousel-control-prev, .carousel-control-next {
-//   bottom: 100px;
-//   opacity: 1;
-// }
+.carousel-control-prev, .carousel-control-next {
+  opacity: 1;
+}
 
 
 // KARAOKE CAROUSEL WITH TWO CARDS
@@ -189,9 +219,7 @@
   }
 }
 
-.contact-us-title {
-  margin-bottom: 0.2rem;
-}
+
 // WHO WE ARE SECTION
 
 .text-bubble-yellow {
