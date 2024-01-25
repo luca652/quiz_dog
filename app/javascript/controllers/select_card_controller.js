@@ -27,7 +27,7 @@ export default class extends Controller {
 
   deselect(event) {
     console.log("working")
-    const clickedCard = event.target.closest(".card-venue");
+    const clickedCard = event.target.closest(".venue-card");
     console.log(clickedCard.classList.contains("notselected"));
     this.cardTargets.forEach(card => {
       console.log(card.classList);

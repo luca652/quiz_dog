@@ -1,4 +1,3 @@
-
 <%# CAROUSEL WITH BACKGROUND IMAGES + LOGO AND BUTTONS %>
 <div class="top">
   <div id="home-page-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
@@ -6,10 +5,16 @@
       <div class="carousel-item carousel-image bg-img-1 active"></div>
       <div class="carousel-item carousel-image bg-img-2"></div>
       <div class="carousel-item carousel-image bg-img-3"></div>
+      <div class="carousel-item carousel-image bg-img-4"></div>
+      <div class="carousel-item carousel-image bg-img-5"></div>
+      <div class="carousel-item carousel-image bg-img-6"></div>
+      <div class="carousel-item carousel-image bg-img-7"></div>
+      <div class="carousel-item carousel-image bg-img-8"></div>
+      <div class="carousel-item carousel-image bg-img-9"></div>
     </div>
     <div class="row home-page-buttons justify-content-center mt-3">
       <div class="col-10 d-flex justify-content-center">
-        <%= image_tag("logo.png", class: "logo mb-3 mt-5 img-fluid", alt: "quizmaster logo") %>
+        <%= image_tag("logos/logo.png", class: "logo mb-3 mt-5 img-fluid", alt: "quizmaster logo") %>
       </div>
       <%= link_to venues_path do %>
         <div class="col-md-12 col-sm-12 d-flex justify-content-center btn-block">
@@ -31,68 +36,58 @@
 </div>
 
 <%# QUIZZING SECTION %>
-<div id="quizzing-section" class="d-flex mt-5 mb-5 flex-column align-items-center container-fluid">
-  <h1 class="mb-3">QUIZZING</h1>
+<div id="quizzing-section" class="mt-4 mb-4 container-fluid">
+  <h1 class="section-title">QUIZZING</h1>
 
 <%# CAROUSEL FOR QUIZZING CATEGORIES %>
   <div id="quizzing-categories-carousel" class="carousel" data-interval="false">
     <div class="carousel-inner" data-controller="multiple-images">
       <div class="carousel-item active" data-multiple-images-target="card1">
-        <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+        <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to venues_path do %>
-          <div class="quizzing-category-img-1 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">PUBS</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= image_tag("landing_page/quizzing_section/2.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">PUBS</h4>
           </div>
           <% end %>
         </div>
       </div>
       <div class="carousel-item" data-multiple-images-target="card2">
-        <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
-          <%= link_to corporate_path do %>
-          <div class="quizzing-category-img-2 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+        <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to venues_path do %>
+          <%= image_tag("landing_page/quizzing_section/3.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">CORPORATE</h4>
           </div>
           <% end %>
         </div>
       </div>
       <div class="carousel-item" data-multiple-images-target="card3">
-        <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+        <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to charity_path do %>
-          <div class="quizzing-category-img-3 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">CHARITY</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= image_tag("landing_page/quizzing_section/3.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">CHARITY</h4>
           </div>
           <% end %>
         </div>
       </div>
       <div class="carousel-item" data-multiple-images-target="card4">
-        <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+        <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to private_path do %>
-          <div class="quizzing-category-img-4 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">PRIVATE</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= image_tag("landing_page/quizzing_section/5.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">PRIVATE</h4>
           </div>
           <% end %>
         </div>
       </div>
       <div class="carousel-item" data-multiple-images-target="card5">
-        <div class="card category-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+        <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to virtual_path do %>
-          <div class="quizzing-category-img-5 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">VIRTUAL</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= image_tag("landing_page/quizzing_section/6.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">VIRTUAL</h4>
           </div>
           <% end %>
         </div>
@@ -114,33 +109,29 @@
 <hr class="dividing-line-black">
 
 <%# KARAOKE SECTION %>
-<div id="karaoke-section" class="d-flex mt-5 mb-5 flex-column align-items-center container-fluid">
-  <h1 class="mb-3">KARAOKE</h1>
+<div id="karaoke-section" class="mt-4 mb-4 container-fluid">
+  <h1 class="section-title">KARAOKE</h1>
 
   <div id="karaoke-categories-carousel" class="carousel" data-interval="false">
     <div class="carousel-inner" data-controller="karaoke-carousel">
 
       <div class="carousel-item active" data-karaoke-carousel-target="card1">
-        <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+        <div class="card category-card karaoke-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to corporate_karaoke_path do %>
-          <div class="quizzing-category-img-1 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">CORPORATE</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <%= image_tag("landing_page/karaoke_section/7.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">CORPORATE</h4>
           </div>
           <% end %>
         </div>
       </div>
 
       <div class="carousel-item" data-karaoke-carousel-target="card2">
-        <div class="card category-card karaoke-card m-2 col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
-          <%= link_to piano_karaoke_path do %>
-          <div class="quizzing-category-img-2 category-image position-relative">
-            <h4 class="card-title font-weight-bold align-self-end">PIANO</h4>
-          </div>
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. </p>
+        <div class="card category-card karaoke-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to corporate_karaoke_path do %>
+          <%= image_tag("landing_page/karaoke_section/8.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">LIVE PIANO</h4>
           </div>
           <% end %>
         </div>
@@ -157,50 +148,71 @@
   </div>
 </div>
 
+<hr class="dividing-line-black">
+
 <%# WHO WE ARE SECTION %>
-<div id="who-we-are-section" class="d-flex flex-column align-items-center container-fluid">
-  <h1>WHO WE ARE</h1>
+<div id="who-we-are-section" class="mt-4 mb-4 container-fluid">
+  <h1 class="section-title">ABOUT QUIZ DOG</h1>
 
-  <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column align-items-center">
-    <h2 class="d-flex justify-content-center">JOE AND DOGS</h2>
-    <div class="text-bubble-yellow">
-      <p class="d-flex justify-content-center"> Quiz Dog was founded in 2019 (a historically brilliant year to start any business) after Joe had worked for many years in the industry. We wanted to do things differently. Focussing on fun, sustainability, and dynamic hosting. </p>
-      <p>Starting in Peckham and Deptford, we now span across the capital (and even have an event in the USA). Our goal is to expand across the country and beyond, providing the best quizzing event it’s possible to have.</p>
-      <p class="mb-0">Where do dogs come into it? Joe likes dogs. It’s as simple as that. Just so happens that we are just like a pack of playful, adventurous, ol' faithfuls ourselves. Please bring your dogs along to the quiz. They’ll be on Instagram immediately!</p>
+  <div id="about-categories-carousel" class="carousel" data-interval="false">
+    <div class="carousel-inner" data-controller="about-carousel">
+
+      <div class="carousel-item active" data-about-carousel-target="card1">
+        <div class="card category-card about-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to about_us_path do %>
+          <%= image_tag("landing_page/about_section/9.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">OUR STORY & HOSTS</h4>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-about-carousel-target="card2">
+        <div class="card category-card about-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
+          <%= link_to sustainability_path do %>
+          <%= image_tag("landing_page/about_section/10.jpg", class: "card-img", alt: "Card image") %>
+          <div class="card-img-overlay category-card-image">
+            <h4 class="card-title font-weight-bold">SUSTAINABILITY</h4>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#about-categories-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#about-categories-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+ </div>
 
-  <%# (link to Instagram here) %>
+<hr class="dividing-line-black">
 
-  <h2 class="mt-5 mb-3">OUR HOSTS</h1>
-  <%# Quizmaster Cards %>
-  <div class="cards">
-    <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: false } %>
+<div id="contact-us-section" class="mt-4 mb-4 container-fluid d-flex flex-column align-items-center">
+  <h1 class="contact-us-title">CONTACT US</h1>
+
+  <div class="social-media">
+    <%= link_to "https://www.instagram.com/quizdog/", target: "_blank" do %>
+      <%= image_tag("landing_page/social_media/1.jpg", class: "social-media-img", alt: "Instagram Logo") %>
+    <% end %>
+    <%= link_to "https://www.facebook.com/quizdog/", target: "_blank" do %>
+      <%= image_tag("landing_page/social_media/2.jpg", class: "social-media-img", alt: "Facebook Logo") %>
+    <% end %>
+    <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
+      <%= image_tag("landing_page/social_media/3.jpg", class: "social-media-img", alt: "Threads Logo") %>
+    <% end %>
+    <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
+      <%= image_tag("landing_page/social_media/4.jpg", class: "social-media-img", alt: "LinkedIn Logo") %>
+    <% end %>
   </div>
 </div>
 
+<%#
 
-<div id="sustainability-section" class="d-flex flex-column align-items-center container-fluid">
-  <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column align-items-center">
-    <h1>SUSTAINABILITY</h1>
-    <h4>Carbon Footprintp</h4>
-    <div class="text-bubble-green">
-      <p class="mb-0">
-        We take our environmental duties very seriously here at Quiz Dog. Between answer sheets and ink for picture rounds, the carbon footprint of a quiz can expand to those sasquatch prints in the snow.
-        We decided to make a difference and put everything online. No easy task given the access to Google, but with our anti-cheating measures, we are confident we have the greenest events company on the market. We are always looking for ways in which we can go even further with lessening our environmental impact and are striving for complete carbon neutrality.
-      </p>
-    </div>
-    <h4 class="mt-3">Planting trees, ecologi online</h4>
-    <div class="text-bubble-green">
-      <p class="mb-0">
-        One of the ways in which we are doing our bit for mother earth is by promising to plant a tree for every corporate client we have playing the quiz. This is done in partnership with the amazing people over at Ecologi (a B-Corps certificate company).
-        Click here to see how many trees we’ve planted!
-      </p>
-    </div>
-  </div>
-<div id="contact-section" class="d-flex flex-column container-lg align-center">
-  <h1 class="d-flex justify-content-center">CONTACT QUIZDOG</h1>
-</div>
 <%# TESTIMONIALS %>
 <%# <div class="row justify-content-evenly bg-success">
   <div class="col-3">

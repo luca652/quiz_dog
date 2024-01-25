@@ -5,27 +5,86 @@
   display: flex;
 }
 
-.bg-img-1 {
-  background-image: url('carousel-1.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-}
-
-.bg-img-2 {
-  background-image: url('carousel-2.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-}
-
-.bg-img-3 {
-  background-image: url('carousel-3.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+.logo {
+  width: 20rem;
 }
 
 .carousel-image {
   height: 100vh;
-  // background: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.logo {
-  width: 20rem;
+.bg-img-1 {
+  background-image: url('landing_page/main_carousel/14-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/14.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-2 {
+  background-image: url('landing_page/main_carousel/15-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/15.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-3 {
+  background-image: url('landing_page/main_carousel/16-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/16.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-4 {
+  background-image: url('landing_page/main_carousel/17-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/17.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-5 {
+  background-image: url('landing_page/main_carousel/18-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/18.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-6 {
+  background-image: url('landing_page/main_carousel/19-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/19.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-7 {
+  background-image: url('landing_page/main_carousel/20-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/20.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-8 {
+  background-image: url('landing_page/main_carousel/21-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/21.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
+}
+
+.bg-img-9 {
+  background-image: url('landing_page/main_carousel/22-mobile.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+
+  @include media(tabletAndUp) {
+    background-image: url('landing_page/main_carousel/22.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  }
 }
 
 // three buttons over carousel
@@ -46,23 +105,45 @@
   }
 }
 
+// Line to divide page
 .dividing-line-black {
-  border-bottom: 2px solid black !important;
-  width: 40%;
+  border-bottom: 2px solid #0E0000;
+  width: 70%;
   margin: 0 auto;
   border-radius: 5px;
+  opacity: 1;
+
+  @include media(tabletAndUp) {
+    width: 40%;
+  }
 }
-// Category cards for QUIZZING and KARAOKE
 
+// Category cards for QUIZZING, KARAOKE and ABOUT US
 
-.card-body {
-  padding-bottom: 0px;
+.section-title {
+  @include media(tabletAndUp) {
+    text-align: center;
+  }
+
 }
-// here I removed bottom padding from bootstrap card to even out spacing on page
 
-.card-text {
-  text-align: justify;
-  text-justify: inter-word;
+.card-img {
+  border-radius: $br;
+}
+
+.category-card {
+  margin: 0;
+
+  @include media(tabletAndUp) {
+    margin: 0 2rem;
+  }
+}
+
+.category-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .carousel-item a {
@@ -71,72 +152,60 @@
   font-weight: lighter;
  }
 
-.category-cards a {
-  text-decoration: none;
-  color: black;
-  font-weight: lighter;
-}
-
-.quizzing-category-img-1 {
-  background-image: url("quizzing-1.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-2 {
-  background-image: url("quizzing-2.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-3 {
-  background-image: url("quizzing-3.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-4 {
-  background-image: url("quizzing-4.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-.quizzing-category-img-5 {
-  background-image: url("quizzing-5.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-}
-
-
-.category-image img {
-  border-radius: 5px;
-}
-
-.category-image {
-  position: relative;
-  height: 0;
-  padding-bottom: 56.25%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .card-title {
-  position: absolute;
-  bottom: 10px;
   padding: 5px 10px 0px;
   background-color: $yellow;
-  // margin: 0 5px 10px 0;
   border-radius: 5px;
   font-family: $lovelo;
 }
 
+.karaoke-card {
+  .card-title {
+    background-color: $orange;
+  }
+}
+
+.about-card {
+  .card-title {
+    background-color: $peach;
+    text-align: center;
+  }
+}
 // CAROUSEL --> DISPLAY THREE CARDS AT THE SAME TIME
 
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 // CAROUSEL CONTROLS
+
+// Makes controls pop more
 .carousel-control-prev, .carousel-control-next {
-  bottom: 100px;
   opacity: 1;
+}
+
+// Changes position of carousel controls depending on screen size so that position on card is consistent
+.carousel-control-prev {
+  @include media(tabletAndUp) {
+    left: -2.5rem;
+  }
+
+  @include media(laptopAndUp) {
+    left: 1.5rem;
+  }
+}
+
+.carousel-control-next {
+  @include media(tabletAndUp) {
+    right: -2.5rem;
+  }
+
+  @include media(laptopAndUp) {
+    right: 1.5rem;
+  }
 }
 
 
@@ -148,8 +217,6 @@
   display: flex;
   justify-content: center;
 }
-
-
 
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
@@ -170,7 +237,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .karaoke-cards {
     justify-content: space-around;
@@ -181,11 +247,15 @@
   }
 }
 
-.karaoke-card {
-  .card-title {
-    background-color: $orange;
-  }
+
+// CONTACT US
+
+.social-media-img {
+  width: 3rem;
+  border-radius: 50%;
 }
+
+
 // WHO WE ARE SECTION
 
 .text-bubble-yellow {

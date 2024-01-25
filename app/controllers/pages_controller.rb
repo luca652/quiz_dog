@@ -32,12 +32,15 @@ class PagesController < ApplicationController
   def virtual
   end
 
-  def aboutus
+  def about_us
   end
 
   def corporate_karaoke
   end
 
   def piano_karaoke
+  end
+
+  def sustainability
   end
 end
