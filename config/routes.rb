@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "private", to: "pages#private"
   get "virtual", to: "pages#virtual"
   get "corporate-karaoke", to: "pages#corporate_karaoke"
-  get "piano-karaoke", to: "pages#piano_karaoke"
+  get "live-piano-karaoke", to: "pages#live_piano_karaoke"
   get "sustainability", to: "pages#sustainability"
 
   resources :venues, except: [:show ]
