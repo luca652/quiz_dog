@@ -1,0 +1,31 @@
+// LAYOUT FOR PAGE BANNERS
+.banner-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.page-banner {
+  height: 14rem;
+  background-size: cover;
+
+  @include media(tabletAndUp) {
+    height: 18rem;
+  }
+
+  @include media(laptopAndUp) {
+    height: 24rem;
+  }
+}
+
+.page-title {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  font-size: 3rem;
+
+  @include media(tabletAndUp) {
+    top: 2.5rem;
+    left: 2rem;
+    font-size: 4rem;
+  }
+}

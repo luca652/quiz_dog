@@ -10,7 +10,7 @@
 }
 
 .carousel-image {
-  height: 100vh;
+  height: 95vh;
   background-size: cover;
   background-position: center;
 }
@@ -105,18 +105,7 @@
   }
 }
 
-// Line to divide page
-.dividing-line-black {
-  border-bottom: 2px solid #0E0000;
-  width: 70%;
-  margin: 0 auto;
-  border-radius: 5px;
-  opacity: 1;
 
-  @include media(tabletAndUp) {
-    width: 40%;
-  }
-}
 
 // Category cards for QUIZZING, KARAOKE and ABOUT US
 
@@ -253,21 +242,4 @@
 .social-media-img {
   width: 3rem;
   border-radius: 50%;
-}
-
-
-// WHO WE ARE SECTION
-
-.text-bubble-yellow {
-  background-color: $yellow;
-  padding: 1.5rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.text-bubble-green {
-  background-color: $quiz-dog-green;
-  padding: 1.5rem;
-  border-radius: 5px;
-  text-align: center;
 }

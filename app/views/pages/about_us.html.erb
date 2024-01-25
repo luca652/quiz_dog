@@ -1,0 +1,58 @@
+
+<div class="banner-container">
+  <div class="page-banner banner-image-about-us">
+    <h1 class="page-title title-about-us">OUR STORY & HOSTS</h1>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+  <h1 class="text-align-center">WHO ARE WE?</h1>
+</div>
+
+<div class="container">
+  <div class="text-bubble text-bubble-peach">
+    <p> Quiz Dog was founded in 2019 (a historically brilliant year to start any business) after Joe had worked for many years in the industry.
+      We wanted to do things differently. Focussing on fun, sustainability, and dynamic hosting.
+    </p>
+    <p class="empty-line"></p>
+    <p> Starting in Peckham and Deptford, we now span across the capital (and even have an event in the USA).
+      Our goal is to expand across the country and beyond, providing the best quizzing event it’s possible to have.
+    </p>
+    <p class="empty-line"></p>
+    <p> Where do dogs come into it? Joe likes dogs. It’s as simple as that. Just so happens that we are just like a pack of playful,
+      adventurous, ol' faithfuls ourselves. Please bring your dogs along to the quiz. They’ll be on <%= link_to "Instagram", "https://www.instagram.com/quizdog/", target: "_blank" %> immediately!
+    </p>
+  </div>
+</div>
+
+<hr class="dividing-line-black">
+
+<div class="container d-flex justify-content-start">
+  <h2>OUR TEAM</h1>
+</div>
+
+<div class="container-fluid row justify-content-center">
+   <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: false } %>
+</div>
+
+<hr class="dividing-line-black">
+
+<div class="container-fluid quizzing-dogs-section">
+  <div class="d-flex flex-column align-items-center">
+    <h2>LET QUIZZING DOGS APPLY</h2>
+    <div class="text-bubble text-bubble-peach">
+      <p>
+        Do you have the wit and charm to be a quizmaster?
+        Want to be part of something great and fun? Looking
+        for a bit of extra cash while having a jolly good
+        time? Look no further and apply to be a quizmaster today:
+        <button class="button-rounded">Contact Us</button>
+      </p>
+    </div>
+  </div>
+  <div>
+    <%= image_tag("about_us/10.jpg", alt: "three quizmasters posing on stage") %>
+  </div>
+</div>
+
+<div class="space-one-rem"></div>

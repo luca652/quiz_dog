@@ -1,6 +1,9 @@
-<div class="quizmaster-card">
+<div class="quizmaster-card col-6 col-md-4 col-lg-3">
   <%= cl_image_tag quizmaster.photo.key if quizmaster.photo.key %>
   <h4><%= quizmaster.name %></h4>
+  <div class="text-bubble text-bubble-peach">
+    <p><%= quizmaster.profile %></p>
+  </div>
 
 <% if admin_page %>
   <div class="quizmaster-venues">

@@ -1,6 +1,3 @@
-.banner-container {
-  position: relative;
-}
 
 .punters-text-overlay {
   position: absolute;
@@ -71,11 +68,6 @@
   .cards {
     grid-template-columns: 1fr;
   }
-
-  .banner-container {
-    margin-bottom: 2rem;
-  }
-
 }
 
 // Small devices (landscape phones, 576px and up)
