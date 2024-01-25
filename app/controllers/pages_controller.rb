@@ -39,7 +39,7 @@ class PagesController < ApplicationController
   def corporate_karaoke
   end
 
-  def piano_karaoke
+  def live_piano_karaoke
   end
 
   def sustainability
