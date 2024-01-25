@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 
   img {
-    width: 150px;
+    width: 120px;
+    border-radius: 50%;
+
+    @include media(tabletAndUp) {
+      width: 180px;
+    }
   }
 
   > h4 {

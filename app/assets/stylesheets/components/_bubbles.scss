@@ -1,0 +1,22 @@
+.text-bubble {
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+
+  @include media(tabletAndUp) {
+  padding: 1.5rem;
+  }
+}
+
+
+.text-bubble-yellow {
+  background-color: $yellow;
+}
+
+.text-bubble-green {
+  background-color: $quiz-dog-green;
+}
+
+.text-bubble-peach {
+  background-color: $peach;
+}

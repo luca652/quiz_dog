@@ -7,3 +7,20 @@
   color: $peach;
   -webkit-text-stroke: 2px #973a27; /* For WebKit browsers (Safari, Chrome) */
 }
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.quizzing-dogs-section {
+
+  img {
+    display: none;
+    width: 80%;
+  }
+
+  @include media(tabletAndUp) {
+    display: flex;
+  }
+}

@@ -1,4 +1,9 @@
 // LAYOUT FOR PAGE BANNERS
+.banner-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
 .page-banner {
   height: 14rem;
   background-size: cover;

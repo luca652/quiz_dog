@@ -33,6 +33,7 @@ class PagesController < ApplicationController
   end
 
   def about_us
+    @quizmasters = Quizmaster.all
   end
 
   def corporate_karaoke
