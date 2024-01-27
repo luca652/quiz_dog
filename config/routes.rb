@@ -16,4 +16,5 @@ Rails.application.routes.draw do
 
   resources :venues, except: [:show ]
   resources :quizmasters, except: [:index, :show ]
+  resources :messages, only: [:new, :create]
 end
