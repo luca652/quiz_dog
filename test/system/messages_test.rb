@@ -16,6 +16,9 @@ class MessagesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "CONTACT US"
 
     fill_in "Name", with: "First Test Message"
+    fill_in "Email", with: "test@test.com"
+    fill_in "Number", with: "07833333333"
+    fill_in "Message", with: "Ciao!"
     click_on "Send"
 
     assert_text "Thank you for your message!"
