@@ -6,6 +6,11 @@ class MessagesTest < ApplicationSystemTestCase
   #
   #   assert_selector "h1", text: "Messages"
   # end
+
+  setup do
+    @message = messages(:first)
+  end
+
   test "Creating a new message" do
     visit contact_us_path
     assert_selector "h1", text: "CONTACT US"

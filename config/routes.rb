@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "corporate-karaoke", to: "pages#corporate_karaoke"
   get "live-piano-karaoke", to: "pages#live_piano_karaoke"
   get "sustainability", to: "pages#sustainability"
+  get "contact-us", to: "pages#contact_us"
 
   resources :venues, except: [:show ]
   resources :quizmasters, except: [:index, :show ]
