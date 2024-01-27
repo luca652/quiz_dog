@@ -19,7 +19,7 @@ class MessagesTest < ApplicationSystemTestCase
     fill_in "Email", with: "test@test.com"
     fill_in "Number", with: "07833333333"
     fill_in "Message", with: "Ciao!"
-    click_on "Send"
+    click_on "Send Message"
 
     assert_text "Thank you for your message!"
   end
