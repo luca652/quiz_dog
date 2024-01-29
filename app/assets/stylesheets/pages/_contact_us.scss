@@ -1,0 +1,17 @@
+
+.banner-contact-us {
+  background-color: #FFEABF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-contact-us {
+  color: $quiz-dog-red;
+  font-size: 2.5rem;
+}
+
+.contact-us-logo {
+  max-width: 30%;
+  height: auto;
+}
