@@ -3,8 +3,12 @@
   border-radius: 10px;
   text-align: center;
 
-  @include media(tabletAndUp) {
-  padding: 1.5rem;
+  @include media(tablet) {
+    padding: 1.5rem;
+  }
+
+  @include media(desktop) {
+    padding: 2.5rem;
   }
 }
 

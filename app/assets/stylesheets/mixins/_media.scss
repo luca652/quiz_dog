@@ -26,4 +26,8 @@
   @if $query == large-desktop {
     @media (min-width: 1200px) { @content; }
   }
+
+  @if $query == extra-large-desktop {
+    @media (min-width: 1440px) { @content; }
+  }
 }
