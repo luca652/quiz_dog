@@ -8,7 +8,7 @@
     width: 120px;
     border-radius: 50%;
 
-    @include media(tabletAndUp) {
+    @include media(tablet) {
       width: 180px;
     }
   }

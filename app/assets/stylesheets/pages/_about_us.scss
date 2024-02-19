@@ -20,7 +20,7 @@
     width: 80%;
   }
 
-  @include media(tabletAndUp) {
+  @include media(tablet) {
     display: flex;
   }
 }
