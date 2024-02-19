@@ -1,10 +1,29 @@
 
+// @mixin media($query) {
+//   @if $query == tabletAndUp {
+//     @media (min-width: 768px) { @content; }
+//   }
+
+//   @if $query == laptopAndUp {
+//     @media (min-width: 1200px) { @content; }
+//   }
+// }
+
+
 @mixin media($query) {
-  @if $query == tabletAndUp {
+  @if $query == tablet {
+    @media (min-width: 576px) { @content; }
+  }
+
+  @if $query == laptop {
     @media (min-width: 768px) { @content; }
   }
 
-  @if $query == laptopAndUp {
-    @media (min-width: 1200px) {@content;}
+  @if $query == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @if $query == large-desktop {
+    @media (min-width: 1200px) { @content; }
   }
 }
