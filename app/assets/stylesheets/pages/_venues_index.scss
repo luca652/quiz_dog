@@ -35,7 +35,7 @@
   border-radius: $br;
   top: 0;
 
-  @include media(tabletAndUp) {
+  @include media(tablet) {
     width: 70%;
   }
 }
