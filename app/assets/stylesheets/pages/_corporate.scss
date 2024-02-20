@@ -8,3 +8,17 @@
 .title-corporate {
   color: $yellow;
 }
+
+
+.company-logos-container {
+  width: 100%; /* Ensure the container spans the full width of its parent */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent logos from wrapping to the next line */
+  background-color: white;
+
+  img {
+    width: 10rem;
+    height: 5rem;
+    object-fit: cover;
+  }
+}
