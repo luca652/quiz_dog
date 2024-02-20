@@ -49,7 +49,9 @@
           time? Look no further and apply to be a quizmaster today:
         </p>
         <p class="empty-line"></p>
-        <button class="contact-us-button-blue">Contact Us</button>
+        <%= link_to contact_us_path do %>
+          <button class="contact-us-button-blue">Contact Us</button>
+        <% end %>
       </div>
     </div>
     <div class="quizzing-dogs-image-container col-sm-0 col-md-6 col-lg-6">
