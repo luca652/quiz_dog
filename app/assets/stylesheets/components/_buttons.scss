@@ -11,7 +11,6 @@
   white-space: nowrap;
   text-decoration: none;
   width: 270px;
-  // transform: scale(1);
   transition: all 0.2s;
 }
 
@@ -22,16 +21,8 @@
 .btn-red:hover {
   text-decoration: none;
   background-color: #750d10;
-  // transform: scale(1.1);
 }
 
-// @media (min-width: 768px) {
-//   .btn-red {
-//     padding: 14px 50px 10px;
-//   }
-// }
-
-// buttons for the ADMIN SECTION
 .btn-create {
   margin: 10px 0;
 }
@@ -39,5 +30,11 @@
 .button-rounded {
   border-radius: 20px;
   background-color: #008080;
+  font-weight: bold;
+}
+
+.button-rounded-red {
+  border-radius: 20px;
+  background-color: $quiz-dog-red;
   font-weight: bold;
 }

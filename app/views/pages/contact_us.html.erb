@@ -8,10 +8,46 @@
   </div>
 </div>
 
-<%= simple_form_for @message do |form| %>
-  <%= form.input :name %>
-  <%= form.input :email %>
-  <%= form.input :number %>
-  <%= form.input :message %>
-  <%= form.button :submit, "Send Message", class: "btn btn-success" %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6 col-lg-4 form-container">
+      <%= simple_form_for @message do |form| %>
+        <%= form.input :name %>
+        <%= form.input :email %>
+        <%= form.input :number %>
+        <%= form.input :message %>
+        <div class="d-flex justify-content-center">
+          <%= form.button :submit, "Send Message", class: "btn button-rounded-red" %>
+        </div>
+      <% end %>
+      <div class="space-one-rem"></div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-4 text-bubble text-bubble-red d-flex flex-column justify-content-center social-message-container">
+      <div class="social-media">
+        <%= link_to "https://www.instagram.com/quizdog/", target: "_blank" do %>
+          <%= image_tag("landing_page/social_media/1.jpg", class: "social-media-img", alt: "Instagram Logo") %>
+        <% end %>
+        <%= link_to "https://www.facebook.com/quizdog/", target: "_blank" do %>
+          <%= image_tag("landing_page/social_media/2.jpg", class: "social-media-img", alt: "Facebook Logo") %>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
+          <%= image_tag("landing_page/social_media/3.jpg", class: "social-media-img", alt: "Threads Logo") %>
+        <% end %>
+        <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
+          <%= image_tag("landing_page/social_media/4.jpg", class: "social-media-img", alt: "LinkedIn Logo") %>
+        <% end %>
+      </div>
+      <p class="empty-line"></p>
+      <p>
+        Want to work with us? Want to work for us? Want to know more about us?
+        Please get in contact with any questions, we are here to help!
+        Or fill out the form
+      </p>
+      <p class="empty-line"></p>
+      <p><strong>Email: info@quiz.dog</strong></p>
+      <p class="empty-line"></p>
+      <p><strong>Phone: +44 (0) 7966 663 693</strong></p>
+    </div>
+  </div>
+</div>
