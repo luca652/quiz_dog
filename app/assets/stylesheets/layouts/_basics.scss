@@ -6,10 +6,20 @@ p {
   margin-bottom: 0;
 }
 
+.container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .empty-line {
   margin-bottom: 1rem;
 }
 
-.space-one-rem {
+.empty-space-responsive {
   height: 1rem;
+
+  @include media(tablet) {
+    height: 2rem;
+  }
 }

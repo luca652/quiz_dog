@@ -18,7 +18,43 @@
 
   img {
     width: 10rem;
-    height: 5rem;
+    height: 4rem;
     object-fit: cover;
+
+    @include media(tablet) {
+      height: 5rem;
+    }
+  }
+}
+
+.shauna-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    max-width: 10rem;
+    border-radius: 50%;
+  }
+
+  .shauna-title-section {
+    background-color: $dog-peach;
+    padding: 8px 12px 8px;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    color: black;
+    text-align: justify;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      text-align: justify;
+      margin-bottom: 5px;
+    }
   }
 }
