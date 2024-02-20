@@ -1,6 +1,6 @@
 
 .btn-red {
-  background-color: $quiz-dog-red;
+  background-color: $dog-red;
   border-radius: 5px;
   color: #fff;
   font-family: $lovelo;
@@ -27,14 +27,16 @@
   margin: 10px 0;
 }
 
-.button-rounded {
+.contact-us-button-blue {
   border-radius: 20px;
+  padding: 10px;
   background-color: #008080;
   font-weight: bold;
+  border: none;
 }
 
 .button-rounded-red {
   border-radius: 20px;
-  background-color: $quiz-dog-red;
+  background-color: $dog-red;
   font-weight: bold;
 }
