@@ -13,14 +13,24 @@
   margin-left: 0px;
 }
 
-.quizzing-dogs-section {
+.quizzing-dogs-section img {
 
-  img {
-    display: none;
-    width: 80%;
-  }
+  display: none;
+  z-index: 0;
 
   @include media(tablet) {
     display: flex;
+    width: 80%;
   }
+}
+
+
+.quizzing-dogs-text-container {
+  margin-right: -1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.quizzing-dogs-image-container {
+  margin-left: -1rem;
 }
