@@ -52,8 +52,8 @@
 
 <div class="empty-space-responsive"></div>
 
-<div class="container justify-content-center">
-  <div class="row align-items-center">
+<div class="container">
+  <div class="row align-items-center justify-content-evenly">
     <div class="shauna-card col-4 col-md-3 col-lg-2">
       <%= image_tag("quizmasters/1.jpg", alt: "Picture of Shuana Thompson from Multiplex ", class: "shuana-pic") %>
       <div class="shauna-title-section">
@@ -84,7 +84,7 @@
     <p>
       We know that sustainability is important to every company. We can help your
       company go the extra mile at your company event with our sustainable online answer sheets.
-      See what else we are doing to improve our carbon footprint here.
+      See what else we are doing to improve our carbon footprint <%= link_to "here", sustainability_path %>.
     </p>
   </div>
 </div>
