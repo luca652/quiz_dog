@@ -5,12 +5,54 @@
 </div>
 
 <div class="container">
-  <h1>PRIVATE</h1>
-  <p>
-  Info
-
-Looking to throw a party and need the perfect ice breaker to get things going? There’s nothing like a fantastic quiz to get things really cooking! We’ve hosted quizzes at weddings, birthday parties, floating down the Thames, even at a funeral. If you want to give your private function some real pop, drop us a line.
-
-Contact us for rates and further details.
-</p>
+  <div class="d-flex justify-content-center">
+    <h3>FOR ALL YOU PARTY ANIMALS</h3>
+  </div>
+  <div class="d-flex">
+    <div class="text-bubble text-bubble-yellow col-9 col-md-8 col-lg-8">
+      <p>
+        Looking to throw a party and need the perfect ice breaker to get things going?
+        There’s nothing like a fantastic quiz to get things really cooking!
+      </p>
+      <p class="empty-line"></p>
+      <p>
+        We’ve hosted quizzes at weddings, birthday parties, floating down the Thames,
+        even at a funeral. If you want to give your private function some real pop,
+        drop us a line.
+      </p>
+      <p class="empty-line"></p>
+      <p>
+        Contact us for rates and further details.
+      </p>
+    </div>
+    <div class="col-3 col-md-4 col-lg-4">
+      <%= image_tag "private/private_lightbulb.jpg", class: "img-fluid" %>
+    </div>
+  </div>
 </div>
+
+<hr class="dividing-line-black">
+
+<div class="container private-virtual">
+  <div class="text-bubble text-bubble-yellow">
+    <h3>VIRTUAL</h3>
+    <p>
+      Just because your mates are spread across the world is absolutely no reason why
+      you can’t enjoy a good quiz. We have hosted huge events of well over a 200
+      people on Zoom and lockdown meant we had plenty of time to hone the event to a
+      fine art!
+    </p>
+    <p class="empty-line"></p>
+    <p>
+      All you need is a computer and a camera, and away we go.
+      We also have options of hybrid quizzes where half the contestants are there in
+      person, the other half playing online.
+    </p>
+    <p class="empty-line"></p>
+    <p>
+      For more information, please <%= link_to "contact us", contact_us_path %>.
+    </p>
+  </div>
+</div>
+
+<%= image_tag "private/12.jpg", class: "private-dogs-image", alt: "a group of dogs enjoying a party with balloons" %>
