@@ -3,3 +3,16 @@
   background-image: url('charity/charity_header.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   background-position: center center;
 }
+
+.title-charity {
+  color: $yellow;
+}
+
+.charity-logo {
+  width: 8rem;
+  border-radius: 10px;
+}
+
+.lightbulb-logo {
+  object-fit: cover;
+}
