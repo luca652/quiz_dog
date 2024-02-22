@@ -4,4 +4,5 @@ class Message < ApplicationRecord
   validates :email, presence: true
   validates :number, presence: true
   validates :message, presence: true
+
 end

@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
+      ContactUsMailer.with(message: @message).new_question.deliver_now
       redirect_to contact_us_path, notice: "Thank you for your message!"
     else
       render :new
