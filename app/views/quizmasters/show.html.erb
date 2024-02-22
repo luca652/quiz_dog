@@ -1,0 +1,22 @@
+<div class="container admin-quizmaster-show-container d-flex flex-column align-items-center">
+  <div class="quizmaster-card col-6 col-md-4 col-lg-3">
+  <%= cl_image_tag @quizmaster.photo.key if @quizmaster.photo.key %>
+  <h4><%= @quizmaster.name %></h4>
+  <div class="text-bubble text-bubble-peach">
+    <p><%= @quizmaster.profile %></p>
+  </div>
+  <div class="quizmaster-venues">
+    <h6><%= @quizmaster.name %>'s PUBS</h6>
+    <% if @quizmaster.venues.empty? %>
+      <p>No pubs yet.</p>
+    <% else %>
+      <% @quizmaster.venues.each do |venue| %>
+        <p><%= venue.name %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="admin-quizmaster-buttons">
+    <%= link_to "Edit", edit_quizmaster_path(@quizmaster), class: "btn btn-primary dog-button-yellow" %>
+    <%= link_to "Delete", quizmaster_path(@quizmaster), class: "btn btn-danger dog-button-red", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+  </div>
+</div>
