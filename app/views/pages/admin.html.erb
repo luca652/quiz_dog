@@ -16,18 +16,20 @@
   </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-      <%= link_to "Create a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
+      <%= link_to "Add a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
       <%# VENUE CARDS %>
-      <div class="cards">
-        <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
+      <div class="container-venues-map d-flex pt-2 pl-3 pr-3 pb-3">
+        <div class="cards">
+          <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
+        </div>
       </div>
     </div>
 
     <%# QUIZMASTER TAB %>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <%= link_to "Create a QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
+      <%= link_to "Add a QUIZMASTER!", new_quizmaster_path, class: "btn btn-success btn-create" %>
       <%# Quizmaster Cards %>
-      <div class="cards">
+      <div class="container-fluid row justify-content-center">
         <%= render partial: 'quizmasters/quizmaster', collection: @quizmasters, locals: { admin_page: true } %>
       </div>
     </div>

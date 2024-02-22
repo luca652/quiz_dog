@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   get "pubs", to: "pages#pubs"
 
   resources :venues, except: [:show ]
-  resources :quizmasters, except: [:index, :show ]
+  resources :quizmasters, except: [:index ]
   resources :messages, only: [:new, :create]
 end

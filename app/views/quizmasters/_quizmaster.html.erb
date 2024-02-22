@@ -5,20 +5,7 @@
     <p><%= quizmaster.profile %></p>
   </div>
 
-<% if admin_page %>
-  <div class="quizmaster-venues">
-    <h6><%= quizmaster.name %>'s PUBS</h6>
-    <% if quizmaster.venues.empty? %>
-      <p>No pubs yet.</p>
-    <% else %>
-      <% quizmaster.venues.each do |venue| %>
-        <p><%= venue.name %></p>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="admin-quizmaster-buttons">
-    <%= link_to "Edit", edit_quizmaster_path(quizmaster), class: "btn btn-primary" %>
-    <%= link_to "Delete", quizmaster_path(quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
-  </div>
+  <% if admin_page %>
+   <%= link_to "Edit", quizmaster_path(quizmaster), class: "primary-button"  %>
   <% end %>
 </div>
