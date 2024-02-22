@@ -48,4 +48,7 @@ class PagesController < ApplicationController
   def contact_us
     @message = Message.new
   end
+
+  def pubs
+  end
 end
