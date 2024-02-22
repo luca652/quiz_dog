@@ -1,6 +1,12 @@
 class QuizmastersController < ApplicationController
   before_action :set_quizmaster, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [ :show ]
+
   def index
+  end
+
+  def show
+    @quizmaster = Quizmaster.find(params[:id])
   end
 
   def new
