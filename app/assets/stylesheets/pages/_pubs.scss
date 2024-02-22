@@ -1,8 +1,37 @@
 .banner-video-pubs {
-  // position: relative;
+  overflow: hidden;
 }
 
 #pubs-video {
   width: 100%;
   height: auto;
+}
+
+.join-pack-container {
+  position: relative;
+  z-index: 1;
+}
+
+.tiger-banner {
+  width: 100%;
+  height: auto;
+  margin-top: -0.5rem;
+  z-index: 0;
+
+  @include media(tablet) {
+    margin-top: -1rem;
+  }
+}
+
+.find-venue-button {
+  text-decoration: none;
+  color: black;
+}
+
+.title-align-center {
+  text-align: center;
+}
+
+.testimonial-title-red {
+  background-color: $red;
 }

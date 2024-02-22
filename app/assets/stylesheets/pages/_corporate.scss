@@ -31,7 +31,7 @@
   }
 }
 
-.shauna-card {
+.testimonial-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,8 +43,7 @@
     border-radius: 50%;
   }
 
-  .shauna-title-section {
-    background-color: $dog-peach;
+  .testimonial-title-section {
     padding: 8px 12px 8px;
     border-radius: 5px;
     margin-top: -10px;
@@ -60,6 +59,10 @@
       text-align: justify;
       margin-bottom: 5px;
     }
+  }
+
+  .testimonial-title-peach {
+    background-color: $dog-peach;
   }
 }
 

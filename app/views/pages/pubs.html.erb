@@ -4,3 +4,135 @@
     <%= video_tag "quiz_dog_video.mp4", id: "pubs-video", autoplay: :autoplay, loop: :loop, muted: true, alt: "quizmaster on stage and people quizzing" %>
   </div>
 </div>
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <h3 class="title-align-center">COME A QUIZZING, YOU FLEA RIDDEN SCOUNDRELS!</h3>
+  </div>
+  <div class="d-flex justify-content-evenly">
+    <div class="col-4 col-md-4 col-lg-4 d-flex flex-column justify-content-between">
+      <%= image_tag "pubs/5.jpg", class: "img-fluid" %>
+      <%= link_to venues_path do %>
+        <div class="text-bubble text-bubble-yellow">
+          <h5 class="find-venue-button">FIND A VENUE NEAR YOU</h5>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-bubble text-bubble-yellow col-7 col-md-8 col-lg-8">
+      <p>
+        Fancy the funnest challenge you can have in a pub?
+        Fancy winning loads of prizes?
+      </p>
+      <p class="empty-line"></p>
+      <p>
+        Fancy learning something whilst damaging close friendships? Sick of the
+        same egg heads winning every week?
+      </p>
+      <p class="empty-line"></p>
+      <p>
+        If yes, Quiz Dog has you covered. We have venues
+        all across London (and one in America) that blow
+        the rest out of the water. Everything’s done on your
+        phone too, because we want to save this planet
+        one sheet of paper at a time!
+      </p>
+      <p class="empty-line"></p>
+      <p>
+        And with our anti-cheating measures, you can’t lose
+        (unless you score fewer points than the other teams)!!!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="dividing-line-black"></div>
+
+<div class="container join-pack-container">
+  <h3>JOIN THE QUIZ DOG PACK AT YOUR PUB!</h3>
+  <div class="text-bubble text-bubble-yellow">
+    <p>
+      Above everything here at Quiz Dog, the thing we are most proud of is our
+      amazing team of passionate Quizmasters. However, we understand that
+      margins are tight at the minute and sometimes cost cutting is not preferred,
+      but a necessity. Well, we have you covered.
+    </p>
+    <p>
+      Our quizmasters are an array of comedians, actors, and broadcasters that
+      know how to work a crowd. When we provide a venue with a quizmaster,
+      they’re in for the long haul. We think it’s so important for there to be a
+      great rapport between venue, performer, and audience. If for some reason
+      the quizmaster can’t make it, don’t despair! Quiz Dog has a team of
+      dedicated and experienced <%= link_to "professionals", about_us_path(anchor: 'our-team') %> that are more than happy to step in.
+    </p>
+    <p class="empty-line"></p>
+    <p>
+      A Quiz Dog quiz is written and performed with each location in mind. No two
+      venues are the same, and here at Quiz Dog we want to guarantee that your
+      venue’s event is the best event it’s possible to have. With this in mind, our
+      quizzes are flexible. If you want bonus rounds, we have them ready. If you
+      want a shorter quiz, no problem. We work closely with each venue to
+      guarantee the perfect event for your venue.
+    </p>
+    <p class="empty-line"></p>
+    <p>
+      On average, a quiz lasts two hours, and we’re always mindful that our events
+      are usually on school nights.
+    </p>
+  </div>
+</div>
+
+<%= image_tag "pubs/6.jpg", class: "dogs-poker-img d-none", alt: "illustration of dogs quizzing" %>
+
+<%= link_to "http://www.conaldeeney.com", target: "_blank" do  %>
+  <%= image_tag "pubs/the_tiger.jpg", class: "tiger-banner", alt: "An illustration of a tiger" %>
+<% end %>
+
+<div class="dividing-line-black"></div>
+
+<div class="container access-quizdex-section">
+  <h3>HOST YOUR OWN - ACCESS QUIZDEX</h3>
+  <div class="text-bubble text-bubble-yellow">
+    <p>
+      Above everything here at Quiz Dog, the thing we are most proud of is our amazing team of passionate
+      Quizmasters. However, we understand that margins are tight at the minute and sometimes cost cutting
+      is not preferred, but a necessity. Well, we have you covered.
+    </p>
+  </div>
+</div>
+
+<div class="empty-space-responsive"></div>
+
+<div class="container">
+  <div class="row justify-content-evenly">
+    <div class="testimonial-card col-4 col-md-3 col-lg-2">
+      <%= image_tag("pubs/20.jpg", alt: "Picture of Shuana Thompson from Multiplex ", class: "shuana-pic") %>
+      <div class="testimonial-title-section testimonial-title-red">
+        <h4 class="title-align-center"> MOUNTAIN LAKES BREWERY - USA </h4>
+      </div>
+    </div>
+    <div class="text-bubble text-bubble-yellow col-6 col-md-7 col-lg-8">
+      <p>
+        “We've been using QuizDog in our taproom once a week
+        for over a year, and we've grown Thursday revenues into
+        something that nearly matches our weekend numbers. If
+        you're a business owner, you know that's amazing!
+        QuizDog makes it fun and easy to put on a weekly quiz in
+        your pub, whether you host it yourself, like me, or you
+        pass hosting duties onto someone else on your staff.
+        Bring your community together with QuizDog!”
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="dividing-line-black"></div>
+
+<div class="d-flex justify-content-center">
+  <%= link_to "Contact Us", contact_us_path %>
+</div>
+
+<div class="col-3 col-md-4 col-lg-4">
+  <%= image_tag "private/private_lightbulb.jpg", class: "img-fluid d-none" %>
+</div>
+
+<div class="empty-space-responsive"></div>
