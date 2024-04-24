@@ -9,12 +9,25 @@
   color: $yellow;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
 
-.company-logos-container {
-  width: 100%; /* Ensure the container spans the full width of its parent */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  white-space: nowrap; /* Prevent logos from wrapping to the next line */
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  white-space: nowrap;
   background-color: white;
+
+}
+
+.logos-slide {
+  animation: 40s slide infinite linear;
+  display: inline-block;
 
   img {
     width: 13rem;
@@ -29,6 +42,10 @@
   .logo-paribas {
     width: 8rem;
   }
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
 }
 
 .testimonial-card {

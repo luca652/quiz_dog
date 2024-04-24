@@ -21,12 +21,12 @@
           <h5 class="btn-red">FIND A QUIZ</h5>
         </div>
       <% end %>
-      <%= link_to pubs_path do %>
+      <%= link_to pubs_path(anchor: "join-us-at-your-pub") do %>
         <div class="col-md-12 col-sm-12 d-flex justify-content-center">
           <h5 class="btn-red">START A QUIZ!</h5>
         </div>
       <% end %>
-      <%= link_to private_path do %>
+      <%= link_to pubs_path(anchor: "host-your-own") do %>
         <div class="col-md-12 col-sm-12 d-flex justify-content-center">
           <h5 class="btn-red">HOST YOUR OWN</h5>
         </div>
@@ -65,7 +65,7 @@
       <div class="carousel-item" data-multiple-images-target="card3">
         <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to charity_path do %>
-          <%= image_tag("landing_page/quizzing_section/3.jpg", class: "card-img", alt: "Card image") %>
+          <%= image_tag("landing_page/quizzing_section/5.jpg", class: "card-img", alt: "Card image") %>
           <div class="card-img-overlay category-card-image">
             <h4 class="card-title font-weight-bold">CHARITY</h4>
           </div>
@@ -75,7 +75,7 @@
       <div class="carousel-item" data-multiple-images-target="card4">
         <div class="card category-card col-lg-3 col-md-6 col-sm-12 border-0 bg-transparent">
           <%= link_to private_path do %>
-          <%= image_tag("landing_page/quizzing_section/5.jpg", class: "card-img", alt: "Card image") %>
+          <%= image_tag("private/6.jpg", class: "card-img", alt: "Card image") %>
           <div class="card-img-overlay category-card-image">
             <h4 class="card-title font-weight-bold">PRIVATE</h4>
           </div>
@@ -193,7 +193,9 @@
 <hr class="dividing-line-black">
 
 <div id="contact-us-section" class="mt-4 mb-4 container-fluid d-flex flex-column align-items-center">
-  <h1 class="contact-us-title">CONTACT US</h1>
+  <%= link_to "contact_us_path", class: "contact-us-link" do %>
+    <h1 class="contact-us-title">CONTACT US</h1>
+  <% end %>
 
   <div class="social-media">
     <%= link_to "https://www.instagram.com/quizdog/", target: "_blank" do %>
