@@ -6,7 +6,7 @@ export default class extends Controller {
 
   connect() {
     console.log("Connected!");
-    let elements = [this.card1Target, this.card2Target, this.card3Target, this.card4Target, this.card5Target];
+    let elements = [this.card1Target, this.card2Target, this.card3Target, this.card4Target];
     console.log(elements);
 
     elements.forEach((el) => {
