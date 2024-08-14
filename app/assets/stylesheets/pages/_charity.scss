@@ -13,6 +13,16 @@
   border-radius: 10px;
 }
 
-.lightbulb-logo {
+.lightbulb-logo-charity {
   object-fit: cover;
+  margin-top: -2rem;
+
+  @include media(mobile) {
+    margin-top: -3rem;
+  }
+
+  @include media(mobile) {
+    margin-top: -4rem;
+  }
+
 }

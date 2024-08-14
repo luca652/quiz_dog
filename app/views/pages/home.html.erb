@@ -187,18 +187,5 @@
     <h1 class="contact-us-title">CONTACT US</h1>
   <% end %>
 
-  <div class="social-media">
-    <%= link_to "https://www.instagram.com/quizdog/", target: "_blank" do %>
-      <%= image_tag("landing_page/social_media/1.png", class: "social-media-img", alt: "Instagram Logo") %>
-    <% end %>
-    <%= link_to "https://www.facebook.com/quizdog/", target: "_blank" do %>
-      <%= image_tag("landing_page/social_media/2.png", class: "social-media-img", alt: "Facebook Logo") %>
-    <% end %>
-    <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
-      <%= image_tag("landing_page/social_media/3.png", class: "social-media-img", alt: "Threads Logo") %>
-    <% end %>
-    <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
-      <%= image_tag("landing_page/social_media/4.png", class: "social-media-img", alt: "LinkedIn Logo") %>
-    <% end %>
-  </div>
+  <%= render "pages/partials/social_media" %>
 </div>

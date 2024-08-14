@@ -4,10 +4,40 @@
   background-position: center center;
 }
 
-// .private-virtual {
-//   position: relative;
-//   z-index: 0;
-// }
+.lightbulb-image-private {
+  max-width: 100px;
+
+  @include media(mobile) {
+    max-width: 200px;
+  }
+
+  @include media(laptop) {
+    max-width: 250px;
+  }
+
+  @include media(desktop) {
+    max-width: 300px;
+  }
+}
+
+.lighbulb-image-private-container {
+  margin-top: -2rem;
+  z-index: 1;
+  margin-bottom: -1rem;
+
+  @include media(mobile) {
+    margin-top: -9rem;
+    margin-bottom: -2rem;
+  }
+
+  @include media(laptop) {
+    margin-top: -13rem;
+  }
+
+  @include media(desktop) {
+    margin-top: -16rem;
+  }
+}
 
 .private-dogs-image {
   width: 100%;
