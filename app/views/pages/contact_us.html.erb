@@ -24,20 +24,7 @@
     </div>
 
     <div class="col-sm-12 col-md-6 col-lg-4 text-bubble text-bubble-red d-flex flex-column justify-content-center social-message-container">
-      <div class="social-media">
-        <%= link_to "https://www.instagram.com/quizdog/", target: "_blank" do %>
-          <%= image_tag("landing_page/social_media/1.jpg", class: "social-media-img", alt: "Instagram Logo") %>
-        <% end %>
-        <%= link_to "https://www.facebook.com/quizdog/", target: "_blank" do %>
-          <%= image_tag("landing_page/social_media/2.jpg", class: "social-media-img", alt: "Facebook Logo") %>
-        <% end %>
-        <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
-          <%= image_tag("landing_page/social_media/3.jpg", class: "social-media-img", alt: "Threads Logo") %>
-        <% end %>
-        <%= link_to "https://www.linkedin.com/company/quiz-dog/", target: "_blank" do %>
-          <%= image_tag("landing_page/social_media/4.jpg", class: "social-media-img", alt: "LinkedIn Logo") %>
-        <% end %>
-      </div>
+      <%= render "pages/partials/social_media" %>
       <p class="empty-line"></p>
       <p>
         Want to work with us? Want to work for us? Want to know more about us?

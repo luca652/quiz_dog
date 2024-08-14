@@ -1,5 +1,6 @@
 .banner-video-pubs {
   overflow: hidden;
+  position: relative;
 }
 
 #pubs-video {
@@ -7,9 +8,81 @@
   height: auto;
 }
 
+// BEGIN this section deals with the overlap of the dog image
+.overlap-column {
+  position: relative;
+}
+
+.overlap-image-container {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  right: 0;
+
+  @include media(mobile) {
+    top: -70px;
+  }
+
+  @include media(tablet) {
+    top: -110px;
+  }
+}
+
+.overlap-image {
+  width: 100%;
+  height: auto;
+}
+
+.overlap-button {
+  margin-top: 250px;
+}
+// END
+
+.button-bubble {
+  padding: 0.5rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .join-pack-container {
   position: relative;
   z-index: 1;
+}
+
+.dividing-line-pubs-page {
+  @include media(desktop) {
+    width: 20%;
+  }
+}
+
+.poker-image {
+  float: right;
+  margin-top: -20px; /* Adjust to overlap the top */
+  margin-left: 20px;
+}
+
+.poker-image img {
+  max-width: 300px; /* Adjust the size as needed */
+  height: auto;
+  margin-top: 1rem;
+
+  @include media(laptop) {
+    max-width: 300px; /* Adjust the size as needed */
+    height: auto;
+    margin-top: -3rem;
+  }
+
+  @include media(desktop) {
+    max-width: 400px;
+    margin-top: -7rem;
+  }
+
+  // @include media(large-desktop) {
+  //   max-width: 400px;
+  //   margin-top: -10rem;
+  // }
 }
 
 .tiger-banner {
@@ -35,3 +108,46 @@
 .testimonial-title-red {
   background-color: $red;
 }
+
+.lightbulb-container {
+  display: flex;
+  justify-content: right;
+  margin-top: -7rem;
+
+  @include media(tablet) {
+    margin-right: 3rem;
+  }
+
+  @include media(laptop) {
+    margin-right: 6rem;
+    margin-top: -10rem;
+  }
+
+  @include media(laptop) {
+    margin-right: 6rem;
+    margin-top: -8rem;
+  }
+
+  @include media(large-desktop) {
+    margin-right: 12rem;
+    margin-top: -14rem;
+  }
+
+  @include media(extra-large-desktop) {
+    margin-right: 15rem;
+    margin-top: -14rem;
+  }
+
+}
+
+.lightbulb-image {
+  max-width: 130px;
+
+  @include media(tablet) {
+    max-width: 200px;
+  }
+
+  @include media(laptop) {
+    max-width: 300px;
+  }
+ }

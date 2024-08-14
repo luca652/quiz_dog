@@ -2,3 +2,40 @@
 .banner-image-corporate-karaoke {
   background-image: url("landing_page/karaoke_section/7.jpg"), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
+
+
+.singing-mouth {
+  max-width: 150px;
+
+  @include media(mobile) {
+    max-width: 200px;
+  }
+
+  @include media(laptop) {
+    max-width: 250px;
+  }
+
+  @include media(desktop) {
+    max-width: 300px;
+  }
+}
+
+.singing-mouth-container {
+  margin-top: -3rem;
+  margin-bottom: -1rem;
+  margin-left: -2rem;
+  z-index: 1;
+
+  @include media(mobile) {
+    margin-top: -10rem;
+    margin-left: -3rem;
+  }
+
+  @include media(laptop) {
+    // margin-top: -13rem;
+  }
+
+  @include media(desktop) {
+    margin-top: -12rem;
+  }
+}
