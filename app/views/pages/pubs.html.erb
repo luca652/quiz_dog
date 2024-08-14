@@ -5,57 +5,66 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="d-flex justify-content-center">
-    <h3 class="title-align-center">COME A QUIZZING, YOU FLEA RIDDEN SCOUNDRELS!</h3>
-  </div>
+<div class="container position-relative">
   <div class="d-flex justify-content-evenly">
-    <div class="col-4 col-md-4 col-lg-4 d-flex flex-column justify-content-between">
-      <%= image_tag "pubs/5.jpg", class: "img-fluid" %>
-      <%= link_to venues_path do %>
-        <div class="text-bubble text-bubble-yellow">
-          <h5 class="find-venue-button">FIND A VENUE NEAR YOU</h5>
-        </div>
-      <% end %>
+    <div class="col-4 col-md-4 col-lg-4 d-flex flex-column overlap-column">
+      <div class="overlap-image-container">
+        <%= image_tag "pubs/5.png", class: "img-fluid shakespeare-dog-img" %>
+        <%= link_to venues_path, class: "overlap-button" do %>
+          <div class="text-bubble text-bubble-yellow button-bubble">
+            <h5 class="find-venue-button mb-0">FIND A VENUE NEAR YOU</h5>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="text-bubble text-bubble-yellow col-7 col-md-8 col-lg-8">
-      <p>
-        Fancy the funnest challenge you can have in a pub?
-        Fancy winning loads of prizes?
-      </p>
-      <p class="empty-line"></p>
-      <p>
-        Fancy learning something whilst damaging close friendships? Sick of the
-        same egg heads winning every week?
-      </p>
-      <p class="empty-line"></p>
-      <p>
-        If yes, Quiz Dog has you covered. We have venues
-        all across London (and one in America) that blow
-        the rest out of the water. Everything’s done on your
-        phone too, because we want to save this planet
-        one sheet of paper at a time!
-      </p>
-      <p class="empty-line"></p>
-      <p>
-        And with our anti-cheating measures, you can’t lose
-        (unless you score fewer points than the other teams)!!!
-      </p>
+    <div class="col-7 col-md-8 col-lg-8">
+      <div class="d-flex justify-content-center">
+        <h3 class="title-align-center">COME A QUIZZING, YOU FLEA RIDDEN SCOUNDRELS!</h3>
+      </div>
+
+      <div class="text-bubble text-bubble-yellow">
+        <p>
+          Fancy the funnest challenge you can have in a pub?
+          Fancy winning loads of prizes?
+        </p>
+        <p class="empty-line"></p>
+        <p>
+          Fancy learning something whilst damaging close friendships? Sick of the
+          same egg heads winning every week?
+        </p>
+        <p class="empty-line"></p>
+        <p>
+          If yes, Quiz Dog has you covered. We have venues
+          all across London (and one in America) that blow
+          the rest out of the water. Everything’s done on your
+          phone too, because we want to save this planet
+          one sheet of paper at a time!
+        </p>
+        <p class="empty-line"></p>
+        <p>
+          And with our anti-cheating measures, you can’t lose
+          (unless you score fewer points than the other teams)!!!
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="dividing-line-black"></div>
+<div class="dividing-line-black dividing-line-pubs-page"></div>
 
 <div class="container join-pack-container" id="join-us-at-your-pub">
   <h3>JOIN THE QUIZ DOG PACK AT YOUR PUB!</h3>
   <div class="text-bubble text-bubble-yellow">
+    <div class="poker-image">
+      <%= image_tag "pubs/6.png", class: "img-fluid overlap-right-image", alt: "illustration of dogs quizzing"  %>
+    </div>
     <p>
       Above everything here at Quiz Dog, the thing we are most proud of is our
       amazing team of passionate Quizmasters. However, we understand that
       margins are tight at the minute and sometimes cost cutting is not preferred,
       but a necessity. Well, we have you covered.
     </p>
+    <p class="empty-line"></p>
     <p>
       Our quizmasters are an array of comedians, actors, and broadcasters that
       know how to work a crowd. When we provide a venue with a quizmaster,
@@ -80,8 +89,6 @@
     </p>
   </div>
 </div>
-
-<%= image_tag "pubs/6.jpg", class: "dogs-poker-img d-none", alt: "illustration of dogs quizzing" %>
 
 <%= link_to "http://www.conaldeeney.com", target: "_blank" do  %>
   <%= image_tag "pubs/the_tiger.jpg", class: "tiger-banner", alt: "An illustration of a tiger" %>
