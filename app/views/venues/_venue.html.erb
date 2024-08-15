@@ -11,7 +11,7 @@
       <p class="venue-phone-number"><%= venue.phone_number %></p>
     </div>
   </div>
-  <% if show_edit_delete_buttons %>
+  <% if admin_page %>
     <div class="admin-cards-buttons">
       <%= link_to "Edit", edit_venue_path(venue), class: "btn btn-primary"%>
       <%= link_to "Delete", venue_path(venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>

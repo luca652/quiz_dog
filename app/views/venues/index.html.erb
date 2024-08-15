@@ -18,7 +18,7 @@
       <% if @venues.empty? %>
         <p>No venues yet.</p>
       <% else %>
-        <%= render partial: 'venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
+        <%= render partial: 'venues/venue', collection: @venues, locals: { admin_page: false } %>
       <% end %>
     </div>
   </div>

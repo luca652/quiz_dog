@@ -3,7 +3,9 @@
   <%= simple_form_for @quizmaster, url: (@quizmaster.new_record? ? quizmasters_path : quizmaster_path(@quizmaster)),
                             method: (@quizmaster.new_record? ? :post : :patch) do |form| %>
     <%= form.input :name %>
-    <%= form.input :profile, as: :text, input_html: { rows: 2 } %>
+    <%= form.input :record %>
+    <%= form.input :fact %>
+    <%= form.input :breed %>
     <%= form.input :photo, as: :file %>
     <%= form.input :user_id, as: :hidden, input_html: {value: current_user.id} %>
 

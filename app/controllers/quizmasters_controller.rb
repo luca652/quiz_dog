@@ -18,7 +18,7 @@ class QuizmastersController < ApplicationController
   def create
     @quizmaster = Quizmaster.new(quizmaster_params)
 
-    if @quizmaster.save!
+    if @quizmaster.save
       redirect_to admin_path
     else
       puts "Quizmaster Errors: #{@quizmaster.errors.full_messages.join(', ')}"
@@ -41,7 +41,6 @@ class QuizmastersController < ApplicationController
   end
 
   def destroy
-    @quizmaster.gigs.destroy_all
     @quizmaster.destroy
     redirect_to admin_path
   end
@@ -49,7 +48,7 @@ class QuizmastersController < ApplicationController
   private
 
   def quizmaster_params
-    params.require(:quizmaster).permit(:name, :profile, :user_id, :photo, venue_ids: [])
+    params.require(:quizmaster).permit(:name, :record, :breed, :fact, :user_id, :photo, venue_ids: [])
   end
 
   def set_quizmaster
