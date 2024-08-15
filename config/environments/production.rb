@@ -5,14 +5,14 @@ Rails.application.configure do
   host = "https://quizdog-ef11b17e16f4.herokuapp.com/"
   config.action_mailer.default_url_options = { host: host }
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :user_name            => Rails.application.credentials.quiz_dog_mailer.address,
-  :password             => Rails.application.credentials.quiz_dog_mailer.password,
-  :authentication       => "plain",
-  :enable_starttls_auto => true
-}
+#   config.action_mailer.smtp_settings = {
+#   :address              => "smtp.gmail.com",
+#   :port                 => 587,
+#   :user_name            => Rails.application.credentials.quiz_dog_mailer.address,
+#   :password             => Rails.application.credentials.quiz_dog_mailer.password,
+#   :authentication       => "plain",
+#   :enable_starttls_auto => true
+# }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
