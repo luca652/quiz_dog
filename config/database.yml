@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: _QuizDog_production
-  username: _QuizDog
-  password: <%= ENV["_QUIZDOG_DATABASE_PASSWORD"] %>
+  database: quiz_dog_production
+  username: luca
+  password: <%= ENV["DATABASE_URL"] %>
