@@ -19,8 +19,8 @@
       <%= link_to "Add a VENUE!", new_venue_path, class: "btn btn-success btn-create" %>
       <%# VENUE CARDS %>
       <div class="container-venues-map d-flex pt-2 pl-3 pr-3 pb-3">
-        <div class="cards">
-          <%= render partial: 'venues/venue', collection: @venues, locals: { show_edit_delete_buttons: false } %>
+        <div class="cards mb-2">
+          <%= render partial: 'venues/venue', collection: @venues, locals: { admin_page: true } %>
         </div>
       </div>
     </div>

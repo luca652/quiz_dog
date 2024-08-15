@@ -33,7 +33,6 @@ class VenuesController < ApplicationController
   end
 
   def destroy
-    @venue.gigs.destroy_all
     @venue.destroy
     redirect_to admin_path
   end

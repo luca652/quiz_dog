@@ -3,7 +3,9 @@
   <%= cl_image_tag @quizmaster.photo.key if @quizmaster.photo.key %>
   <h4><%= @quizmaster.name %></h4>
   <div class="text-bubble text-bubble-peach">
-    <p><%= @quizmaster.profile %></p>
+    <p>Record: <%= @quizmaster.record %></p>
+    <p>Fact: <%= @quizmaster.fact %></p>
+    <p>Dog breed: <%= @quizmaster.breed %></p>
   </div>
   <div class="quizmaster-venues">
     <h6><%= @quizmaster.name %>'s PUBS</h6>

@@ -1,7 +1,13 @@
 <div class="banner-container">
   <div class="page-banner banner-video-pubs">
     <h1 class="page-title title-charity">PUB QUIZZES</h1>
-    <%= video_tag "quiz_dog_video.mp4", id: "pubs-video", autoplay: :autoplay, loop: :loop, muted: true, alt: "quizmaster on stage and people quizzing" %>
+    <%= video_tag "quiz_dog_video.mp4",
+        id: "pubs-video",
+        autoplay: :autoplay,
+        loop: :loop,
+        muted: true,
+        playsinline: true,
+        webkit_playsinline: true %>
   </div>
 </div>
 
