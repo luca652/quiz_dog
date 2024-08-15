@@ -21,8 +21,12 @@
     <h3>WE SUPPORT</h3>
   </div>
   <div class="col-12 col-md-8 col-lg-8 mx-auto d-flex justify-content-evenly">
-    <%= image_tag "charity/24.png", class: "charity-logo", alt: "St Giles logo" %>
-    <%= image_tag "charity/25.png", class: "charity-logo", alt: "Macmillan logo" %>
+    <%= link_to "https://www.stgilestrust.org.uk/" do %>
+      <%= image_tag "charity/24.png", class: "charity-logo", alt: "St Giles logo" %>
+    <% end %>
+    <%= link_to "https://www.macmillan.org.uk/" do %>
+      <%= image_tag "charity/25.png", class: "charity-logo", alt: "Macmillan logo" %>
+    <% end %>
   </div>
   <div class="col-4 mx-auto d-flex justify-content-center">
     <%= image_tag "pubs/7.png", class: "lightbulb-logo-charity img-fluid", alt: "a lightbulb" %>

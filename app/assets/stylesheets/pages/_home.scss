@@ -303,6 +303,16 @@
   }
 }
 
+.social-media {
+  margin-top: -0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
 .social-media-img {
-  width: 6rem;
+  width: 5rem;
+
+  @include media(tablet) {
+    width: 6rem;
+  }
 }

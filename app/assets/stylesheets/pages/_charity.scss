@@ -11,6 +11,14 @@
 .charity-logo {
   width: 8rem;
   border-radius: 10px;
+
+  @include media(tablet) {
+    width: 12rem;
+  }
+
+  @include media(laptop) {
+    width: 14rem;
+  }
 }
 
 .lightbulb-logo-charity {
@@ -21,8 +29,12 @@
     margin-top: -3rem;
   }
 
-  @include media(mobile) {
+  @include media(tablet) {
     margin-top: -4rem;
+  }
+
+  @include media(laptob) {
+    margin-top: -5rem;
   }
 
 }

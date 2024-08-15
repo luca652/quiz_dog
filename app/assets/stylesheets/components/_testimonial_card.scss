@@ -1,0 +1,34 @@
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    max-width: 10rem;
+    border-radius: 50%;
+  }
+
+  .testimonial-title-section {
+    padding: 8px 12px 8px;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    color: black;
+    text-align: justify;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .testimonial-title-peach {
+    background-color: $dog-peach;
+  }
+}
