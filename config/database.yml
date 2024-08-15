@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: quiz_dog_production
-  username: luca
   password: <%= ENV["DATABASE_URL"] %>
