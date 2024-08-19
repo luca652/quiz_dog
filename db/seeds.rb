@@ -22,7 +22,7 @@ puts "Clearing database..."
 Gig.destroy_all
 Venue.destroy_all
 Quizmaster.destroy_all
-# User.destroy_all
+User.destroy_all
 
 user = User.create!(
   email: 'admin@test.com',
