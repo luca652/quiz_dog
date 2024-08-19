@@ -1,15 +1,13 @@
-<div class="quizmaster-card col-6 col-md-4 col-lg-3">
-  <%= cl_image_tag quizmaster.photo.key if quizmaster.photo.key %>
+<div class="quizmaster-card col-6 col-md-4 col-lg-3 mb-4">
+  <%= image_tag quizmaster.photo if quizmaster.photo.attached? %>
   <h4><%= quizmaster.name %></h4>
   <div class="text-bubble text-bubble-peach d-flex flex-column">
-    <p class="mb-3"><strong>Record </strong><%= quizmaster.record %></p>
-    <p class="mb-3"> <strong>Fact </strong><%= quizmaster.fact %></p>
-    <p><strong>Breed </strong><%= quizmaster.breed %></p>
+    <p class="mb-3"><strong>Record: </strong><%= quizmaster.record %></p>
+    <p class="mb-3"><strong>Fact: </strong><%= quizmaster.fact %></p>
+    <p><strong>Breed: </strong><%= quizmaster.breed %></p>
   </div>
 
   <% if admin_page %>
-   <%= link_to "Quizmaster page", quizmaster_path(quizmaster), class: "primary-button text-decoration-underline"  %>
+    <%= link_to "Quizmaster page", quizmaster_path(quizmaster), class: "primary-button text-decoration-underline" %>
   <% end %>
 </div>
-
-<div class="empty-space-responsive"></div>

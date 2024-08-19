@@ -1,6 +1,6 @@
 <div class="container admin-quizmaster-show-container d-flex flex-column align-items-center">
   <div class="quizmaster-card col-6 col-md-4 col-lg-3">
-  <%= cl_image_tag @quizmaster.photo.key if @quizmaster.photo.key %>
+  <%= image_tag @quizmaster.photo if @quizmaster.photo.attached? %>
   <h4><%= @quizmaster.name %></h4>
   <div class="text-bubble text-bubble-peach">
     <p>Record: <%= @quizmaster.record %></p>
