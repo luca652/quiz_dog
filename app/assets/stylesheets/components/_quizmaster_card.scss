@@ -5,11 +5,12 @@
   margin-bottom: 1rem;
 
   img {
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
     border-radius: 50%;
 
     @include media(tablet) {
-      width: 180px;
+      max-width: 180px;
     }
   }
 
@@ -20,7 +21,7 @@
     border-radius: 5px;
     margin-top: -10px;
     margin-bottom: 8px;
-    text-align: justify;
+    text-align: center;
   }
 
   .text-bubble p {

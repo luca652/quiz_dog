@@ -2,7 +2,7 @@
       <% @venues.each do |venue| %>
       <div class="card-venue">
         <% if venue.photo %>
-        <%= cl_image_tag venue.photo.key %>
+        <%= image_tag venue.photo if venue.photo.attached? %>
         <% end %>
         <div class="card-venue-title">
           <h6><%= venue.name %></h6>
