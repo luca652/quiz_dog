@@ -2,18 +2,19 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
-  host = "https://quizdog-ef11b17e16f4.herokuapp.com/"
-  config.action_mailer.default_url_options = { host: host }
+  host = "https://quiz-dog-d2cd7f0d5620.herokuapp.com/"
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   # Settings specified here will take precedence over those in config/application.rb.
-#   config.action_mailer.smtp_settings = {
-#   :address              => "smtp.gmail.com",
-#   :port                 => 587,
-#   :user_name            => Rails.application.credentials.quiz_dog_mailer.address,
-#   :password             => Rails.application.credentials.quiz_dog_mailer.password,
-#   :authentication       => "plain",
-#   :enable_starttls_auto => true
-# }
-
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.zoho.com",
+  :port                 => 587,
+  :domain               => "quiz.dog",
+  :user_name            => ENV['ZOHO_EMAIL'],
+  :password             => ENV['ZOHO_PASSWORD'],
+  :authentication       => "plain",
+  :enable_starttls_auto => true
+}
+  config.action_mailer.perform_deliveries = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 
