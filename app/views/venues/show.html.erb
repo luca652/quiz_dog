@@ -11,9 +11,9 @@
         <p class="venue-phone-number"><%= @venue.phone_number %></p>
       </div>
     </div>
-    <div class="d-flex justify-content-center">
-      <%= link_to "Edit", edit_venue_path(@venue), class: "btn btn-primary dog-button-yellow" %>
-      <%= link_to "Delete", venue_path(@venue), class: "btn btn-danger dog-button-red", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+    <div class="d-flex justify-content-center venue-admin-button">
+      <%= link_to "Edit", edit_venue_path(@venue), class: "btn btn-primary" %>
+      <%= link_to "Delete", venue_path(@venue), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
     </div>
   </div>
 </div>
