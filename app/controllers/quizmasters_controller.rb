@@ -14,7 +14,7 @@ class QuizmastersController < ApplicationController
     @quizmaster = Quizmaster.new(quizmaster_params)
 
     if @quizmaster.save
-      redirect_to quizmaster_path(@quizmaster), notice: 'Quizmaster was successfully created.'
+      redirect_to admin_path, notice: 'Quizmaster was successfully created.'
     else
       @venues = Venue.all
       render :new, status: :unprocessable_entity
@@ -47,8 +47,6 @@ class QuizmastersController < ApplicationController
 
   def set_quizmaster
     @quizmaster = Quizmaster.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    redirect_to admin_path, alert: 'Quizmaster not found.'
   end
 
 end
