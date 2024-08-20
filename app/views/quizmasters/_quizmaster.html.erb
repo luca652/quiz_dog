@@ -8,6 +8,8 @@
   </div>
 
   <% if admin_page %>
-    <%= link_to "Quizmaster page", quizmaster_path(quizmaster), class: "primary-button text-decoration-underline" %>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Quizmaster page", quizmaster_path(quizmaster), class: "btn dog-button-yellow quizmaster-admin-button" %>
+    </div>
   <% end %>
 </div>

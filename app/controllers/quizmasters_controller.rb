@@ -1,5 +1,5 @@
 class QuizmastersController < ApplicationController
-  before_action :set_quizmaster, only: [:edit, :update, :destroy]
+  before_action :set_quizmaster, only: [:show, :edit, :update, :destroy]
 
   def show
   end

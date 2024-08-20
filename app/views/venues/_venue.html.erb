@@ -11,7 +11,9 @@
       <p class="venue-phone-number"><%= venue.phone_number %></p>
     </div>
   </div>
-  <% if admin_page %>
-    <%= link_to "Quizmaster page", venue_path(venue), class: "primary-button text-decoration-underline" %>
-  <% end %>
+  <div class="d-flex justify-content-center">
+    <% if admin_page %>
+      <%= link_to "Venue page", venue_path(venue), class: "btn dog-button-yellow venue-admin-button" %>
+    <% end %>
+  </div>
 </div>
