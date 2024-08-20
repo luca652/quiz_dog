@@ -3,6 +3,7 @@ class VenuesController < ApplicationController
   before_action :set_venue, only: [:show, :destroy, :edit, :update]
 
   def new
+    @venue = Venue.new
     @quizmasters = Quizmaster.all
   end
 
@@ -42,7 +43,7 @@ class VenuesController < ApplicationController
 
   def update
     if @venue.update(venue_params)
-      redirect_to admin_path, notice: 'Venue was successfully updated.'
+      redirect_to venue_path(@venue), notice: 'Venue was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -56,7 +57,5 @@ class VenuesController < ApplicationController
 
   def set_venue
     @venue = Venue.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    redirect_to admin_path, alert: 'Venue not found.'
   end
 end
