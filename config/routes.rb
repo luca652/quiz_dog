@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "contact-us", to: "pages#contact_us"
   get "pubs", to: "pages#pubs"
 
-  resources :venues, except: [:show ]
+  resources :venues
   resources :quizmasters, except: [:index ]
   resources :messages, only: [:new, :create]
 end
