@@ -1,4 +1,7 @@
-<div class="show-card-venue-container">
+<div class="show-card-venue-container d-flex flex-column align-items-center">
+  <div>
+    <%= link_to "Back to the admin page", admin_path, class: "btn dog-button-yellow mb-4" %>
+  </div>
   <div class="admin-card-venue">
     <div class="venue-card" id=<%="#{@venue.id}"%> data-select-card-target="card" data-action="click->select-card#deselect">
       <%= image_tag @venue.photo if @venue.photo.attached? %>
