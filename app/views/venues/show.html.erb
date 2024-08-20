@@ -1,3 +1,19 @@
 <div class="show-card-venue-container">
-  <%= render 'shared/card' %>
+  <div class="admin-card-venue">
+    <div class="venue-card" id=<%="#{@venue.id}"%> data-select-card-target="card" data-action="click->select-card#deselect">
+      <%= image_tag @venue.photo if @venue.photo.attached? %>
+      <div class="venue-card-title">
+        <h6><%= @venue.name %></h6>
+      </div>
+      <div class="venue-card-info">
+        <p class="venue-day-time"><%= @venue.day_of_the_week.upcase %> at <%= @venue.time.strftime('%H:%M') %></p>
+        <p class="venue-address"> <%= @venue.address.partition(" London ").first%><%= @venue.address.partition(" London ").last%></p>
+        <p class="venue-phone-number"><%= @venue.phone_number %></p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Edit", edit_venue_path(@venue), class: "btn btn-primary dog-button-yellow" %>
+      <%= link_to "Delete", venue_path(@venue), class: "btn btn-danger dog-button-red", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+    </div>
+  </div>
 </div>

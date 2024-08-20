@@ -1,12 +1,7 @@
 class QuizmastersController < ApplicationController
   before_action :set_quizmaster, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, only: [ :show ]
-
-  def index
-  end
 
   def show
-    @quizmaster = Quizmaster.find(params[:id])
   end
 
   def new
@@ -19,11 +14,10 @@ class QuizmastersController < ApplicationController
     @quizmaster = Quizmaster.new(quizmaster_params)
 
     if @quizmaster.save
-      redirect_to admin_path
+      redirect_to quizmaster_path(@quizmaster), notice: 'Quizmaster was successfully created.'
     else
-      puts "Quizmaster Errors: #{@quizmaster.errors.full_messages.join(', ')}"
-      puts "Venue Errors: #{@quizmaster.venues.map { |venue| venue.errors.full_messages }.flatten}"
-      redirect_to admin_path, status: :unprocessable_entity
+      @venues = Venue.all
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -34,7 +28,7 @@ class QuizmastersController < ApplicationController
 
   def update
     if @quizmaster.update(quizmaster_params)
-      redirect_to admin_path
+      redirect_to quizmaster_path(@quizmaster), notice: 'Quizmaster was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -53,6 +47,8 @@ class QuizmastersController < ApplicationController
 
   def set_quizmaster
     @quizmaster = Quizmaster.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to admin_path, alert: 'Quizmaster not found.'
   end
 
 end
