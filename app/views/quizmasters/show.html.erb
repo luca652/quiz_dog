@@ -1,4 +1,7 @@
 <div class="container admin-quizmaster-show-container d-flex flex-column align-items-center">
+  <div>
+    <%= link_to "Back to the admin page", admin_path, class: "btn dog-button-yellow mb-4" %>
+  </div>
   <div class="quizmaster-card col-6 col-md-4 col-lg-3 mb-4">
   <%= image_tag @quizmaster.photo if @quizmaster.photo.attached? %>
     <h4><%= @quizmaster.name %></h4>
