@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
 
-    if @message.save
+    if verify_recaptcha(model: @message) && @message.save
       ContactUsMailer.with(message: @message).new_question.deliver_now
       redirect_to contact_us_path, notice: "Thank you for your message!"
     else
