@@ -16,6 +16,9 @@
         <%= form.input :email %>
         <%= form.input :number %>
         <%= form.input :message %>
+
+        <%= recaptcha_tags %>
+
         <div class="d-flex justify-content-center">
           <%= form.button :submit, "Send Message", class: "btn button-rounded-red" %>
         </div>
