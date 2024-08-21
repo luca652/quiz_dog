@@ -14,6 +14,10 @@ Rails.application.configure do
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
+
+  config.recaptcha.site_key  = ENV['RECAPTCHA_SITE_KEY']
+  config.recaptcha.secret_key = ENV['RECAPTCHA_SECRET_KEY']
+
   config.action_mailer.perform_deliveries = true
   # Code is not reloaded between requests.
   config.cache_classes = true
