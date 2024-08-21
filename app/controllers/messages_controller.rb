@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
 
+    # veryfying captcha first
     if verify_recaptcha(model: @message)
       if @message.save
         ContactUsMailer.with(message: @message).new_question.deliver_now
