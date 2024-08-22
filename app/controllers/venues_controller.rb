@@ -8,7 +8,7 @@ class VenuesController < ApplicationController
   end
 
   def index
-    @venues = Venue.all
+    @venues = Venue.includes(:quizmasters).all
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
@@ -28,7 +28,7 @@ class VenuesController < ApplicationController
     if @venue.save
       redirect_to admin_path, notice: 'Venue was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, notice: 'Could not create Venue. Please try again.'
     end
   end
 
@@ -45,7 +45,7 @@ class VenuesController < ApplicationController
     if @venue.update(venue_params)
       redirect_to venue_path(@venue), notice: 'Venue was successfully updated.'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity, notice: 'Could not update Venue. Please try again.'
     end
   end
 
