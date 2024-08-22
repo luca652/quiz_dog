@@ -10,6 +10,14 @@
       <p class="mb-3"><strong>Fact: </strong><%= @quizmaster.fact %></p>
       <p><strong>Breed: </strong><%= @quizmaster.breed %></p>
     </div>
+    <div class="d-flex flex-column align-items-center gigs-styles">
+      <% if @quizmaster.venues.empty? %>
+        <p>No venues yet.</p>
+        <% @quizmaster.venues.each do |venue|  %>
+          <p><%= venue.name %></p>
+        <% end %>
+      <% end %>
+    </div>
     <div class="quizmaster-admin-button">
       <%= link_to "Edit", edit_quizmaster_path(@quizmaster), class: "btn btn-primary" %>
       <%= link_to "Delete", quizmaster_path(@quizmaster), class: "btn btn-danger", data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>

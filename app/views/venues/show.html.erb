@@ -3,7 +3,7 @@
     <%= link_to "Back to the admin page", admin_path, class: "btn dog-button-yellow mb-4" %>
   </div>
   <div class="admin-card-venue">
-    <div class="venue-card" id=<%="#{@venue.id}"%> data-select-card-target="card" data-action="click->select-card#deselect">
+    <div class="venue-card venue-card-admin-page" id=<%="#{@venue.id}"%> data-select-card-target="card" data-action="click->select-card#deselect">
       <%= image_tag @venue.photo if @venue.photo.attached? %>
       <div class="venue-card-title">
         <h6><%= @venue.name %></h6>
@@ -13,6 +13,15 @@
         <p class="venue-address"> <%= @venue.address.partition(" London ").first%><%= @venue.address.partition(" London ").last%></p>
         <p class="venue-phone-number"><%= @venue.phone_number %></p>
       </div>
+    </div>
+    <div class="d-flex flex-column align-items-center gigs-styles">
+      <% if @venue.quizmasters.empty? %>
+        <p>No quizmasters yet.</p>
+      <% else %>
+        <% @venue.quizmasters.each do |qm|  %>
+          <p><%= qm.name %></p>
+        <% end %>
+      <% end %>
     </div>
     <div class="d-flex justify-content-center venue-admin-button">
       <%= link_to "Edit", edit_venue_path(@venue), class: "btn btn-primary" %>
