@@ -43,4 +43,16 @@
   width: 100%;
   height: auto;
   margin-top: -1rem;
+
+  @include media(mobile) {
+    margin-top: -2rem;
+  }
+
+  @include media(laptop) {
+    margin-top: -3rem;
+  }
+
+  @include media(desktop) {
+    margin-top: -3rem;
+  }
 }
