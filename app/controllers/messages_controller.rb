@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
 
     # veryfying captcha first
     if verify_recaptcha(model: @message)
-      if @message.save
+      if @message.valid?
         ContactUsMailer.with(message: @message).new_question.deliver_now
         redirect_to contact_us_path, notice: "Thank you for your message!"
       else

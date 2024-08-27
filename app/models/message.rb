@@ -1,4 +1,6 @@
-class Message < ApplicationRecord
+class Message
+  include ActiveModel::Model
+  attr_accessor :name, :email, :number, :message
 
   validates :name, :email, :number, :message, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
@@ -7,5 +9,4 @@ class Message < ApplicationRecord
   validates :number, length: { maximum: 20 }
   validates :message, length: { maximum: 1000 }
   validates :number, format: { with: /\A[0-9\s]+\z/, message: "must only contain numbers" }, allow_blank: true
-
 end
