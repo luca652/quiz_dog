@@ -9,6 +9,7 @@ class VenuesController < ApplicationController
 
   def index
     @venues = Venue.includes(:quizmasters).all
+
     @markers = @venues.geocoded.map do |venue|
       {
         lat: venue.latitude,
